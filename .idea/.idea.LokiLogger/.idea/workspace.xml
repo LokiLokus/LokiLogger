@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7087dca4-d02a-4941-a26c-7e1f9c6805c5" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="2068573754">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="23" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="3372" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="3372" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/LokiLogger/Log.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="665">
+                  <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+                  <folding>
+                    <marker date="1537172266262" expanded="true" signature="6:102" ph="..." />
+                    <marker date="1537172266262" expanded="true" signature="125:1578" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="152:1576" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="168:209" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="302:330" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="492:571" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="732:807" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="968:1044" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="1208:1290" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="1394:1573" ph="{...}" />
+                    <marker date="1537172266262" expanded="true" signature="1435:1567" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/LokiLoggerTest/MainTest.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="247">
+                  <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+                  <folding>
+                    <marker date="1537172266254" expanded="false" signature="6:30" ph="..." />
+                    <marker date="1537172266254" expanded="true" signature="57:220" ph="{...}" />
+                    <marker date="1537172266254" expanded="true" signature="82:218" ph="{...}" />
+                    <marker date="1537172266254" expanded="true" signature="116:215" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/LokiLogger/Writer.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+                  <folding>
+                    <marker date="1537172266246" expanded="true" signature="21:107" ph="{...}" />
+                    <marker date="1537172266246" expanded="true" signature="53:105" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="152">
+                  <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+                  <folding>
+                    <marker date="1537172266226" expanded="false" signature="6:37" ph="..." />
+                    <marker date="1537172266226" expanded="true" signature="68:830" ph="{...}" />
+                    <marker date="1537172266226" expanded="true" signature="107:828" ph="{...}" />
+                    <marker date="1537172266226" expanded="true" signature="155:825" ph="{...}" />
+                    <marker date="1537172266226" expanded="true" signature="180:618" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/LokiLogger/Model/Log.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="228">
+                  <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+                  <folding>
+                    <marker date="1537123875479" expanded="true" signature="42:316" ph="{...}" />
+                    <marker date="1537123875479" expanded="true" signature="62:314" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/PerformanceTest/Program.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+                  <folding>
+                    <marker date="1537172266266" expanded="false" signature="6:119" ph="..." />
+                    <marker date="1537172266266" expanded="true" signature="147:701" ph="{...}" />
+                    <marker date="1537172266266" expanded="true" signature="173:699" ph="{...}" />
+                    <marker date="1537172266266" expanded="true" signature="216:696" ph="{...}" />
+                    <marker date="1537172266266" expanded="true" signature="378:535" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/PerformanceSerilog/Program.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="703">
+                  <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+                  <folding>
+                    <marker date="1537172263758" expanded="true" signature="6:116" ph="..." />
+                    <marker date="1537172263758" expanded="true" signature="147:824" ph="{...}" />
+                    <marker date="1537172263758" expanded="true" signature="173:822" ph="{...}" />
+                    <marker date="1537172263758" expanded="true" signature="216:819" ph="{...}" />
+                    <marker date="1537172263758" expanded="true" signature="491:657" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PerformanceSerilog/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLogger/Log.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLogger/Model/Log.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DFC8E72A-7C99-4B71-9C34-D6BAAFA51091/6b/08288896/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLogger/Model/LogType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLoggerTest/PerformanceTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLoggerTest/MultithreadingTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DFC8E72A-7C99-4B71-9C34-D6BAAFA51091/f6/1297efd7/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLogger/Writer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PerformanceTest/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LokiLoggerTest/MainTest.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/LokiLoggerTest/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Class1.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Model/LogType.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Model/Log.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/ILogger.cs" />
+        <option value="$PROJECT_DIR$/LokiLoggerTest/MultithreadingTest.cs" />
+        <option value="$PROJECT_DIR$/LokiLoggerTest/ExportTest.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Model/LogSession.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Exceptions/SessionNotInitializedException.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Exceptions/SessionAlreadyInitializedException.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Writer.cs" />
+        <option value="$PROJECT_DIR$/LokiLoggerTest/MainTest.cs" />
+        <option value="$PROJECT_DIR$/LokiLoggerTest/PerformanceTest.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs" />
+        <option value="$PROJECT_DIR$/LokiLogger/Log.cs" />
+        <option value="$PROJECT_DIR$/PerformanceTest/Program.cs" />
+        <option value="$PROJECT_DIR$/PerformanceSerilog/Program.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="26" />
+    <option name="width" value="3790" />
+    <option name="height" value="2133" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="LokiLogger" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="LokiLogger" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="LokiLogger" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="LokiLogger" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="LokiLoggerTest" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="LokiLogger" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="PerformanceSerilog" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="LokiLogger" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="PerformanceTest" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.PerformanceTest">
+    <configuration name="PerformanceSeriLog" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/PerformanceSerilog/bin/Debug/netcoreapp2.1/PerformanceSerilog.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PerformanceSerilog" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/PerformanceSerilog/PerformanceSerilog.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PerformanceTest" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/PerformanceTest.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PerformanceTest" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/PerformanceTest/PerformanceTest.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/PerformanceTest.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PerformanceTest" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/PerformanceTest/PerformanceTest.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.PerformanceTest" />
+      <item itemvalue=".NET Project.PerformanceSeriLog" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7087dca4-d02a-4941-a26c-7e1f9c6805c5" name="Default Changelist" comment="" />
+      <created>1537120591765</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537120591765</updated>
+      <workItem from="1537120594432" duration="3101000" />
+      <workItem from="1537123717190" duration="1932000" />
+      <workItem from="1537126599503" duration="6069000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11102000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="3840" height="2133" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25369978" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32979798" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32979798" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4936575" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32979798" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32979798" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.32979798" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32979798" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5063425" side_tool="true" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.4939218" weight="0.32979798" />
+      <window_info anchor="bottom" id="Statistic" order="15" weight="0.32979798" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs</url>
+          <line>6</line>
+          <properties documentPath="$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs" initialLine="8">
+            <startOffsets>
+              <option value="158" />
+            </startOffsets>
+            <endOffsets>
+              <option value="159" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LokiLogger/ILogger.cs" />
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Exceptions/SessionNotInitializedException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Model/LogType.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <marker date="1537123883747" expanded="true" signature="50:109" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Model/LogSession.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Exceptions/SessionAlreadyInitializedException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="63" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLoggerTest/ExportTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DFC8E72A-7C99-4B71-9C34-D6BAAFA51091/6b/08288896/ExecutionContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="134" column="6" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DFC8E72A-7C99-4B71-9C34-D6BAAFA51091/f6/1297efd7/Task.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="85" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLoggerTest/MultithreadingTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding>
+            <marker date="1537123883723" expanded="true" signature="25:66" ph="{...}" />
+            <marker date="1537123883723" expanded="true" signature="60:64" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Model/Log.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <marker date="1537123875479" expanded="true" signature="42:316" ph="{...}" />
+            <marker date="1537123875479" expanded="true" signature="62:314" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLoggerTest/PerformanceTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding>
+            <marker date="1537172191250" expanded="true" signature="25:63" ph="{...}" />
+            <marker date="1537172191250" expanded="true" signature="57:61" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLoggerTest/MainTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <marker date="1537172266254" expanded="false" signature="6:30" ph="..." />
+            <marker date="1537172266254" expanded="true" signature="57:220" ph="{...}" />
+            <marker date="1537172266254" expanded="true" signature="82:218" ph="{...}" />
+            <marker date="1537172266254" expanded="true" signature="116:215" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Writer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding>
+            <marker date="1537172266246" expanded="true" signature="21:107" ph="{...}" />
+            <marker date="1537172266246" expanded="true" signature="53:105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <marker date="1537172266226" expanded="false" signature="6:37" ph="..." />
+            <marker date="1537172266226" expanded="true" signature="68:830" ph="{...}" />
+            <marker date="1537172266226" expanded="true" signature="107:828" ph="{...}" />
+            <marker date="1537172266226" expanded="true" signature="155:825" ph="{...}" />
+            <marker date="1537172266226" expanded="true" signature="180:618" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LokiLogger/Log.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+          <folding>
+            <marker date="1537172266262" expanded="true" signature="6:102" ph="..." />
+            <marker date="1537172266262" expanded="true" signature="125:1578" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="152:1576" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="168:209" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="302:330" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="492:571" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="732:807" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="968:1044" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="1208:1290" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="1394:1573" ph="{...}" />
+            <marker date="1537172266262" expanded="true" signature="1435:1567" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerformanceTest/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <marker date="1537172266266" expanded="false" signature="6:119" ph="..." />
+            <marker date="1537172266266" expanded="true" signature="147:701" ph="{...}" />
+            <marker date="1537172266266" expanded="true" signature="173:699" ph="{...}" />
+            <marker date="1537172266266" expanded="true" signature="216:696" ph="{...}" />
+            <marker date="1537172266266" expanded="true" signature="378:535" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PerformanceSerilog/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <marker date="1537172263758" expanded="true" signature="6:116" ph="..." />
+            <marker date="1537172263758" expanded="true" signature="147:824" ph="{...}" />
+            <marker date="1537172263758" expanded="true" signature="173:822" ph="{...}" />
+            <marker date="1537172263758" expanded="true" signature="216:819" ph="{...}" />
+            <marker date="1537172263758" expanded="true" signature="491:657" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

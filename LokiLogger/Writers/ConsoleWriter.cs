@@ -1,0 +1,32 @@
+using System;
+using LokiLogger.Model;
+
+namespace LokiLogger.Writers {
+	public class ConsoleWriter : Writer {
+		public override void WriteLog(Model.Log log)
+		{
+			switch (log.Type)
+			{
+				case LogType.Information:
+					Console.ForegroundColor = ConsoleColor.Black;
+					break;
+				case LogType.Warning:
+					Console.ForegroundColor = ConsoleColor.Yellow;
+					break;
+				case LogType.Critical:
+					Console.ForegroundColor = ConsoleColor.Red;
+					break;
+				case LogType.SystemCritical:
+					Console.ForegroundColor = ConsoleColor.DarkRed;
+					break;
+				default:
+					throw new ArgumentOutOfRangeException();
+			}
+
+			Console.BackgroundColor = ConsoleColor.White;
+			Console.WriteLine("[{0}: {1}.{2}:{3}]{4}", log.Time.ToLongTimeString(), log.Class, log.Method, log.LineNr,
+				log.Message);
+			Console.ResetColor();
+		}
+	}
+}

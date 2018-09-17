@@ -1,0 +1,9 @@
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.deps.json
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.dll
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.pdb
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.csprojAssemblyReference.cache
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.csproj.CoreCompileInputs.cache
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.AssemblyInfoInputs.cache
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.AssemblyInfo.cs
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.dll
+/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.pdb
