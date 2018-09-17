@@ -2,5 +2,12 @@
 <project version="4">
   <component name="Statistic">
     <option name="fileTypes" value="class;svn-base;svn-work;Extra;gif;png;jpg;cache;csproj;dll;json,pdb;props;sln;targets;txt;copycomplete;json;pdb;jpeg;bmp;tga;tiff;ear;war;zip;jar;iml;iws;ipr;bz2;gz;" />
+    <option name="excludedDirectories">
+      <list>
+        <option value="$PROJECT_DIR$/LokiLoggerTest" />
+        <option value="$PROJECT_DIR$/PerformanceSerilog" />
+        <option value="$PROJECT_DIR$/PerformanceTest" />
+      </list>
+    </option>
   </component>
 </project>

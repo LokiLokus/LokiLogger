@@ -7,6 +7,12 @@ namespace LokiLogger.Writers {
 		{
 			switch (log.Type)
 			{
+				case LogType.Verbose:
+					Console.ForegroundColor = ConsoleColor.Gray;
+					break;
+				case LogType.Debug:
+					Console.ForegroundColor = ConsoleColor.Green;
+					break;
 				case LogType.Information:
 					Console.ForegroundColor = ConsoleColor.Black;
 					break;
@@ -26,7 +32,6 @@ namespace LokiLogger.Writers {
 			Console.BackgroundColor = ConsoleColor.White;
 			Console.WriteLine("[{0}: {1}.{2}:{3}]{4}", log.Time.ToLongTimeString(), log.Class, log.Method, log.LineNr,
 				log.Message);
-			Console.ResetColor();
 		}
 	}
 }

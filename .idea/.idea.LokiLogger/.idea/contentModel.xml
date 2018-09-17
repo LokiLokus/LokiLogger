@@ -16,6 +16,7 @@
           <e p="Log.cs" t="Include" />
           <e p="LogType.cs" t="Include" />
         </e>
+        <e p="README.md" t="Include" />
         <e p="Writer.cs" t="Include" />
         <e p="Writers" t="Include">
           <e p="ConsoleWriter.cs" t="Include" />
