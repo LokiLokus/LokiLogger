@@ -55,5 +55,5 @@ Logging.
 - Add Log Methods with string format
 - Add to Nuget
 
-##Licence
+## Licence
 This Libary is under MIT Lincense published.
