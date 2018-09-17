@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7087dca4-d02a-4941-a26c-7e1f9c6805c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LokiLogger/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/statistic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/statistic.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLogger/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/Log.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLogger/Model/LogType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/Model/LogType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/Writers/ConsoleWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/MainTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/MainTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLogger.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLogger.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLogger.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLogger.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLoggerTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLoggerTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLoggerTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/bin/Debug/netcoreapp2.1/LokiLoggerTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/bin/Debug/netcoreapp2.1/PerformanceSerilog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/bin/Debug/netcoreapp2.1/PerformanceSerilog.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/bin/Debug/netcoreapp2.1/PerformanceSerilog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/bin/Debug/netcoreapp2.1/PerformanceSerilog.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/Debug/netcoreapp2.1/PerformanceSerilog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/Debug/netcoreapp2.1/PerformanceSerilog.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/Debug/netcoreapp2.1/PerformanceSerilog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/Debug/netcoreapp2.1/PerformanceSerilog.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/LokiLogger.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/LokiLogger.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/LokiLogger.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/LokiLogger.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/PerformanceTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/PerformanceTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/PerformanceTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/bin/Debug/netcoreapp2.1/PerformanceTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="7087dca4-d02a-4941-a26c-7e1f9c6805c5" name="Default Changelist" comment="Added GitIgnore" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,12 +35,14 @@
         <counts>
           <entry key="cs" value="3693" />
           <entry key="md" value="2490" />
+          <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="C#" value="3693" />
           <entry key="Markdown" value="2490" />
+          <entry key="PLAIN_TEXT" value="22" />
         </counts>
       </usages-collector>
     </session>
@@ -96,8 +65,8 @@
             <entry file="file://$PROJECT_DIR$/LokiLogger/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="911">
-                    <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+                  <first_editor relative-caret-position="1006">
+                    <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -460,12 +429,27 @@
       <updated>1537120591765</updated>
       <workItem from="1537120594432" duration="3101000" />
       <workItem from="1537123717190" duration="1932000" />
-      <workItem from="1537126599503" duration="8810000" />
+      <workItem from="1537126599503" duration="9065000" />
     </task>
+    <task id="LOCAL-00001" summary="Added ReadMe">
+      <created>1537179558633</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1537179558644</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added GitIgnore">
+      <created>1537179682397</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1537179682397</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13843000" />
+    <option name="totallyTimeSpent" value="14098000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,7 +462,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="3840" height="2133" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25369978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -486,7 +469,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32979798" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32979798" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4918076" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4918076" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32979798" />
@@ -495,8 +478,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" sideWeight="0.49973574" weight="0.32979798" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49973574" weight="0.32979798" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50819236" side_tool="true" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49947146" visible="true" weight="0.32979798" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5005285" side_tool="true" visible="true" weight="0.32979798" />
       <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49207187" weight="0.32979798" />
       <window_info anchor="bottom" id="Statistic" order="15" sideWeight="0.49973574" weight="0.32979798" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -513,6 +496,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added ReadMe" />
+    <MESSAGE value="Added GitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GitIgnore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -729,8 +717,8 @@
     <entry file="file://$PROJECT_DIR$/LokiLogger/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="911">
-            <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <first_editor relative-caret-position="1006">
+            <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
           </first_editor>
           <second_editor />
         </state>
