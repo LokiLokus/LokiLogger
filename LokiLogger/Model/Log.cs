@@ -13,12 +13,12 @@ namespace LokiLogger.Model {
 		public override string ToString()
 		{
 			return "{\"ID\":" + ID + ","
-			       + "Time:\"" + Time + "\","
-			       + "Type:" + (int) Type + ","
-			       + "Message:\"" + Message + "\","
-			       + "Class:\"" + Class + "\","
-			       + "Method:\"" + Method + "\","
-			       + "LineNr:" + LineNr
+			       + "\"Time\":\"" + Time + "\","
+			       + "\"Type\":" + (int) Type + ","
+			       + "\"Message\":\"" + Message + "\","
+			       + "\"Class\":\"" + Class + "\","
+			       + "\"Method\":\"" + Method + "\","
+			       + "\"LineNr\":" + LineNr
 			       + "}";
 		}
 	}
