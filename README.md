@@ -4,6 +4,13 @@ Most Logging Frameworks like Serilog are quiet complex and so slow.
 LokiLogger is a more than simple Alternative. With under 200 LoC it's
 very small and easy to extend.
 
+## Why it's much better than other Logger?
+Other Logger are f*** slow, LokiLogger is small and fast.
+Also the most Logger don't safe the Class, Method or LineNumber
+where the Logger is called. But this is obviously a nice Feature
+for Debugging (most Logger have this Feature, but the use Refelection
+=> more than slow => mostly disabled in Production).
+
 
 ## Usage
 More than simple just:
