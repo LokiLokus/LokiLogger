@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/lokilokus/RiderProjects/LokiLogger/PerformanceSerilog/PerformanceSerilog.csproj",
+    "projectUniqueName": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\PerformanceSerilog\\PerformanceSerilog.csproj",
     "projectName": "PerformanceSerilog",
-    "projectPath": "/home/lokilokus/RiderProjects/LokiLogger/PerformanceSerilog/PerformanceSerilog.csproj",
-    "outputPath": "/home/lokilokus/RiderProjects/LokiLogger/PerformanceSerilog/obj/",
+    "projectPath": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\PerformanceSerilog\\PerformanceSerilog.csproj",
+    "outputPath": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\PerformanceSerilog\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/home/lokilokus/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"

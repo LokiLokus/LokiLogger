@@ -3311,28 +3311,30 @@
     ]
   },
   "packageFolders": {
-    "/home/lokilokus/.nuget/packages/": {},
-    "/home/lokilokus/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Loki\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lokilokus/RiderProjects/LokiLogger/PerformanceSerilog/PerformanceSerilog.csproj",
+      "projectUniqueName": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\PerformanceSerilog\\PerformanceSerilog.csproj",
       "projectName": "PerformanceSerilog",
-      "projectPath": "/home/lokilokus/RiderProjects/LokiLogger/PerformanceSerilog/PerformanceSerilog.csproj",
-      "packagesPath": "/home/lokilokus/.nuget/packages/",
-      "outputPath": "/home/lokilokus/RiderProjects/LokiLogger/PerformanceSerilog/obj/",
+      "projectPath": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\PerformanceSerilog\\PerformanceSerilog.csproj",
+      "packagesPath": "C:\\Users\\Loki\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\PerformanceSerilog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/home/lokilokus/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/lokilokus/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Loki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

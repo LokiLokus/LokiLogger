@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/lokilokus/RiderProjects/LokiLogger/LokiLoggerTest/LokiLoggerTest.csproj",
+    "projectUniqueName": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\LokiLoggerTest\\LokiLoggerTest.csproj",
     "projectName": "LokiLoggerTest",
-    "projectPath": "/home/lokilokus/RiderProjects/LokiLogger/LokiLoggerTest/LokiLoggerTest.csproj",
-    "outputPath": "/home/lokilokus/RiderProjects/LokiLogger/LokiLoggerTest/obj/",
+    "projectPath": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\LokiLoggerTest\\LokiLoggerTest.csproj",
+    "outputPath": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\LokiLoggerTest\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/home/lokilokus/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp2.1": {
         "projectReferences": {
-          "/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/LokiLogger.csproj": {
-            "projectPath": "/home/lokilokus/RiderProjects/LokiLogger/LokiLogger/LokiLogger.csproj"
+          "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\LokiLogger\\LokiLogger.csproj": {
+            "projectPath": "C:\\Users\\Loki\\RiderProjects\\LokiLogger\\LokiLogger\\LokiLogger.csproj"
           }
         }
       }
