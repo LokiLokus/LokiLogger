@@ -10,7 +10,7 @@ namespace PerformanceTest {
 	internal class Program {
 		private static void Main(string[] args)
 		{
-			int count = 20000;
+			int count = 20;
 			DateTime tmpdate = DateTime.Now;
 
 			Log.AddWriter(new FileWriter("/home/lokilokus/Downloads/TestLog.json"));
