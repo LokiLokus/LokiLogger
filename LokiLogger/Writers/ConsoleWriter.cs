@@ -1,9 +1,10 @@
 using System;
+using System.Threading.Tasks;
 using LokiLogger.Model;
 
 namespace LokiLogger.Writers {
-	public class ConsoleWriter : Writer {
-		public override void WriteLog(Model.Log log)
+	public class ConsoleWriter : IWriter {
+		public void WriteLog(Model.Log log)
 		{
 			switch (log.Type)
 			{
@@ -32,6 +33,11 @@ namespace LokiLogger.Writers {
 			Console.BackgroundColor = ConsoleColor.White;
 			Console.WriteLine("[{0}: {1}.{2}:{3}]{4}", log.Time.ToLongTimeString(), log.Class, log.Method, log.LineNr,
 				log.Message);
+		}
+
+		public async Task Stop()
+		{
+			
 		}
 	}
 }

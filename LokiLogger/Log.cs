@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using LokiLogger.Model;
 using LokiLogger.Writers;
 
@@ -11,10 +12,10 @@ namespace LokiLogger {
 			_writer = new ConsoleWriter();
 		}
 
-		private static Writer _writer { get; set; }
+		private static IWriter _writer { get; set; }
 		private static List<LogType> _ignoreList = new List<LogType>();
 		
-		public static void SetWriter(Writer writer)
+		public static void SetWriter(IWriter writer)
 		{
 			_writer = writer;
 		}
@@ -27,6 +28,15 @@ namespace LokiLogger {
 		public static void DeIgnoreType(LogType type)
 		{
 			_ignoreList.Remove(type);
+		}
+		
+		/// <summary>
+		/// This Function garants that all Logs are written
+		/// </summary>
+		/// <returns></returns>
+		public static async Task StopLog()
+		{
+			await _writer.Stop();
 		}
 
 
