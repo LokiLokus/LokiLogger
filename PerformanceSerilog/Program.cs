@@ -10,7 +10,7 @@ namespace PerformanceSerilog {
 		{
 			Log.Logger = new LoggerConfiguration()
 				.MinimumLevel.Debug()
-				.WriteTo.Console()
+				.WriteTo.File("/home/lokilokus/Downloads/TestLog.json")
 				.CreateLogger();
 
 			DateTime tmpdate = DateTime.Now;
