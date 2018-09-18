@@ -37,7 +37,6 @@ namespace LokiLogger.Writers {
 
 		public async Task Stop()
 		{
-			
 		}
 	}
 }

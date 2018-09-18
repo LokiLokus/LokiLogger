@@ -14,7 +14,7 @@ namespace LokiLogger.Model {
 		{
 			return "{\"ID\":" + ID + ","
 			       + "Time:\"" + Time + "\","
-			       + "Type:" + (int)Type + ","
+			       + "Type:" + (int) Type + ","
 			       + "Message:\"" + Message + "\","
 			       + "Class:\"" + Class + "\","
 			       + "Method:\"" + Method + "\","
@@ -22,5 +22,4 @@ namespace LokiLogger.Model {
 			       + "}";
 		}
 	}
-	
 }

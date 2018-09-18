@@ -3,16 +3,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LokiLogger.Writers {
-	public class FileWriter :IWriter {
-		private string _filePath;
-		private StreamWriter _fileStream;
+	public class FileWriter : IWriter {
+		private readonly string _filePath;
+		private readonly StreamWriter _fileStream;
 
 		public FileWriter(string options)
 		{
 			_filePath = options;
-			_fileStream = new StreamWriter(_filePath ,true, Encoding.UTF8) {AutoFlush = true};
+			_fileStream = new StreamWriter(_filePath, true, Encoding.UTF8) {AutoFlush = true};
 		}
-		
+
 		public void WriteLog(Model.Log log)
 		{
 			lock (_fileStream)
@@ -25,8 +25,9 @@ namespace LokiLogger.Writers {
 		{
 			lock (_fileStream)
 			{
-				_fileStream.Close();				
+				_fileStream.Close();
 			}
+
 			await Task.Delay(0);
 		}
 	}

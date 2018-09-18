@@ -12,9 +12,9 @@ namespace PerformanceTest {
 		{
 			int count = 20000;
 			DateTime tmpdate = DateTime.Now;
-			
-			Log.SetWriter(new FileWriter("/home/lokilokus/Downloads/TestLog.json"));
-			
+
+			Log.AddWriter(new FileWriter("/home/lokilokus/Downloads/TestLog.json"));
+
 			Log.IgnoreType(LogType.Debug);
 			Log.IgnoreType(LogType.Verbose);
 			Log.IgnoreType(LogType.Information);
