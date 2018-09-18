@@ -25,6 +25,9 @@ Log.Warn("Text");
 Log.Crit("Text");
 Log.SysCrit("Text");
 
+//Not needed e.g. for the ConsoleWriter but for the FileWriter and some others to close Stream/cleanup
+Log.StopLog();
+
 ```
 
 ## Architecture
