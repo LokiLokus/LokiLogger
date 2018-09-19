@@ -16,6 +16,7 @@ namespace PerformanceSerilog {
 
 			DateTime tmpdate = DateTime.Now;
 			int count = 20000;
+			
 
 			List<Task> tmp = new List<Task>();
 			for (int i = 0; i < count; i++)

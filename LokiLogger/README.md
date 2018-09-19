@@ -62,10 +62,5 @@ The Focus on this Project is performance. LokiLogger is e.g. with Console
 Output about 40% faster then Serilog (in some Scenarios about 60 % faster). It's thread safe and build for fast
 Logging.
 
-## Backlog
-- Add File Writer
-- Add Log Methods with string format
-- Add to Nuget
-
 ## Licence
 This Libary is under MIT Lincense published.

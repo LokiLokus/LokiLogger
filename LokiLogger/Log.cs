@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using LokiLogger.Model;
@@ -37,7 +38,8 @@ namespace LokiLogger {
 		/// <returns></returns>
 		public static async Task StopLog()
 		{
-			_writer.ForEach(async x => await x.Stop());
+			var tasks = _writer.Select(x => x.Stop());
+			await Task.WhenAll(tasks);
 		}
 
 
@@ -47,6 +49,7 @@ namespace LokiLogger {
 			LogEvent(LogType.Verbose, data, callerName, className, lineNr);
 		}
 
+		
 		public static void Debug(string data, [CallerMemberName] string callerName = "",
 			[CallerFilePath] string className = "", [CallerLineNumber] int lineNr = 0)
 		{
