@@ -27,6 +27,7 @@ namespace PerformanceTest {
 					Log.Debug("asdsa");
 					Log.Verbose("asdsa");
 					Log.Info("Hallo");
+					Log.Info("Hallo{as}","asd");
 					Thread.Sleep(1);
 					Log.Warn("HAsdas");
 					Log.Crit("asdas");

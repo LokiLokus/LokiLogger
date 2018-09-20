@@ -64,3 +64,5 @@ Logging.
 
 ## Licence
 This Libary is under MIT Lincense published.
+
+https://www.nuget.org/packages/LokiLogger/

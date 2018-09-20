@@ -48,7 +48,6 @@ namespace LokiLogger {
 		{
 			LogEvent(LogType.Verbose, data, callerName, className, lineNr);
 		}
-
 		
 		public static void Debug(string data, [CallerMemberName] string callerName = "",
 			[CallerFilePath] string className = "", [CallerLineNumber] int lineNr = 0)
