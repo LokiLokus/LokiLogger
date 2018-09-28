@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using LokiLogger.Model;
+using LokiLogger.Writers;
 using Log = LokiLogger.Log;
 
 namespace PerformanceTest {
 	internal class Program {
 		private static void Main(string[] args)
 		{
-			int count = 20000;
+			int count = 20;
 			DateTime tmpdate = DateTime.Now;
-			
+
+			Log.AddWriter(new FileWriter("/home/lokilokus/Downloads/TestLog.json"));
+
 			Log.IgnoreType(LogType.Debug);
 			Log.IgnoreType(LogType.Verbose);
 			Log.IgnoreType(LogType.Information);
@@ -24,6 +27,7 @@ namespace PerformanceTest {
 					Log.Debug("asdsa");
 					Log.Verbose("asdsa");
 					Log.Info("Hallo");
+					Log.Info("Hallo{as}","asd");
 					Thread.Sleep(1);
 					Log.Warn("HAsdas");
 					Log.Crit("asdas");
@@ -33,6 +37,8 @@ namespace PerformanceTest {
 
 			tmp.ForEach(x => { x.Start(); });
 			Task.WaitAll(tmp.ToArray());
+			Task l = Log.StopLog();
+			l.Wait();
 
 			Console.WriteLine((DateTime.Now - tmpdate).TotalSeconds);
 			Console.ReadKey();

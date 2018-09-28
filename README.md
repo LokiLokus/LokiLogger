@@ -15,6 +15,9 @@ for Debugging (most Logger have this Feature, but the use Refelection
 ## Usage
 More than simple just:
 ```
+Log.SetWriter(new ConsoleWriter());
+
+
 Log.Verbose("Text");
 Log.Debug("Text");
 Log.Info("Text");
@@ -22,7 +25,9 @@ Log.Warn("Text");
 Log.Crit("Text");
 Log.SysCrit("Text");
 
-Log.SetWriter(new ConsoleWriter());
+//Not needed e.g. for the ConsoleWriter but for the FileWriter and some others to close Stream/cleanup
+Log.StopLog();
+
 ```
 
 ## Architecture

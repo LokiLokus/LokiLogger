@@ -15,6 +15,9 @@ for Debugging (most Logger have this Feature, but the use Refelection
 ## Usage
 More than simple just:
 ```
+Log.SetWriter(new ConsoleWriter());
+
+
 Log.Verbose("Text");
 Log.Debug("Text");
 Log.Info("Text");
@@ -22,7 +25,9 @@ Log.Warn("Text");
 Log.Crit("Text");
 Log.SysCrit("Text");
 
-Log.SetWriter(new ConsoleWriter());
+//Not needed e.g. for the ConsoleWriter but for the FileWriter and some others to close Stream/cleanup
+Log.StopLog();
+
 ```
 
 ## Architecture
@@ -57,10 +62,7 @@ The Focus on this Project is performance. LokiLogger is e.g. with Console
 Output about 40% faster then Serilog (in some Scenarios about 60 % faster). It's thread safe and build for fast
 Logging.
 
-## Backlog
-- Add File Writer
-- Add Log Methods with string format
-- Add to Nuget
-
 ## Licence
 This Libary is under MIT Lincense published.
+
+https://www.nuget.org/packages/LokiLogger/
