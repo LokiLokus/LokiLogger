@@ -2,34 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087dca4-d02a-4941-a26c-7e1f9c6805c5" name="Default Changelist" comment="Added GitIgnore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/statistic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LokiLogger/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LokiLogger/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LokiLogger/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/bin/Debug/netcoreapp2.1/LokiLogger.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.csprojResolveAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LokiLogger/obj/Debug/netcoreapp2.1/LokiLogger.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LokiLogger/obj/LokiLogger.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/LokiLogger.csproj.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LokiLogger/obj/LokiLogger.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/LokiLogger.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LokiLogger/obj/LokiLogger.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/LokiLogger.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LokiLogger/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LokiLogger/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLogger/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/Debug/netcoreapp2.1/LokiLoggerTest.Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/LokiLoggerTest.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/LokiLoggerTest.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/LokiLoggerTest.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/LokiLoggerTest.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/LokiLoggerTest.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/LokiLoggerTest.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LokiLoggerTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/LokiLoggerTest/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/Debug/netcoreapp2.1/PerformanceSerilog.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/Debug/netcoreapp2.1/PerformanceSerilog.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/PerformanceSerilog.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/PerformanceSerilog.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/PerformanceSerilog.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/PerformanceSerilog.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/PerformanceSerilog.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/PerformanceSerilog.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceSerilog/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceSerilog/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/Debug/netcoreapp2.1/PerformanceTest.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/PerformanceTest.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/PerformanceTest.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/PerformanceTest.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/PerformanceTest.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/PerformanceTest.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/PerformanceTest.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformanceTest/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PerformanceTest/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,10 +77,11 @@
     <session id="-1623862973">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -94,8 +94,8 @@
             <entry file="file://$PROJECT_DIR$/LokiLogger/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="16">
-                    <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+                  <first_editor relative-caret-position="128">
+                    <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -173,7 +173,7 @@
             <entry file="file://$PROJECT_DIR$/PerformanceSerilog/Program.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="304">
-                  <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+                  <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
                   <folding>
                     <marker date="1537220980277" expanded="false" signature="6:116" ph="..." />
                     <marker date="1537220980277" expanded="true" signature="147:825" ph="{...}" />
@@ -237,8 +237,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -373,6 +373,7 @@
       <workItem from="1537126599503" duration="9065000" />
       <workItem from="1537220993496" duration="649000" />
       <workItem from="1537286791988" duration="177000" />
+      <workItem from="1537293830797" duration="903000" />
     </task>
     <task id="LOCAL-00001" summary="Added ReadMe">
       <created>1537179558633</created>
@@ -392,7 +393,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14924000" />
+    <option name="totallyTimeSpent" value="15827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -406,7 +407,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2637584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -421,8 +422,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" sideWeight="0.49973574" weight="0.32979798" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49798658" visible="true" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.50201344" side_tool="true" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49731544" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5026846" side_tool="true" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49207187" weight="0.32979798" />
       <window_info anchor="bottom" id="Statistic" order="15" sideWeight="0.49973574" weight="0.32979798" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -492,6 +493,17 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.md" />
+    <entry file="file://$PROJECT_DIR$/LokiLogger/README.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="128">
+            <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LokiLogger/Model/LogType.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -541,21 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LokiLogger/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="16">
-            <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PerformanceSerilog/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding>
             <marker date="1537220980277" expanded="false" signature="6:116" ph="..." />
             <marker date="1537220980277" expanded="true" signature="147:825" ph="{...}" />
