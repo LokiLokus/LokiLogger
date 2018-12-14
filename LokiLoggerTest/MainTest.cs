@@ -8,10 +8,6 @@ namespace LokiLoggerTest {
 		[Fact]
 		public void AddLogs()
 		{
-			Log.Info("Hallo");
-			Log.Warn("Hallo");
-			Log.Crit("Hallo");
-			Log.SysCrit("Hallo");
 		}
 
 		[Fact]
@@ -19,7 +15,7 @@ namespace LokiLoggerTest {
 		{
 			try
 			{
-				Log.DeIgnoreType(LogType.Debug);
+				Log.DeIgnoreType(LogLevel.Debug);
 				Assert.True(true);
 			}
 			catch (Exception e)

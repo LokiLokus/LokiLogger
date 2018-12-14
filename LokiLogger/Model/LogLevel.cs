@@ -1,5 +1,5 @@
 namespace LokiLogger.Model {
-	public enum LogType {
+	public enum LogLevel {
 		Verbose,
 		Debug,
 		Information,

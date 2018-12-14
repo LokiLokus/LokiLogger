@@ -13,12 +13,12 @@ namespace PerformanceTest {
 			int count = 20;
 			DateTime tmpdate = DateTime.Now;
 
-			Log.AddWriter(new FileWriter("/home/lokilokus/Downloads/TestLog.json"));
+			Log.AddWriter(new FileLogAdapter("/home/lokilokus/Downloads/TestLog.json"));
 
-			Log.IgnoreType(LogType.Debug);
-			Log.IgnoreType(LogType.Verbose);
-			Log.IgnoreType(LogType.Information);
-			Log.IgnoreType(LogType.Warning);
+			Log.IgnoreType(LogLevel.Debug);
+			Log.IgnoreType(LogLevel.Verbose);
+			Log.IgnoreType(LogLevel.Information);
+			Log.IgnoreType(LogLevel.Warning);
 
 			List<Task> tmp = new List<Task>();
 			for (int i = 0; i < count; i++)
