@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using LokiLogger.Model;
 
 namespace LokiLogger.LoggerAdapter {

@@ -15,7 +15,6 @@ namespace LokiLoggerTest {
 		{
 			try
 			{
-				Log.DeIgnoreType(LogLevel.Debug);
 				Assert.True(true);
 			}
 			catch (Exception e)

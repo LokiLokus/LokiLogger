@@ -5,16 +5,15 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using LokiLogger.LoggerAdapter;
 using LokiLogger.Model;
-using LokiLogger.Writers;
 
 namespace LokiLogger {
 	public static class Log {
-		private static readonly List<LogLevel> _ignoreList = new List<LogLevel>();
-		private static List<ILogAdapter> _writer { get; set; }
+		private static Dictionary<ILogAdapter,List<LogLevel>> _adapters { get; set; }
 		
 		static Log()
 		{
-			_writer = new List<ILogAdapter> {new BasicLoggerAdapter()};
+			_adapters = new Dictionary<ILogAdapter, List<LogLevel>>();
+			UpdateAdapter(new BasicLoggerAdapter());
 		}
 		
 		#region Verbose
@@ -149,33 +148,82 @@ namespace LokiLogger {
 		}
 		#endregion
 		
-		
-		public static void AddWriter(ILogAdapter logAdapter)
+		/// <summary>
+		/// Adds a Writer to Logger, ignores Nothing
+		/// </summary>
+		/// <param name="logAdapter"></param>
+		/// <exception cref="LoggerAdapterIsNullException"></exception>
+		public static void UpdateAdapter(ILogAdapter logAdapter)
 		{
 			if (logAdapter == null) throw new LoggerAdapterIsNullException();
-			_writer.Add(logAdapter);
+			if (_adapters.ContainsKey(logAdapter))
+			{
+				_adapters[logAdapter] = new List<LogLevel>();
+			}
+			else
+			{
+				_adapters.Add(logAdapter,new List<LogLevel>());		
+			}
+		}
+		/// <summary>
+		/// Updates the Adapter, adds if not already added, Updates IgnoreList for the given Adapter
+		/// </summary>
+		/// <param name="logAdapter"></param>
+		/// <param name="ignoreList"></param>
+		/// <exception cref="LoggerAdapterIsNullException"></exception>
+		/// <exception cref="IgnoreListIsNullException"></exception>
+		public static void UpdateAdapter(ILogAdapter logAdapter,List<LogLevel> ignoreList)
+		{
+			if (logAdapter == null) throw new LoggerAdapterIsNullException();
+			if (ignoreList == null) throw new IgnoreListIsNullException();
+			if (_adapters.ContainsKey(logAdapter))
+			{
+				_adapters[logAdapter] = ignoreList;
+			}
+			else
+			{
+				_adapters.Add(logAdapter,ignoreList);				
+			}
 		}
 
-		public static void IgnoreType(LogLevel level)
+		/// <summary>
+		/// Remove the Adapter from the subscription List
+		/// </summary>
+		/// <param name="logAdapter"></param>
+		public static void RemoveAdapter(ILogAdapter logAdapter)
 		{
-			_ignoreList.Add(level);
+			if(_adapters.ContainsKey(logAdapter))
+				_adapters.Remove(logAdapter);
 		}
 
-		public static void DeIgnoreType(LogLevel level)
+		/// <summary>
+		/// Returns a Dictionary with the ILogAdapter as Key
+		/// and their List of ignored LogLevels
+		/// </summary>
+		/// <returns></returns>
+		public static Dictionary<ILogAdapter, List<LogLevel>> GetAllAdapter()
 		{
-			_ignoreList.Remove(level);
+			return _adapters;
 		}
 
 		private static void Write(LogLevel logLevel, string message, string methodName, string className, int line,
 			params object[] objects)
 		{
-			if(_ignoreList.Contains(logLevel)) return;
-			_writer.ForEach(x =>
+			foreach (ILogAdapter logAdapter in _adapters.Keys)
 			{
-				x.Write(logLevel,message,className, methodName,line,objects);
-			});
+				try
+				{
+					if (logAdapter == null) continue;
+					if(!_adapters[logAdapter].Contains(logLevel))
+						logAdapter.Write(logLevel,message,className, methodName,line,objects);
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine(e);
+				}
+			}
 		}
 	}
-	public class LoggerAdapterIsNullException : Exception {
-	}
+	public class LoggerAdapterIsNullException : Exception {}
+	public class IgnoreListIsNullException : Exception {}
 }
