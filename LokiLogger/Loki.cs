@@ -7,10 +7,13 @@ using LokiLogger.LoggerAdapter;
 using LokiLogger.Model;
 
 namespace LokiLogger {
-	public static class Log {
+	public static class Loki {
 		private static Dictionary<ILogAdapter,List<LogLevel>> _adapters { get; set; }
-		
-		static Log()
+		/// <summary>
+		/// Project Name Space Start everything before that ist remove from ClassPath
+		/// </summary>
+		public static string ProjectNameSpace { get; set; }
+		static Loki()
 		{
 			_adapters = new Dictionary<ILogAdapter, List<LogLevel>>();
 			UpdateAdapter(new BasicLoggerAdapter());
@@ -209,6 +212,19 @@ namespace LokiLogger {
 		private static void Write(LogLevel logLevel, string message, string methodName, string className, int line,
 			params object[] objects)
 		{
+			string classPath = className;
+
+			if (ProjectNameSpace != null)
+			{
+			
+				//Yeah hate me, but i like tmp as Name
+				string[] tmp = className.Split(ProjectNameSpace,2);
+				if (tmp.Length > 1)
+				{
+					className = $"{ProjectNameSpace}{tmp[1]}";
+				}
+			}
+			
 			foreach (ILogAdapter logAdapter in _adapters.Keys)
 			{
 				try

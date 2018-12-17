@@ -1,13 +1,14 @@
 using System;
+using LokiLogger;
 using LokiLogger.Model;
 using Xunit;
-using Log = LokiLogger.Log;
 
 namespace LokiLoggerTest {
 	public class MainTest {
 		[Fact]
 		public void AddLogs()
 		{
+			Loki.Information("Hallo");
 		}
 
 		[Fact]
