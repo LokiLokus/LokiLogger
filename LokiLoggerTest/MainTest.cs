@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using LokiLogger;
 using LokiLogger.Model;
 using Xunit;
@@ -24,4 +26,6 @@ namespace LokiLoggerTest {
 			}
 		}
 	}
+	
+	public class Dummy()
 }
