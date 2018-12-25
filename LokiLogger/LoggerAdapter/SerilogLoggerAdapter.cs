@@ -15,6 +15,16 @@ namespace LokiLogger.LoggerAdapter {
 				.CreateLogger();
 
 		}
+		
+		/// <summary>
+		/// Configure Serilog before use
+		/// </summary>
+		/// <param name="logLevel"></param>
+		/// <param name="message"></param>
+		/// <param name="className"></param>
+		/// <param name="methodName"></param>
+		/// <param name="line"></param>
+		/// <param name="objects"></param>
 		public void Write(LogLevel logLevel, string message, string className, string methodName, int line, params object[] objects)
 		{
 			Log.Write(LogLevelToLogEventLevel(logLevel),$"{className}.{methodName}:{line} {message}",objects);

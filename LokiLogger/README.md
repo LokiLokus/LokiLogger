@@ -1,47 +1,44 @@
-# LokiLogger
+# LokiLogger v2
 
-Most Logging Frameworks like Serilog are quiet complex and so slow.
-LokiLogger is a more than simple Alternative. With under 200 LoC it's
-very small and easy to extend.
+Vendors Lock-In is a common Antipattern, Patterns like Dependency Injection try to remove these Antipatterns,
+but not all Platforms support DI like e.g. ASP Core. So usually a Wrapper/Interface is build, so it's easy to exchange 
+e.g. the Loging Framework. Also some new nice Feature are not supported, like the ```CallerLineNumber``` to get the LineNumber
+in which a Method is called.
+
+So you can build for every Project your on Logging Wrapper, or you can just use LokiLogger, which is basically the same.
 
 ## Why it's much better than other Logger?
-Other Logger are f*** slow, LokiLogger is small and fast.
-Also the most Logger don't safe the Class, Method or LineNumber
-where the Logger is called. But this is obviously a nice Feature
-for Debugging (most Logger have this Feature, but the use Refelection
-=> more than slow => mostly disabled in Production).
-
+LokiLogger do not replace other Logger, it just build a wrapper around them, so you can use LokiLogger
+as your normal Logging Interface and define on Runtime which Framework you want to use (maybe you want to use more than one).
+Maybe you use an Email Notification on Fatal Errors, you can define this in LokiLogger.
 
 ## Usage
 More than simple just:
 ```
-Log.SetWriter(new ConsoleWriter());
+Loki.UpdateAdapter(new SerilogLoggerAdapter());
 
 
-Log.Verbose("Text");
-Log.Debug("Text");
-Log.Info("Text");
-Log.Warn("Text");
-Log.Crit("Text");
-Log.SysCrit("Text");
+Loki.Verbose("Text");
+Loki.Debug("Text");
+Loki.Information("Text");
+Loki.Warning("Text");
+Loki.Error("Text");
+Loki.Fatal("Text");
 
-//Not needed e.g. for the ConsoleWriter but for the FileWriter and some others to close Stream/cleanup
-Log.StopLog();
 
 ```
 
 ## Architecture
-The Libary is divided in Models, Writers and the Main Log Class.
+The Libary is divided in Models, Adapters and the Main Log Class.
  
 Models is mainly the Log Class,
 a DTO for all Logged Events and the Logtype enum, just a simple Enum
 to identitfy the type of a Log Event.
 
-Writers provide the Possibility to write the Logs to a custom output
-per default the ConsoleWriter is used. All of them must Implement the
-the IWriter Interface.
+Adapters are just Adapter to other Logging Frameworks, LokiLogger provide only a simple ConsoleLogger for demo, which is used by default.
+To build your own LoggerAdapter Implement the ```ILogAdapter``` Interface.
 
-The Log Class provides the kernl Features like changing the Writer and
+The Loki Class provides the kernel Features like changing the Writer and
 or Log Events.
 
 ## Features
@@ -56,11 +53,15 @@ The Log Events are divided in:
 On every Log Event the Calling Class, Method and LineNumber is saved
 => it's quite easy to find the Error.
 
+Filter your Logs by LogLevel to different Loggers:
+```
+Loki.UpdateAdapter(new SerilogLoggerAdapter(),new List<LogLevel>(){LogLevel.Verbose,LogLevel.Information});
 
+```
+Now the Serilog Adapter will not get any Logs which are Verbose or Information Level.
 ## Performance
-The Focus on this Project is performance. LokiLogger is e.g. with Console
-Output about 40% faster then Serilog (in some Scenarios about 60 % faster). It's thread safe and build for fast
-Logging.
+
+Of course LokiLogger makes logging slower, but 
 
 ## Licence
 This Libary is under MIT Lincense published.
