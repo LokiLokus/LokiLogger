@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using LokiLogger.LoggerAdapter;
@@ -12,11 +13,12 @@ namespace LokiLogger {
 		/// <summary>
 		/// Project Name Space Start everything before that ist remove from ClassPath
 		/// </summary>
-		public static string ProjectNameSpace { get; set; }
+		private static string ProjectNameSpace { get; set; }
 		static Loki()
 		{
 			_adapters = new Dictionary<ILogAdapter, List<LogLevel>>();
 			UpdateAdapter(new BasicLoggerAdapter());
+			ProjectNameSpace = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault()?.Namespace;
 		}
 		
 		#region Verbose

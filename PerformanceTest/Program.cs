@@ -12,7 +12,6 @@ namespace PerformanceTest {
 		private static void Main(string[] args)
 		{
 			DateTime tmpdate = DateTime.Now;
-			Loki.ProjectNameSpace = "lokilogger";
 
 
 			for (int i = 0; i < 100000; i++)

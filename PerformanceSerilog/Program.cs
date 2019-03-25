@@ -10,10 +10,9 @@ namespace PerformanceSerilog {
 		private static void Main(string[] args)
 		{
 			DateTime tmpdate = DateTime.Now;
-			Loki.ProjectNameSpace = "lokilogger";
 
 
-			for (int i = 0; i < 100000;ut i++)
+			for (int i = 0; i < 100000; i++)
 			{
 				Loki.Information("Hallo das ist das ding hier {s}",new Dictionary<string,string>(){{"Hallo","Hallo"}},"asdasd");
 			}
@@ -23,7 +22,6 @@ namespace PerformanceSerilog {
 		
 		public class Dummy {
 			public int ID { get; set; }
-			public TYPE Type { get; set; }
 		}
 	}
 }
