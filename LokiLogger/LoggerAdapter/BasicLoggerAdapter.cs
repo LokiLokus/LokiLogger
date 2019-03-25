@@ -37,7 +37,7 @@ namespace LokiLogger.LoggerAdapter {
 
 			try
 			{
-				result += ": " + String.Format(message,objects);
+				result += ": " + String.Format(message);
 			}
 			catch (Exception e)
 			{

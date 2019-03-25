@@ -6,9 +6,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Serilog.AspNetCore" Version="2.1.2-dev-00026" />
-      <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00777" />
-      <PackageReference Include="Serilog.Sinks.File" Version="4.0.1-dev-00796" />
+      <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\LokiLogger\LokiLogger.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="System.Console, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\..\..\.nuget\packages\microsoft.netcore.app\2.1.0\ref\netcoreapp2.1\System.Console.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

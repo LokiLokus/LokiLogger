@@ -2,6 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
+	<PackageId>LokiLogger</PackageId>
+	<Version>2.0.2</Version>
+	<Authors>LokiLokus</Authors>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -12,10 +15,5 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <PlatformTarget>x64</PlatformTarget>
     </PropertyGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Serilog" Version="2.7.1" />
-      <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00779" />
-    </ItemGroup>
 
 </Project>

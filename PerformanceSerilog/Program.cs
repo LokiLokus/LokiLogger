@@ -2,40 +2,28 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using LokiLogger;
 using Serilog;
 
 namespace PerformanceSerilog {
 	internal class Program {
 		private static void Main(string[] args)
 		{
-			Log.Logger = new LoggerConfiguration()
-				.MinimumLevel.Debug()
-				.WriteTo.File("/home/lokilokus/Downloads/TestLog.json")
-				.WriteTo.Console()
-				.CreateLogger();
-
 			DateTime tmpdate = DateTime.Now;
-			int count = 20000;
-			
+			Loki.ProjectNameSpace = "lokilogger";
 
-			List<Task> tmp = new List<Task>();
-			for (int i = 0; i < count; i++)
-				tmp.Add(new Task(() =>
-				{
-					Log.Information("Hallo");
-					Thread.Sleep(1);
-					Log.Warning("HAsdas");
-					Log.Error("asdas");
-					Thread.Sleep(1);
-					Log.Fatal("asdsad");
-				}));
 
-			tmp.ForEach(x => { x.Start(); });
-			Task.WaitAll(tmp.ToArray());
-
+			for (int i = 0; i < 100000;ut i++)
+			{
+				Loki.Information("Hallo das ist das ding hier {s}",new Dictionary<string,string>(){{"Hallo","Hallo"}},"asdasd");
+			}
 			Console.WriteLine((DateTime.Now - tmpdate).TotalSeconds);
-
 			Console.ReadKey();
+		}
+		
+		public class Dummy {
+			public int ID { get; set; }
+			public TYPE Type { get; set; }
 		}
 	}
 }

@@ -177,6 +177,8 @@ namespace LokiLogger {
 		/// <exception cref="IgnoreListIsNullException"></exception>
 		public static void UpdateAdapter(ILogAdapter logAdapter,List<LogLevel> ignoreList)
 		{
+			if(logAdapter == null) throw new ArgumentNullException("logAdapter is null");
+			if(ignoreList == null) throw new ArgumentNullException("ignoreList is null");
 			if (logAdapter == null) throw new LoggerAdapterIsNullException();
 			if (ignoreList == null) throw new IgnoreListIsNullException();
 			if (_adapters.ContainsKey(logAdapter))
@@ -195,6 +197,7 @@ namespace LokiLogger {
 		/// <param name="logAdapter"></param>
 		public static void RemoveAdapter(ILogAdapter logAdapter)
 		{
+			if(logAdapter == null) throw new ArgumentNullException("logAdapter is null");
 			if(_adapters.ContainsKey(logAdapter))
 				_adapters.Remove(logAdapter);
 		}

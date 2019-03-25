@@ -11,7 +11,7 @@ namespace LokiLoggerTest {
 		[Fact]
 		public void AddLogs()
 		{
-			Loki.UpdateAdapter(new SerilogLoggerAdapter());
+			Loki.UpdateAdapter(new BasicLoggerAdapter());
 			Loki.Information("Hallo");
 		}
 
