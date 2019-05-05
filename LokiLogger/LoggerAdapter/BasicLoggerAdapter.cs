@@ -120,11 +120,11 @@ namespace LokiLogger.LoggerAdapter {
 			}
 
 			result += "[EXC]";
-
+			
 			try
 			{
 				
-				result += ": " + message + " " + JsonConvert.SerializeObject(data);
+				result += ": " + message + " " + exception.Message + " " + exception.StackTrace;
 			}
 			catch (Exception e)
 			{

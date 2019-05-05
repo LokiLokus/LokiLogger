@@ -18,6 +18,15 @@ namespace LokiLoggerTest {
 		[Fact]
 		public void TestIgnore()
 		{
+			Loki.ReturnInfo("Test",new List<string>(){"asd","awd"});
+			try
+			{
+				throw new Exception("Test");
+			}
+			catch (Exception e)
+			{
+				Loki.ExceptionInformation(e);
+			}
 			try
 			{
 				Assert.True(true);
