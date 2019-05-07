@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using LokiLogger;
 using LokiLogger.LoggerAdapter;
 using LokiLogger.Model;
@@ -11,8 +13,14 @@ namespace LokiLoggerTest {
 		[Fact]
 		public void AddLogs()
 		{
-			Loki.UpdateAdapter(new BasicLoggerAdapter());
-			Loki.Information("Hallo");
+			Loki.UpdateAdapter(new ObjectLogger("http://localhost:5000/api/Logging/GetLog","Log",1000));
+			for (int i = 0; i < 10000000; i++)
+			{
+				
+				Loki.Information("Hallo");
+				Loki.Information("Hallo");
+				Loki.ReturnCritical("Hallo");
+			}
 		}
 
 		[Fact]

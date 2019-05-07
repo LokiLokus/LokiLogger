@@ -17,7 +17,6 @@ namespace LokiLogger {
 		static Loki()
 		{
 			_adapters = new Dictionary<ILogAdapter, List<LogLevel>>();
-			UpdateAdapter(new BasicLoggerAdapter());
 			ProjectNameSpace = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault()?.Namespace;
 		}
 		
