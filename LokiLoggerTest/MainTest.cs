@@ -13,13 +13,14 @@ namespace LokiLoggerTest {
 		[Fact]
 		public void AddLogs()
 		{
-			Loki.UpdateAdapter(new ObjectLogger("http://localhost:5000/api/Logging/GetLog","Log",1000));
-			for (int i = 0; i < 10000000; i++)
+			Loki.UpdateAdapter(new ObjectLogger("http://localhost:5000/api/Logging/Log","Log",1000));
+			for (int i = 0; i < 100; i++)
 			{
 				
 				Loki.Information("Hallo");
 				Loki.Information("Hallo");
 				Loki.ReturnCritical("Hallo");
+				Thread.Sleep(100);
 			}
 		}
 

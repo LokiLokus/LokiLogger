@@ -1,34 +1,38 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Timers;
+using LokiLogger;
+using LokiLogger.LoggerAdapter;
 using LokiLogger.Model;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 
-namespace LokiLogger.LoggerAdapter
-{
-    public class ObjectLogger:ILogAdapter
-    {
-        private string _hostName;
+namespace LokiObjectAdapter {
+	public class LokiObjectAdapter : ILogAdapter,IDisposable,IHostedService{
+		private string _hostName;
         private string _name;
-        private int _timeInterval;
         private ConcurrentQueue<Log> _logs;
-        private Timer _timer;
         private HttpClient _client;
-        
-        public ObjectLogger(string hostName,string name,int timeInterval = 2000)
+	    private System.Threading.Timer _timer;
+	    
+        public LokiObjectAdapter()
         {
             _logs = new ConcurrentQueue<Log>();
-            _hostName = hostName;
-            _timeInterval = timeInterval;
-            _timer = new Timer(timeInterval);
-            _timer.AutoReset = true;
-            _timer.Elapsed += TimerOnElapsed;
+            _hostName = "http://localhost:5000/api/Logging/Log";
+            _client = new HttpClient();
+            Loki.UpdateAdapter(this);
         }
 
-        private void TimerOnElapsed(object sender, ElapsedEventArgs e)
+        
+	    [MethodImpl(MethodImplOptions.Synchronized)]
+        private void SendData(object state)
         {
+            Console.WriteLine("Send STUFF");
             List<Log> tmpSafe = new List<Log>();
             Log tmp;
             while (_logs.TryDequeue(out tmp))
@@ -38,14 +42,15 @@ namespace LokiLogger.LoggerAdapter
 
             try
             {
-                _client.PostAsJsonAsync(_hostName, tmpSafe);
+                _client.PostAsJsonAsync(_hostName, tmpSafe).Wait();
             }
             catch (Exception exception)
             {
+                Console.WriteLine("Error occured");
                 tmpSafe.ForEach(x => _logs.Enqueue(x));
             }
         }
-
+        
         public void Write(LogLevel logLevel, string message, string className, string methodName, int line, params object[] objects)
         {
             string data;
@@ -138,7 +143,31 @@ namespace LokiLogger.LoggerAdapter
             };
             _logs.Enqueue(result);
         }
-    }
+
+	    public void Dispose()
+	    {
+	        _timer.Dispose();
+	        SendData(null);
+	        _client.Dispose();
+	    }
+
+	    public Task StartAsync(CancellationToken cancellationToken)
+	    {
+	        
+	        _timer = new System.Threading.Timer(SendData, null, TimeSpan.Zero, 
+	            TimeSpan.FromSeconds(5));
+
+	        return Task.CompletedTask;
+	    }
+
+	    public Task StopAsync(CancellationToken cancellationToken)
+	    {
+	        
+	        _timer?.Change(Timeout.Infinite, 0);
+
+	        return Task.CompletedTask;
+	    }
+	}
 
     public class Log
     {
