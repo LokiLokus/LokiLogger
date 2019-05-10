@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LokiLogger;
+using LokiObjectAdapter;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,9 +26,8 @@ namespace LokiWebAppTest {
 		public void ConfigureServices(IServiceCollection services)
 		{
 			Loki.Information("Hallo");
-			services.AddHostedService<LokiObjectAdapter.LokiObjectAdapter>();
+			services.AddLokiObjectLogger("http://localhost:5000/api/Logging/Log", "LokiTestLogger");
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

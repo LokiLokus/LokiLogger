@@ -16,6 +16,14 @@ namespace LokiWebAppTest.Controllers {
 			Loki.Information("Hallo");
 			var tmp = new string[] {"value1", "value2"};
 			Loki.ReturnCritical(tmp);
+			try
+			{
+				throw new Exception("FEHLER");
+			}
+			catch (Exception e)
+			{
+				Loki.ExceptionCritical(e);
+			}
 			Loki.SystemCritical("OMG",this);
 			return tmp;
 		}

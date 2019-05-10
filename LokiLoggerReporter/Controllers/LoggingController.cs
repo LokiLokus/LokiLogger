@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using LokiLoggerReporter.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,16 +17,22 @@ namespace LokiLoggerReporter.Controllers
             _dbContext = dbContext;
         }
         [HttpPost("Log")]
-        public IActionResult Log([FromBody] List<Log> model)
+        public async Task<IActionResult> Log([FromBody] List<Log> model)
         {
-            if (model != null)
+            try
             {
-                _dbContext.AddRange(model);
-                _dbContext.SaveChanges();
-                return Ok();
+                if (model != null)
+                {
+                    _dbContext.AddRange(model);
+                    await _dbContext.SaveChangesAsync();
+                    return Ok();
+                }
+                return BadRequest();
             }
-
-            return BadRequest();
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpGet("GetLog")]

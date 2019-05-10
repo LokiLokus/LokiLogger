@@ -9,45 +9,53 @@ using System.Timers;
 using LokiLogger;
 using LokiLogger.LoggerAdapter;
 using LokiLogger.Model;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 
 namespace LokiObjectAdapter {
 	public class LokiObjectAdapter : ILogAdapter,IDisposable,IHostedService{
-		private string _hostName;
-        private string _name;
         private ConcurrentQueue<Log> _logs;
         private HttpClient _client;
 	    private System.Threading.Timer _timer;
 	    
+	    public static string HostName { get; set; }
+	    public static string Name { get; set; }
+	    private static object _lock = new object();
         public LokiObjectAdapter()
         {
             _logs = new ConcurrentQueue<Log>();
-            _hostName = "http://localhost:5000/api/Logging/Log";
             _client = new HttpClient();
             Loki.UpdateAdapter(this);
         }
 
-        
+
+
 	    [MethodImpl(MethodImplOptions.Synchronized)]
         private void SendData(object state)
         {
-            Console.WriteLine("Send STUFF");
-            List<Log> tmpSafe = new List<Log>();
-            Log tmp;
-            while (_logs.TryDequeue(out tmp))
-            {
-                tmpSafe.Add(tmp);
-            }
-
-            try
-            {
-                _client.PostAsJsonAsync(_hostName, tmpSafe).Wait();
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine("Error occured");
-                tmpSafe.ForEach(x => _logs.Enqueue(x));
+            lock(_lock){
+                Console.WriteLine("Send STUFF");
+                List<Log> tmpSafe = new List<Log>();
+                Log tmp;
+                while (_logs.TryDequeue(out tmp))
+                {
+                    tmpSafe.Add(tmp);
+                }
+    
+                try
+                {
+                    if(tmpSafe.Count > 0){
+                        var result = _client.PostAsJsonAsync(HostName, tmpSafe);
+                        var data = result.Result;
+                        if(!data.IsSuccessStatusCode) throw new Exception();
+                    }
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("Error occured");
+                    tmpSafe.ForEach(x => _logs.Enqueue(x));
+                }
             }
         }
         
@@ -76,7 +84,8 @@ namespace LokiObjectAdapter {
                 LogTyp = LogTyp.Normal,
                 Message = message,
                 Data = data,
-                Name = _name
+                Name = Name,
+                ThreadId = Thread.CurrentThread.ManagedThreadId
             };
             _logs.Enqueue(result);
         }
@@ -105,7 +114,8 @@ namespace LokiObjectAdapter {
                 LogTyp = LogTyp.Return,
                 Message = message,
                 Data = data,
-                Name = _name
+                Name = Name,
+                ThreadId = Thread.CurrentThread.ManagedThreadId
             };
             _logs.Enqueue(result);
         }
@@ -139,7 +149,8 @@ namespace LokiObjectAdapter {
                 Message = message,
                 Exception = exData,
                 Data = data,
-                Name = _name
+                Name = Name,
+                ThreadId = Thread.CurrentThread.ManagedThreadId
             };
             _logs.Enqueue(result);
         }
@@ -171,6 +182,7 @@ namespace LokiObjectAdapter {
 
     public class Log
     {
+        public int ThreadId { get; set; }
         public DateTime Time { get; set; }
         public LogLevel LogLevel { get; set; }
         public string Message { get; set; }
@@ -186,5 +198,16 @@ namespace LokiObjectAdapter {
     public enum LogTyp
     {
         Normal,Exception,Return
+    }
+
+    public static class LokiObjectAdpaterExtension {
+        
+        public static IServiceCollection AddLokiObjectLogger(this IServiceCollection services,string hostName,string name)
+        {
+            LokiObjectAdapter.HostName = hostName;
+            LokiObjectAdapter.Name = name;
+            services.AddHostedService<LokiObjectAdapter>();
+            return services;
+        }
     }
 }

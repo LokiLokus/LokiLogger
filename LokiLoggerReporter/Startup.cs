@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.WebSockets;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using LokiLogger;
@@ -35,7 +37,7 @@ namespace LokiLoggerReporter
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddDbContext<DatabaseContext>(opt => opt.UseInMemoryDatabase("InMemory"));
+            services.AddDbContext<DatabaseContext>(opt => opt.UseSqlite("Data Source=" + Path.Combine(ContentRootPath() , "Database.db")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -63,5 +65,16 @@ namespace LokiLoggerReporter
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+        private string ContentRootPath()
+        {
+            string fullPath = Assembly.GetExecutingAssembly().Location;
+            int pos = fullPath.IndexOf("LokiLoggerReporter", StringComparison.Ordinal);
+            string sharedFolder = fullPath.Substring(0, pos);
+
+            sharedFolder += "LokiLogger";
+            
+            return sharedFolder;
+        }
+
     }
 }
