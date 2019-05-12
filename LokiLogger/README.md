@@ -50,6 +50,11 @@ The Log Events are divided in:
  - System Critical => System is unstable, Writers should send an Alert,
  when this Event happens
 
+### Log Special events
+Log Return values:
+ - Especially logging Exceptions is very Important so use ```Loki.ExceptionDebug(Exception)```
+ - Logging return Values ( very important for Debug) ```Loki.ReturnDebug(object)```
+
 On every Log Event the Calling Class, Method and LineNumber is saved
 => it's quite easy to find the Error.
 
