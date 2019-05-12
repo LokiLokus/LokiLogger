@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using LokiLogger.Model;
-using Newtonsoft.Json;
-
 namespace LokiLogger.LoggerAdapter {
 	public class BasicLoggerAdapter : ILogAdapter{
 		
@@ -80,7 +78,7 @@ namespace LokiLogger.LoggerAdapter {
 
 			try
 			{
-				result += ": " + message + " " + JsonConvert.SerializeObject(data);
+				result += ": " + message + " " + data;
 			}
 			catch (Exception e)
 			{
