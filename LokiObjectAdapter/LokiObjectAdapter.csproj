@@ -5,8 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="LokiLogger" Version="2.2.1" />
         <PackageReference Include="Microsoft.AspNetCore.App" />
-      <ProjectReference Include="..\LokiLogger\LokiLogger.csproj" />
     </ItemGroup>
 
 </Project>

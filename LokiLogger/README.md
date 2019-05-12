@@ -64,9 +64,7 @@ Loki.UpdateAdapter(new SerilogLoggerAdapter(),new List<LogLevel>(){LogLevel.Verb
 
 ```
 Now the Serilog Adapter will not get any Logs which are Verbose or Information Level.
-## Performance
-
-Of course LokiLogger makes logging slower, but 
+## Adapter
 
 ## Licence
 This Libary is under MIT Lincense published.
