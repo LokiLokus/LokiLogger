@@ -19,6 +19,7 @@ namespace LokiLoggerReporter.Models
         public string Exception { get; set; }
         public string Data { get; set; }
         public string Name { get; set; }
+        public int ThreadId { get; set; }
     }
 
     public enum LogTyp

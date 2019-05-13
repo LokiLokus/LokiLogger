@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using LokiLogger;
+using LokiLoggerReporter.Config;
 using LokiLoggerReporter.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,13 +32,10 @@ namespace LokiLoggerReporter
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-            services.AddDbContext<DatabaseContext>(opt => opt.UseSqlite("Data Source=" + Path.Combine(ContentRootPath() , "Database.db")));
+            
+            DatabaseSettings databaseSettings = GetSettings<DatabaseSettings>("DatabaseSettings");
+
+            services.AddDbContext<DatabaseContext>(opt => opt.UseMySql(databaseSettings.ConnectionString));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -75,6 +73,12 @@ namespace LokiLoggerReporter
             
             return sharedFolder;
         }
-
+        
+        private T GetSettings<T>(string section)
+        {
+            T setting = Configuration.GetSection(section).Get<T>();
+            if (setting == null) throw new NullReferenceException(section + " is null");
+            return setting;
+        }
     }
 }
