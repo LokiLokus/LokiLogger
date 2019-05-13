@@ -35,7 +35,7 @@ namespace LokiLoggerReporter
             
             DatabaseSettings databaseSettings = GetSettings<DatabaseSettings>("DatabaseSettings");
 
-            services.AddDbContext<DatabaseContext>(opt => opt.UseMySql(databaseSettings.ConnectionString));
+            services.AddDbContext<DatabaseContext>(opt => opt.UseInMemoryDatabase(databaseSettings.ConnectionString));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

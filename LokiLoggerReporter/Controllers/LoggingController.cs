@@ -40,5 +40,40 @@ namespace LokiLoggerReporter.Controllers
         {
             return Ok(_dbContext.Logs.ToList());
         }
+
+        [HttpGet("GetDebug")]
+        public IActionResult GetDebug()
+        {
+            var tmp = new List<Log>()
+            {
+                new Log()
+                {
+                    Class = "asdsad",
+                    ID = 1,
+                    Line = 134,
+                    Data = "[]",
+                    Exception = null,
+                    LogLevel = LogLevel.Information,
+                    LogTyp = LogTyp.Normal,
+                    Message = "Funktion wurde aufgerufen",
+                    Method = "CallApi",
+                    Name = "LokiLogger"
+                },
+                new Log()
+                {
+                    Class = "ApiController",
+                    ID = 2,
+                    Line = 20,
+                    Data = "[]",
+                    Exception = null,
+                    LogLevel = LogLevel.Information,
+                    LogTyp = LogTyp.Normal,
+                    Message = "Funktion wurde aufgerufen",
+                    Method = "CallApi",
+                    Name = "LokiLogger"
+                }
+            };
+            return Ok(tmp);
+        }
     }
 }

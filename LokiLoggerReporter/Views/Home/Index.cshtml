@@ -1,0 +1,61 @@
+@model object
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div id="app">
+    {{ info }}
+    {{data.length}}
+    <table class="table table-borderd table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Time</th>
+            <th>Level</th>
+            <th>Typ</th>
+            <th>Name</th>
+            <th>Message</th>
+            <th>Class</th>
+            <th>Method</th>
+            <th>Line</th>
+        </tr>
+        <tr v-for="item in data">
+            <td>{{ item.id }}</td>
+            <td>{{ item.time }}</td>
+            <td>{{ item.logLevel }}</td>
+            <td>{{ item.logTyp }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.message }}</td>
+            <td>{{ item.class }}</td>
+            <td>{{ item.method }}</td>
+            <td>{{ item.line }}</td>
+        </tr>
+    </table>
+</div>
+
+
+<script>
+    Vue.use(VueResource);
+    url = "/api/Logging/GetLog";
+    var tmp = new Vue({
+        el: '#app',
+        data: { 
+            info:"Dashboard",
+            data:[]
+        },
+        methods: {
+            work() {
+                this.$http.get(url).then(function(response) {
+                        this.data = response.data;
+                    },
+                    function(error) {
+                        alert(error.statusText);
+                    });
+            }
+        },
+        created() {
+            this.work();
+        }
+    });
+</script>
