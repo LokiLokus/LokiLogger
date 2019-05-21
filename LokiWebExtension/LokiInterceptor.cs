@@ -10,7 +10,7 @@ using LokiWebExtension.Interception.Interfaces;
 namespace LokiWebExtension {
 	public class LokiInterceptor :IMethodInterceptor {
 		private LokiAttribute _attribute;
-		private Stopwatch _stopwatch;
+		private Stopwatch _stopwatch = new Stopwatch();
 		
 		public void BeforeInvoke(InvocationContext invocationContext)
 		{

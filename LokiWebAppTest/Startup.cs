@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using LogLevel = LokiLogger.Model.LogLevel;
 
 namespace LokiWebAppTest {
 	public class Startup {
@@ -28,13 +29,18 @@ namespace LokiWebAppTest {
 		{
 			Loki.Information("Hallo");
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+			
 			services.AddLokiObjectLogger(options =>
 			{
 				options.Name = "asd";
-				options.HostName = "http://localhost:50001/";
-				options.ActivateAttributes = false;
-				
+				options.HostName = "https://llogger.hopfenspace.org/api/Logging/Log";
+				options.ActivateAttributes = true;
+				options.AttributeDefaultInvokeLevel = LogLevel.Information;
+				options.AttributeDefaultEndLevel = LogLevel.Information;
+				options.SendInterval = 1;
+
 			});
+			
 			services.AddTransientWithProxy<ITest, Tester>();
 		}
 

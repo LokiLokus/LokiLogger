@@ -9,6 +9,11 @@ namespace LokiWebAppTest.Controllers {
 	[Route("/")]
 	[ApiController]
 	public class ValuesController : ControllerBase {
+		private ITest test;
+		public ValuesController(ITest test)
+		{
+			this.test = test;
+		}
 		// GET api/values
 		[HttpGet]
 		public ActionResult<IEnumerable<string>> Get()
@@ -16,6 +21,7 @@ namespace LokiWebAppTest.Controllers {
 			Loki.Information("Hallo");
 			var tmp = new string[] {"value1", "value2"};
 			Loki.ReturnCritical(tmp);
+			test.Test();
 			try
 			{
 				throw new Exception("FEHLER");
@@ -24,6 +30,9 @@ namespace LokiWebAppTest.Controllers {
 			{
 				Loki.ExceptionCritical(e);
 			}
+
+			test.Test2("asd", 123);
+			
 			Loki.SystemCritical("OMG",this);
 			return tmp;
 		}

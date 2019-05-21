@@ -9,6 +9,8 @@ using System.Timers;
 using LokiLogger;
 using LokiLogger.LoggerAdapter;
 using LokiLogger.Model;
+using LokiWebExtension.Interception.Extensions;
+using LokiWebExtension.Interception.Strategies;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
@@ -21,8 +23,6 @@ namespace LokiWebExtension {
 	    
 	    
 	    public static LokiConfig LokiConfig { get; set; }
-	    public static string HostName { get; set; }
-	    public static string Name { get; set; }
 	    private static object _lock = new object();
         public LokiObjectAdapter()
         {
@@ -47,7 +47,7 @@ namespace LokiWebExtension {
                 try
                 {
                     if(tmpSafe.Count > 0){
-                        var result = _client.PostAsJsonAsync(HostName, tmpSafe);
+                        var result = _client.PostAsJsonAsync(LokiConfig.HostName, tmpSafe);
                         var data = result.Result;
                         if(!data.IsSuccessStatusCode) throw new Exception();
                     }
@@ -85,7 +85,7 @@ namespace LokiWebExtension {
                 LogTyp = LogTyp.Normal,
                 Message = message,
                 Data = data,
-                Name = Name,
+                Name = LokiConfig.Name,
                 ThreadId = Thread.CurrentThread.ManagedThreadId
             };
             _logs.Enqueue(result);
@@ -115,7 +115,7 @@ namespace LokiWebExtension {
                 LogTyp = LogTyp.Return,
                 Message = message,
                 Data = data,
-                Name = Name,
+                Name = LokiConfig.Name,
                 ThreadId = Thread.CurrentThread.ManagedThreadId,
                 ElapsedTime = elapsedTime
             };
@@ -151,7 +151,7 @@ namespace LokiWebExtension {
                 Message = message,
                 Exception = exData,
                 Data = data,
-                Name = Name,
+                Name = LokiConfig.Name,
                 ThreadId = Thread.CurrentThread.ManagedThreadId
             };
             _logs.Enqueue(result);
@@ -182,7 +182,7 @@ namespace LokiWebExtension {
                 Message = "",
                 Exception = null,
                 Data = data,
-                Name = Name,
+                Name = LokiConfig.Name,
                 ThreadId = Thread.CurrentThread.ManagedThreadId
             };
             _logs.Enqueue(result);
@@ -197,10 +197,8 @@ namespace LokiWebExtension {
 
 	    public Task StartAsync(CancellationToken cancellationToken)
 	    {
-	        
 	        _timer = new System.Threading.Timer(SendData, null, TimeSpan.Zero, 
-	            TimeSpan.FromSeconds(5));
-
+	            TimeSpan.FromSeconds(LokiConfig.SendInterval));
 	        return Task.CompletedTask;
 	    }
 
@@ -241,6 +239,9 @@ namespace LokiWebExtension {
             LokiConfig config = new LokiConfig();
             options.Invoke(config);
             LokiObjectAdapter.LokiConfig = config;
+            services.AddSimpleProxy(opt =>
+                opt.AddInterceptor<LokiAttribute, LokiInterceptor>()
+                    .WithOrderingStrategy<PyramidOrderStrategy>());
             services.AddHostedService<LokiObjectAdapter>();
             return services;
         }
@@ -252,5 +253,6 @@ namespace LokiWebExtension {
         public bool ActivateAttributes { get; set; }
         public LogLevel AttributeDefaultInvokeLevel { get; set; }
         public LogLevel AttributeDefaultEndLevel { get; set; }
+        public int SendInterval { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace LokiWebExtension.Interception.Extensions
         /// <param name="services">Services Collection</param>
         /// <param name="options">Proxy Configuration Options</param>
         /// <returns><see cref="IServiceCollection"/></returns>
-        public static IServiceCollection EnableSimpleProxy(this IServiceCollection services, Action<SimpleProxyConfiguration> options)
+        public static IServiceCollection AddSimpleProxy(this IServiceCollection services, Action<SimpleProxyConfiguration> options)
         {
             // Check Inputs for Null
             if (options == null)
@@ -45,7 +45,7 @@ namespace LokiWebExtension.Interception.Extensions
         /// <param name="services">Services Collection</param>
         /// <returns><see cref="IServiceCollection"/></returns>
         public static IServiceCollection AddTransientWithProxy<TInterface, TService>(this IServiceCollection services)
-            where TService : class, TInterface
+            where TService : class,TInterface
             where TInterface : class 
             
         {
