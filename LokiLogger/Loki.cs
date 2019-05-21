@@ -12,8 +12,9 @@ namespace LokiLogger {
 		private static Dictionary<ILogAdapter,List<LogLevel>> _adapters { get; set; }
 		/// <summary>
 		/// Project Name Space Start everything before that ist remove from ClassPath
+		/// It is setted automatically but sometimes this is buggy, so set it manually
 		/// </summary>
-		private static string ProjectNameSpace { get; set; }
+		public static string ProjectNameSpace { get; set; }
 		static Loki()
 		{
 			_adapters = new Dictionary<ILogAdapter, List<LogLevel>>();
@@ -46,10 +47,18 @@ namespace LokiLogger {
 			WriteReturn(LogLevel.Debug,data,callerName,className,lineNr);
 		}
 		
-		public static void ReturnDebug(string message,object data, [CallerLineNumber] int lineNr = 0,
+		public static T ReturnDebug<T>(T data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			WriteReturn(LogLevel.Debug,data,callerName,className,lineNr);
+			return data;
+		}
+		
+		public static T ReturnDebug<T>(string message,T data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.Debug,data,callerName,className,lineNr,message);
+			return data;
 		}
 		
 		public static void Debug(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
@@ -92,16 +101,24 @@ namespace LokiLogger {
 			WriteException(LogLevel.Information, exception, callerName, className, lineNr);
 		}
 		
+		public static T ReturnInfo<T>(T data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			WriteReturn(LogLevel.Information,data,callerName,className,lineNr);
+			return data;
+		}
+		
 		public static void ReturnInfo(object data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.Information,data,callerName,className,lineNr);
 		}
 		
-		public static void ReturnInfo(string message,object data, [CallerLineNumber] int lineNr = 0,
+		public static T ReturnInfo<T>(string message,T data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.Information,data,callerName,className,lineNr,message);
+			return data;
 		}
 		
 		public static void Information(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
@@ -144,17 +161,24 @@ namespace LokiLogger {
 			WriteException(LogLevel.Warning, exception, callerName, className, lineNr);
 		}
 
-		
 		public static void ReturnWarning(object data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.Warning,data,callerName,className,lineNr);
 		}
 		
-		public static void ReturnWarning(string message,object data, [CallerLineNumber] int lineNr = 0,
+		public static T ReturnWarning<T>(T data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			WriteReturn(LogLevel.Warning,data,callerName,className,lineNr);
+			return data;
+		}
+		
+		public static T ReturnWarning<T>(string message,T data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.Warning,data,callerName,className,lineNr,message);
+			return data;
 		}
 		
 		public static void Warning(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
@@ -197,17 +221,24 @@ namespace LokiLogger {
 			WriteException(LogLevel.Critical, exception, callerName, className, lineNr);
 		}
 
-		
 		public static void ReturnCritical(object data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.Critical,data,callerName,className,lineNr);
 		}
 		
-		public static void ReturnCritical(string message,object data, [CallerLineNumber] int lineNr = 0,
+		public static T ReturnCritical<T>(T data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			WriteReturn(LogLevel.Critical,data,callerName,className,lineNr);
+			return data;
+		}
+		
+		public static T ReturnCritical<T>(string message,T data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.Critical,data,callerName,className,lineNr,message);
+			return data;
 		}
 		
 		public static void Critical(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
@@ -257,10 +288,18 @@ namespace LokiLogger {
 			WriteReturn(LogLevel.SystemCritical,data,callerName,className,lineNr);
 		}
 		
-		public static void ReturnSystemCritical(string message,object data, [CallerLineNumber] int lineNr = 0,
+		public static T ReturnSystemCritical<T>(T data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			WriteReturn(LogLevel.SystemCritical,data,callerName,className,lineNr);
+			return data;
+		}
+		
+		public static T ReturnSystemCritical<T>(string message,T data, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
 			WriteReturn(LogLevel.SystemCritical,data,callerName,className,lineNr,message);
+			return data;
 		}
 
 		public static void SystemCritical(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")

@@ -13,12 +13,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 
-namespace LokiObjectAdapter {
+namespace LokiWebExtension {
 	public class LokiObjectAdapter : ILogAdapter,IDisposable,IHostedService{
         private ConcurrentQueue<Log> _logs;
         private HttpClient _client;
 	    private System.Threading.Timer _timer;
 	    
+	    
+	    public static LokiConfig LokiConfig { get; set; }
 	    public static string HostName { get; set; }
 	    public static string Name { get; set; }
 	    private static object _lock = new object();
@@ -35,7 +37,6 @@ namespace LokiObjectAdapter {
         private void SendData(object state)
         {
             lock(_lock){
-                Console.WriteLine("Send STUFF");
                 List<Log> tmpSafe = new List<Log>();
                 Log tmp;
                 while (_logs.TryDequeue(out tmp))
@@ -200,14 +201,24 @@ namespace LokiObjectAdapter {
         Normal,Exception,Return
     }
 
-    public static class LokiObjectAdpaterExtension {
+    public static class LokiWebServiceExtension {
         
-        public static IServiceCollection AddLokiObjectLogger(this IServiceCollection services,string hostName,string name)
+        public static IServiceCollection AddLokiObjectLogger(this IServiceCollection services, Action<LokiConfig> options)
         {
-            LokiObjectAdapter.HostName = hostName;
-            LokiObjectAdapter.Name = name;
+            LokiConfig config = new LokiConfig();
+            options.Invoke(config);
+            LokiObjectAdapter.LokiConfig = config;
             services.AddHostedService<LokiObjectAdapter>();
             return services;
         }
+    }
+
+    public class LokiConfig {
+        public string HostName { get; set; }
+        public string Name { get; set; }
+        public bool ActivateAttributes { get; set; }
+        public bool EnableStopWatch { get; set; }
+        public LogLevel AttributeDefaultInvokeLevel { get; set; }
+        public LogLevel AttributeDefaultEndLevel { get; set; }
     }
 }

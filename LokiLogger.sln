@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiLoggerReporter", "LokiL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiWebAppTest", "LokiWebAppTest\LokiWebAppTest.csproj", "{B66386A6-AFD2-49CE-88D5-177BB3E4B644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiObjectAdapter", "LokiObjectAdapter\LokiObjectAdapter.csproj", "{7DE57DEC-CAD7-4DCF-891E-6C71074F6E67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiObjectAdapter", "LokiWebExtension\LokiWebExtension.csproj", "{7DE57DEC-CAD7-4DCF-891E-6C71074F6E67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
