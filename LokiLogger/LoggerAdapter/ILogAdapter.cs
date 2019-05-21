@@ -7,5 +7,6 @@ namespace LokiLogger.LoggerAdapter {
 		void Write(LogLevel logLevel, string message, string className, string methodName, int line, params object[] objects);
 		void WriteReturn(LogLevel logLevel, string message, string className, string methodName, int lineNr, object data);
 		void WriteException(LogLevel logLevel, string message, string className, string methodName, int lineNr, Exception exception,params object[] data);
+		void WriteInvoke(LogLevel logLevel, string methodName, string className, object[] data);
 	}
 }

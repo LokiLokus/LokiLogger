@@ -413,6 +413,35 @@ namespace LokiLogger {
 				}
 			}
 		}
+
+		public static void WriteInvoke(LogLevel logLevel, string methodName, string className, params object[] data)
+		{
+			string classPath = className;
+
+			if (ProjectNameSpace != null)
+			{
+				//Yeah hate me, but i like tmp as Name
+				string[] tmp = className.Split(ProjectNameSpace,2);
+				if (tmp.Length > 1)
+				{
+					className = $"{ProjectNameSpace}{tmp[1]}";
+				}
+			}
+			
+			foreach (ILogAdapter logAdapter in _adapters.Keys)
+			{
+				try
+				{
+					if (logAdapter == null) continue;
+					if(!_adapters[logAdapter].Contains(logLevel))
+						logAdapter.WriteInvoke(logLevel, methodName, className, data);
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine(e);
+				}
+			}
+		}
 		
 		public static void WriteReturn(LogLevel logLevel, object data, string methodName, string className, int lineNr, string message = null)
 		{

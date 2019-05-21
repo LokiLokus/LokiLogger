@@ -156,7 +156,38 @@ namespace LokiWebExtension {
             _logs.Enqueue(result);
         }
 
-	    public void Dispose()
+        public void WriteInvoke(LogLevel logLevel, string methodName, string className, object[] objects)
+        {
+            string data;
+            try
+            {
+                if(objects == null) 
+                    data = null;
+                else
+                    data = JsonConvert.SerializeObject(objects);
+            }
+            catch (Exception e)
+            {
+                data = "Error on Serialize";
+            }
+            Log result = new Log()
+            {
+                Time = DateTime.Now,
+                LogLevel = logLevel,
+                Method = methodName,
+                Class = className,
+                Line = -1,
+                LogTyp = LogTyp.Invoke,
+                Message = "",
+                Exception = null,
+                Data = data,
+                Name = Name,
+                ThreadId = Thread.CurrentThread.ManagedThreadId
+            };
+            _logs.Enqueue(result);
+        }
+
+        public void Dispose()
 	    {
 	        _timer.Dispose();
 	        SendData(null);
@@ -198,7 +229,7 @@ namespace LokiWebExtension {
 
     public enum LogTyp
     {
-        Normal,Exception,Return
+        Normal,Exception,Return,Invoke
     }
 
     public static class LokiWebServiceExtension {
