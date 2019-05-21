@@ -1,14 +1,17 @@
 using System;
+using LokiLogger;
+using LokiLogger.Model;
 using LokiWebExtension.Interception;
 using LokiWebExtension.Interception.Interfaces;
 
 namespace LokiWebExtension {
-	public class LokiInterceptor :IMethodInterceptor{
+	public class LokiInterceptor :IMethodInterceptor {
+		private LokiAttribute _attribute;
 		public void BeforeInvoke(InvocationContext invocationContext)
 		{
 			// Create a logger based on the class type that owns the executing method
 			Type tmp = invocationContext.GetOwningType();
-			LokiAttribute loggingAttribute = invocationContext.GetAttributeFromMethod<LokiAttribute>();
+			_attribute = invocationContext.GetAttributeFromMethod<LokiAttribute>();
 			
 
 			// Get the Logging Level
@@ -20,8 +23,16 @@ namespace LokiWebExtension {
 		/// <inheritdoc />
 		public void AfterInvoke(InvocationContext invocationContext, object methodResult)
 		{
-			Console.WriteLine($"{invocationContext.GetOwningType()}: Method executed: {invocationContext.GetExecutingMethodName()}");
-			Console.WriteLine(methodResult);
+			LogLevel tmp;
+			if (_attribute.ReturnLevel == null)
+			{
+				tmp = _attribute.ReturnLevel.GetValueOrDefault();
+			}
+			else
+			{
+				tmp = LokiObjectAdapter.LokiConfig.AttributeDefaultEndLevel;
+			}
+			Loki.WriteReturn(tmp,methodResult,invocationContext.GetExecutingMethodName(),invocationContext.GetExecutingMethodInfo().DeclaringType.FullName,-1);
 		}
 	}
 }

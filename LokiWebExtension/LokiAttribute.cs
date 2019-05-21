@@ -2,6 +2,7 @@ using LokiLogger.Model;
 using LokiWebExtension.Interception.Attributes;
 
 namespace LokiWebExtension {
+	
 	public class LokiAttribute : MethodInterceptionAttribute {
 		public LogLevel? ParameterLevel;
 		public LogLevel? ReturnLevel;

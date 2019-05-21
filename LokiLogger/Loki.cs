@@ -414,8 +414,7 @@ namespace LokiLogger {
 			}
 		}
 		
-		
-		private static void WriteReturn(LogLevel logLevel, object data, string methodName, string className, int lineNr, string message = null)
+		public static void WriteReturn(LogLevel logLevel, object data, string methodName, string className, int lineNr, string message = null)
 		{
 			string classPath = className;
 
@@ -472,6 +471,8 @@ namespace LokiLogger {
 				}
 			}
 		}
+		
+		
 
 	}
 	public class LoggerAdapterIsNullException : Exception {}

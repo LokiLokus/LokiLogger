@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -9,9 +9,13 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
-        <PackageReference Include="LokiLogger" Version="2.2.1" />
+        <!--<PackageReference Include="LokiLogger" Version="2.2.1" />-->
         <PackageReference Include="Castle.Core" Version="4.3.1" />
         <PackageReference Include="Castle.Core.AsyncInterceptor" Version="1.7.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\LokiLogger\LokiLogger.csproj" />
     </ItemGroup>
 
 </Project>
