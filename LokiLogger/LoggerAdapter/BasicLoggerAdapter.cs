@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using LokiLogger.Model;
 namespace LokiLogger.LoggerAdapter {
 	public class BasicLoggerAdapter : ILogAdapter{
@@ -46,7 +47,7 @@ namespace LokiLogger.LoggerAdapter {
 			Console.WriteLine(result);
 		}
 
-		public void WriteReturn(LogLevel loglvl, string message, string className, string methodName, int line, object data)
+		public void WriteReturn(LogLevel loglvl, string message, string className, string methodName, int line, object data,long elapsedTime)
 		{
 			string result = className.Split("/").Last() + "." + methodName + ":" + line;
 
@@ -78,7 +79,7 @@ namespace LokiLogger.LoggerAdapter {
 
 			try
 			{
-				result += ": " + message + " " + data;
+				result += ": " + message + " " + data + " " + elapsedTime;
 			}
 			catch (Exception e)
 			{

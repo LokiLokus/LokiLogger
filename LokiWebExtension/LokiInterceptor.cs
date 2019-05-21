@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using LokiLogger;
 using LokiLogger.Model;
@@ -9,6 +10,7 @@ using LokiWebExtension.Interception.Interfaces;
 namespace LokiWebExtension {
 	public class LokiInterceptor :IMethodInterceptor {
 		private LokiAttribute _attribute;
+		private Stopwatch _stopwatch;
 		
 		public void BeforeInvoke(InvocationContext invocationContext)
 		{
@@ -31,10 +33,12 @@ namespace LokiWebExtension {
 				logLevel = LokiObjectAdapter.LokiConfig.AttributeDefaultInvokeLevel;
 			}
 			Loki.WriteInvoke(logLevel,invocationContext.GetExecutingMethodName(),invocationContext.GetExecutingMethodInfo().DeclaringType.FullName,param);
+			_stopwatch.Start();
 		}
 
 		public void AfterInvoke(InvocationContext invocationContext, object methodResult)
 		{
+			_stopwatch.Stop();
 			LogLevel tmp;
 			if (_attribute.ReturnLevel == null)
 			{
@@ -44,7 +48,8 @@ namespace LokiWebExtension {
 			{
 				tmp = LokiObjectAdapter.LokiConfig.AttributeDefaultEndLevel;
 			}
-			Loki.WriteReturn(tmp,methodResult,invocationContext.GetExecutingMethodName(),invocationContext.GetExecutingMethodInfo().DeclaringType.FullName,-1);
+			
+			Loki.WriteReturn(tmp,methodResult,invocationContext.GetExecutingMethodName(),invocationContext.GetExecutingMethodInfo().DeclaringType.FullName,-1,elapsedTime: _stopwatch.ElapsedMilliseconds);
 		}
 	}
 }

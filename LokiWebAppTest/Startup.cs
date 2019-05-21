@@ -33,6 +33,7 @@ namespace LokiWebAppTest {
 				options.Name = "asd";
 				options.HostName = "http://localhost:50001/";
 				options.ActivateAttributes = false;
+				
 			});
 			services.AddTransientWithProxy<ITest, Tester>();
 		}

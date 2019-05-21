@@ -91,7 +91,7 @@ namespace LokiWebExtension {
             _logs.Enqueue(result);
         }
 
-        public void WriteReturn(LogLevel logLevel, string message, string className, string methodName, int lineNr, object objects)
+        public void WriteReturn(LogLevel logLevel, string message, string className, string methodName, int lineNr, object objects,long elapsedTime)
         {
             string data;
             try
@@ -116,7 +116,8 @@ namespace LokiWebExtension {
                 Message = message,
                 Data = data,
                 Name = Name,
-                ThreadId = Thread.CurrentThread.ManagedThreadId
+                ThreadId = Thread.CurrentThread.ManagedThreadId,
+                ElapsedTime = elapsedTime
             };
             _logs.Enqueue(result);
         }
@@ -225,6 +226,7 @@ namespace LokiWebExtension {
         public string Exception { get; set; }
         public string Data { get; set; }
         public string Name { get; set; }
+        public long ElapsedTime { get; set; }
     }
 
     public enum LogTyp
@@ -248,7 +250,6 @@ namespace LokiWebExtension {
         public string HostName { get; set; }
         public string Name { get; set; }
         public bool ActivateAttributes { get; set; }
-        public bool EnableStopWatch { get; set; }
         public LogLevel AttributeDefaultInvokeLevel { get; set; }
         public LogLevel AttributeDefaultEndLevel { get; set; }
     }

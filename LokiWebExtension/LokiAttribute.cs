@@ -6,7 +6,6 @@ namespace LokiWebExtension {
 	public class LokiAttribute : MethodInterceptionAttribute {
 		public LogLevel? ParameterLevel;
 		public LogLevel? ReturnLevel;
-		public bool? StopTime;
 
 		public LokiAttribute()
 		{
@@ -20,17 +19,6 @@ namespace LokiWebExtension {
 		{
 			ParameterLevel = parameterLevel;
 			ReturnLevel = returnLevel;
-		}
-		public LokiAttribute(LogLevel parameterLevel,LogLevel returnLevel,bool stopTime)
-		{
-			ParameterLevel = parameterLevel;
-			ReturnLevel = returnLevel;
-			StopTime = stopTime;
-		}
-	
-		public LokiAttribute(bool stopTime)
-		{
-			StopTime = stopTime;
 		}
 	}
 }
