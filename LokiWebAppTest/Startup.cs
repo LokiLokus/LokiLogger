@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LokiLogger;
 using LokiWebExtension;
+using LokiWebExtension.Interception.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,8 +31,10 @@ namespace LokiWebAppTest {
 			services.AddLokiObjectLogger(options =>
 			{
 				options.Name = "asd";
-				options.HostName = "http://localhost:50001/"
+				options.HostName = "http://localhost:50001/";
+				options.ActivateAttributes = false;
 			});
+			services.AddTransientWithProxy<ITest, Tester>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -44,16 +44,24 @@ namespace LokiWebExtension.Interception.Extensions
         /// <typeparam name="TService">Implementation Type</typeparam>
         /// <param name="services">Services Collection</param>
         /// <returns><see cref="IServiceCollection"/></returns>
-        public static IServiceCollection AddTransientWithProxy<TInterface, TService>(this IServiceCollection services) where TService : TInterface
+        public static IServiceCollection AddTransientWithProxy<TInterface, TService>(this IServiceCollection services)
+            where TService : class, TInterface
+            where TInterface : class 
+            
         {
-            var serviceProvider = services.BuildServiceProvider();
-            var proxyConfiguration = services.GetProxyConfiguration();
-            var proxyGenerator = serviceProvider.GetService<IProxyGenerator>();
-            var proxyInstance = ActivatorUtilities.CreateInstance<TService>(serviceProvider);
-
-            // Wrap the service with a Proxy instance and add it with Transient Scope
-            services.AddTransient(typeof(TInterface), p => new ProxyFactory<TInterface>(serviceProvider, proxyGenerator, proxyConfiguration).CreateProxy(proxyInstance));
-
+            if(LokiObjectAdapter.LokiConfig.ActivateAttributes){
+                var serviceProvider = services.BuildServiceProvider();
+                var proxyConfiguration = services.GetProxyConfiguration();
+                var proxyGenerator = serviceProvider.GetService<IProxyGenerator>();
+                var proxyInstance = ActivatorUtilities.CreateInstance<TService>(serviceProvider);
+    
+                // Wrap the service with a Proxy instance and add it with Transient Scope
+                services.AddTransient(typeof(TInterface), p => new ProxyFactory<TInterface>(serviceProvider, proxyGenerator, proxyConfiguration).CreateProxy(proxyInstance));
+            }
+            else
+            {
+                services.AddTransient<TInterface, TService>();
+            }
             // Return the IServiceCollection for chaining configuration
             return services;
         }
@@ -65,15 +73,26 @@ namespace LokiWebExtension.Interception.Extensions
         /// <typeparam name="TService">Implementation Type</typeparam>
         /// <param name="services">Services Collection</param>
         /// <returns><see cref="IServiceCollection"/></returns>
-        public static IServiceCollection AddScopedWithProxy<TInterface, TService>(this IServiceCollection services) where TService : TInterface
+        public static IServiceCollection AddScopedWithProxy<TInterface, TService>(this IServiceCollection services)
+            where TService : class, TInterface
+            where TInterface : class 
         {
-            var serviceProvider = services.BuildServiceProvider();
-            var proxyConfiguration = services.GetProxyConfiguration();
-            var proxyGenerator = serviceProvider.GetService<IProxyGenerator>();
-            var proxyInstance = ActivatorUtilities.CreateInstance<TService>(serviceProvider);
+            if (LokiObjectAdapter.LokiConfig.ActivateAttributes)
+            {
+                var serviceProvider = services.BuildServiceProvider();
+                var proxyConfiguration = services.GetProxyConfiguration();
+                var proxyGenerator = serviceProvider.GetService<IProxyGenerator>();
+                var proxyInstance = ActivatorUtilities.CreateInstance<TService>(serviceProvider);
 
-            // Wrap the service with a Proxy instance and add it with Scoped Scope
-            services.AddScoped(typeof(TInterface), p => new ProxyFactory<TInterface>(serviceProvider, proxyGenerator, proxyConfiguration).CreateProxy(proxyInstance));
+                // Wrap the service with a Proxy instance and add it with Scoped Scope
+                services.AddScoped(typeof(TInterface),
+                    p => new ProxyFactory<TInterface>(serviceProvider, proxyGenerator, proxyConfiguration).CreateProxy(
+                        proxyInstance));
+            }
+            else
+            {
+                services.AddScoped<TInterface, TService>();
+            }
 
             // Return the IServiceCollection for chaining configuration
             return services;
@@ -86,17 +105,26 @@ namespace LokiWebExtension.Interception.Extensions
         /// <typeparam name="TService">Implementation Type</typeparam>
         /// <param name="services">Services Collection</param>
         /// <returns><see cref="IServiceCollection"/></returns>
-        public static IServiceCollection AddSingletonWithProxy<TInterface, TService>(this IServiceCollection services) where TService : TInterface
+        public static IServiceCollection AddSingletonWithProxy<TInterface, TService>(this IServiceCollection services)
+            where TService : class, TInterface
+            where TInterface : class 
         {
-            var serviceProvider = services.BuildServiceProvider();
-            var proxyConfiguration = services.GetProxyConfiguration();
-            var proxyGenerator = serviceProvider.GetService<IProxyGenerator>();
-            var proxyInstance = ActivatorUtilities.CreateInstance<TService>(serviceProvider);
+            if (LokiObjectAdapter.LokiConfig.ActivateAttributes)
+            {
+                    var serviceProvider = services.BuildServiceProvider();
+                    var proxyConfiguration = services.GetProxyConfiguration();
+                    var proxyGenerator = serviceProvider.GetService<IProxyGenerator>();
+                    var proxyInstance = ActivatorUtilities.CreateInstance<TService>(serviceProvider);
 
-            // Wrap the service with a Proxy instance and add it with Singleton Scope
-            services.AddSingleton(typeof(TInterface), p => new ProxyFactory<TInterface>(serviceProvider, proxyGenerator, proxyConfiguration).CreateProxy(proxyInstance));
-            
-            // Return the IServiceCollection for chaining configuration
+                    // Wrap the service with a Proxy instance and add it with Singleton Scope
+                    services.AddSingleton(typeof(TInterface),
+                        p => new ProxyFactory<TInterface>(serviceProvider, proxyGenerator, proxyConfiguration)
+                            .CreateProxy(proxyInstance));
+                }else
+                {
+                    services.AddSingleton<TInterface, TService>();
+                }
+                // Return the IServiceCollection for chaining configuration
             return services;
         }
 
