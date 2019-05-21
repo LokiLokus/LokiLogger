@@ -24,7 +24,7 @@ namespace LokiWebExtension {
 				param.Add(invocationContext.GetParameterValue(i));
 			}
 			LogLevel logLevel;
-			if (_attribute.ReturnLevel == null)
+			if (_attribute.ReturnLevel != null)
 			{
 				logLevel = _attribute.ParameterLevel.GetValueOrDefault();
 			}
@@ -40,7 +40,7 @@ namespace LokiWebExtension {
 		{
 			_stopwatch.Stop();
 			LogLevel tmp;
-			if (_attribute.ReturnLevel == null)
+			if (_attribute.ReturnLevel != null)
 			{
 				tmp = _attribute.ReturnLevel.GetValueOrDefault();
 			}
