@@ -3,19 +3,22 @@ using LokiWebExtension;
 
 namespace LokiWebAppTest {
 	public interface ITest {
+		[Loki]
 		void Test();
 		string Test1();
 		void Test1(string test);
 		string Test2(string test);
+		[Interceptor]
 		string Test2(string test, int hallo);
 	}
 	public class Tester: ITest{
-		[Loki]
+		
+		[Interceptor]
 		public void Test()
 		{
 			Console.WriteLine("asdasd");
 		}
-		[Loki]
+		[Interceptor]
 		public string Test1()
 		{
 			return "Hallo" + "qasd";
@@ -25,13 +28,13 @@ namespace LokiWebAppTest {
 		{
 			Console.WriteLine(test);
 		}
-		[Loki]
+		[Interceptor]
 		public string Test2(string test)
 		{
 			Console.WriteLine(test);
 			return test + Test1();
 		}
-		[Loki]
+		[Interceptor]
 		public string Test2(string test, int hallo)
 		{
 			Console.WriteLine(test + hallo);
