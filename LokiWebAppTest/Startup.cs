@@ -41,7 +41,7 @@ namespace LokiWebAppTest {
 
 			});
 			
-			services.AddTransientWithProxy<ITest, Tester>();
+			services.AddTransient<ITest, Tester>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

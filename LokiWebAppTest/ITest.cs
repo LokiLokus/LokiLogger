@@ -1,4 +1,7 @@
 using System;
+using System.Dynamic;
+using System.Linq.Expressions;
+using KingAOP;
 using LokiWebExtension;
 
 namespace LokiWebAppTest {
@@ -9,10 +12,13 @@ namespace LokiWebAppTest {
 		string Test2(string test);
 		string Test2(string test, int hallo);
 	}
-	public class Tester: ITest{
-		[Loki]
+	public class Tester: ITest ,IDynamicMetaObjectProvider{
+		[HelloWorldAspect]
 		public void Test()
 		{
+			Tester d = new Tester();
+			d.Test1();
+			
 			Console.WriteLine("asdasd");
 		}
 		[Loki]
@@ -20,22 +26,27 @@ namespace LokiWebAppTest {
 		{
 			return "Hallo" + "qasd";
 		}
-		[Loki]
+		[HelloWorldAspect]
 		public void Test1(string test)
 		{
 			Console.WriteLine(test);
 		}
-		[Loki]
+		[HelloWorldAspect]
 		public string Test2(string test)
 		{
 			Console.WriteLine(test);
 			return test + Test1();
 		}
-		[Loki]
+		[HelloWorldAspect]
 		public string Test2(string test, int hallo)
 		{
 			Console.WriteLine(test + hallo);
 			return test + hallo;
+		}
+
+		public DynamicMetaObject GetMetaObject(Expression parameter)
+		{
+			return new AspectWeaver(parameter, this);
 		}
 	}
 }
