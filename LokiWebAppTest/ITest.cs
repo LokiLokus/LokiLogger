@@ -1,7 +1,6 @@
 using System;
 using System.Dynamic;
 using System.Linq.Expressions;
-using KingAOP;
 using LokiWebExtension;
 
 namespace LokiWebAppTest {
@@ -12,8 +11,9 @@ namespace LokiWebAppTest {
 		string Test2(string test);
 		string Test2(string test, int hallo);
 	}
-	public class Tester: ITest ,IDynamicMetaObjectProvider{
-		[HelloWorldAspect]
+	public class Tester: ITest{
+		
+		
 		public void Test()
 		{
 			Tester d = new Tester();
@@ -26,27 +26,22 @@ namespace LokiWebAppTest {
 		{
 			return "Hallo" + "qasd";
 		}
-		[HelloWorldAspect]
+		
 		public void Test1(string test)
 		{
 			Console.WriteLine(test);
 		}
-		[HelloWorldAspect]
+		
 		public string Test2(string test)
 		{
 			Console.WriteLine(test);
 			return test + Test1();
 		}
-		[HelloWorldAspect]
+		
 		public string Test2(string test, int hallo)
 		{
 			Console.WriteLine(test + hallo);
 			return test + hallo;
-		}
-
-		public DynamicMetaObject GetMetaObject(Expression parameter)
-		{
-			return new AspectWeaver(parameter, this);
 		}
 	}
 }
