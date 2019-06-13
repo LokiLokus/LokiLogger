@@ -56,6 +56,39 @@ namespace LokiLogger.Fody {
 		
 		private void ProcessMethod( MethodDefinition method )
 		{
+			
+			
+			WeaveInvoke(method);
+			//var returnIns = method.Body.Instructions[method.Body.Instructions.Count-2];
+			//Instruction.Create(OpCodes.Call, ModuleDefinition.ImportReference( _lokiReturnMethod));
+
+
+
+		}
+
+		private void WeaveReturn(MethodDefinition method)
+		{
+			ILProcessor processor = method.Body.GetILProcessor();
+			List<Instruction> returnInstructions = method.Body.Instructions.Where(instruction => instruction.OpCode == OpCodes.Ret).ToList();
+			foreach (var returnInstruction in returnInstructions)
+			{
+				Instruction loadNameInstruction = processor.Create(OpCodes.Ldstr, name);
+				Instruction callExitReference = processor.Create(OpCodes.Call, exitReference);
+
+				processor.InsertBefore(returnInstruction, loadNameInstruction);
+				processor.InsertAfter(loadNameInstruction, callExitReference);
+			}
+			
+		}
+		public List<Instruction> LokiReturnInstructions(MethodDefinition method)
+		{
+			
+			throw new NotImplementedException();
+		}
+
+		
+		private void WeaveInvoke(MethodDefinition method)
+		{
 			ILProcessor processor = method.Body.GetILProcessor();
 			Instruction current = method.Body.Instructions.First();
 			Instruction first = Instruction.Create( OpCodes.Nop );
@@ -68,21 +101,8 @@ namespace LokiLogger.Fody {
 				processor.InsertAfter( current, instruction );
 				current = instruction;
 			}
-			
-			
-			//var returnIns = method.Body.Instructions[method.Body.Instructions.Count-2];
-			//Instruction.Create(OpCodes.Call, ModuleDefinition.ImportReference( _lokiReturnMethod));
-
-
-
 		}
-
-		public List<Instruction> LokiReturnInstructions(MethodDefinition method)
-		{
-			
-			throw new NotImplementedException();
-		}
-
+		
 		private List<Instruction> LokiInvokeInstructions(MethodDefinition method)
 		{
 		
