@@ -133,35 +133,12 @@ namespace LokiLogger.LoggerAdapter {
 			Console.WriteLine(result);
 		}
 
-		public void WriteInvoke(LogLevel loglvl, string methodName, string className, object[] data)
+		public void WriteInvoke(string methodName, string className, object[] data)
 		{
 			string result = className.Split("/").Last() + "." + methodName;
 
-			switch (loglvl)
-			{
-				case LogLevel.Verbose:
-					result += "[VER]";
-					break;
-				case LogLevel.Debug:
-					result += "[DEB]";
-					break;
-				case LogLevel.Information:
-					result += "[INF]";
-					break;
-				case LogLevel.Warning:
-					result += "[WAR]";
-					break;
-				case LogLevel.Critical:
-					result += "[CRT]";
-					break;
-				case LogLevel.SystemCritical:
-					result += "[SCRT]";
-					break;
-				default:
-					throw new ArgumentOutOfRangeException(nameof(loglvl), loglvl, null);
-			}
 
-			result += "[EXC]";
+			result += "[INV]";
 			
 			try
 			{

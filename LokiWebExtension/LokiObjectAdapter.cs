@@ -157,7 +157,7 @@ namespace LokiWebExtension {
             _logs.Enqueue(result);
         }
 
-        public void WriteInvoke(LogLevel logLevel, string methodName, string className, object[] objects)
+        public void WriteInvoke( string methodName, string className, object[] objects)
         {
             string data;
             try
@@ -174,7 +174,6 @@ namespace LokiWebExtension {
             Log result = new Log()
             {
                 Time = DateTime.Now,
-                LogLevel = logLevel,
                 Method = methodName,
                 Class = className,
                 Line = -1,
@@ -239,9 +238,6 @@ namespace LokiWebExtension {
             LokiConfig config = new LokiConfig();
             options.Invoke(config);
             LokiObjectAdapter.LokiConfig = config;
-            services.AddSimpleProxy(opt =>
-                opt.AddInterceptor<LokiAttribute, LokiInterceptor>()
-                    .WithOrderingStrategy<PyramidOrderStrategy>());
             services.AddHostedService<LokiObjectAdapter>();
             return services;
         }

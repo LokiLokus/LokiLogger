@@ -414,7 +414,7 @@ namespace LokiLogger {
 			}
 		}
 
-		public static void WriteInvoke(LogLevel logLevel, string methodName, string className, params object[] data)
+		public static void WriteInvoke(string methodName, string className, params object[] data)
 		{
 			string classPath = className;
 
@@ -433,8 +433,8 @@ namespace LokiLogger {
 				try
 				{
 					if (logAdapter == null) continue;
-					if(!_adapters[logAdapter].Contains(logLevel))
-						logAdapter.WriteInvoke(logLevel, methodName, className, data);
+					logAdapter.WriteInvoke(methodName, className, data);
+					
 				}
 				catch (Exception e)
 				{
@@ -443,7 +443,8 @@ namespace LokiLogger {
 			}
 		}
 		
-		public static void WriteReturn(LogLevel logLevel, object data, string methodName, string className, int lineNr, string message = null,long elapsedTime = 0)
+		
+		public static void WriteReturn(LogLevel logLevel,object data, string methodName, string className, int lineNr, string message = null,long elapsedTime = 0)
 		{
 			string classPath = className;
 
