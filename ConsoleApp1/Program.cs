@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using LokiLogger;
 using LokiLogger.LoggerAdapter;
@@ -24,25 +25,25 @@ namespace ConsoleApp1 {
 			Test3().Wait();
 			Test4("§ln23", 4).Wait();*/
 		}
-
 		
-
-		[Loki("dfghdfh")]
+		[Loki()]
 		static void Test()
 		{
+			Console.WriteLine("Test");
+			HttpClient client = new HttpClient();
 			Stopwatch sw = new Stopwatch();
 			sw.Start();
-			Console.WriteLine("Test");
+			client.GetAsync("asd").Wait();
 			sw.Stop();
 			Console.WriteLine(sw.ElapsedMilliseconds);
 		}
-		/*
+		
 		 private static async Task<string> Test4(string ln23, int i)
 		{
 			await Task.Delay(123);
 			return ln23 + i;
 		}
-
+/*
 		[Loki("JoDigga")]
 		static string FUCKYOU(string d,List<int> f)
 		{

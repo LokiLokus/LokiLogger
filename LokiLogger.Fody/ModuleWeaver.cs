@@ -15,7 +15,8 @@ namespace LokiLogger.Fody {
 		
 		private static readonly MethodInfo _lokiInvokeMethod;
 		private static readonly MethodInfo _lokiReturnMethod;
-
+		private static readonly MethodInfo _stopWatchStartMethod;
+		private static readonly MethodInfo _stopWatchStopMethod;
 		static ModuleWeaver()
 		{
 			_lokiInvokeMethod = typeof( Loki )
@@ -24,6 +25,10 @@ namespace LokiLogger.Fody {
 			_lokiReturnMethod = typeof( Loki )
 				.GetMethods()
 				.Single(x => x.Name == nameof(Loki.WriteReturn));
+			_stopWatchStartMethod = typeof(System.Diagnostics.Stopwatch).GetMethods()
+				.Single(x => x.Name == nameof(Stopwatch.Start));
+			_stopWatchStopMethod = typeof(System.Diagnostics.Stopwatch).GetMethods()
+				.Single(x => x.Name == nameof(Stopwatch.Stop));
 		}
 		
 		public override void Execute()
@@ -72,11 +77,11 @@ namespace LokiLogger.Fody {
 			List<Instruction> returnInstructions = method.Body.Instructions.Where(instruction => instruction.OpCode == OpCodes.Ret).ToList();
 			foreach (var returnInstruction in returnInstructions)
 			{
-				Instruction loadNameInstruction = processor.Create(OpCodes.Ldstr, name);
+				/*Instruction loadNameInstruction = processor.Create(OpCodes.Ldstr, name);
 				Instruction callExitReference = processor.Create(OpCodes.Call, exitReference);
 
 				processor.InsertBefore(returnInstruction, loadNameInstruction);
-				processor.InsertAfter(loadNameInstruction, callExitReference);
+				processor.InsertAfter(loadNameInstruction, callExitReference);*/
 			}
 			
 		}
@@ -105,9 +110,11 @@ namespace LokiLogger.Fody {
 		
 		private List<Instruction> LokiInvokeInstructions(MethodDefinition method)
 		{
+			
 		
 			var newInstructions = new List<Instruction>();
-			var arrayDef = new VariableDefinition(new ArrayType(ModuleDefinition.TypeSystem.Object));
+			VariableDefinition arrayDef = new VariableDefinition(new ArrayType(ModuleDefinition.TypeSystem.Object));
+			
 			//var arrayDef = new VariableDefinition(new ArrayType(ModuleDefinition.TypeSystem.Object));
 			method.Body.Variables.Add(arrayDef);
 			newInstructions.Add(Instruction.Create(OpCodes.Ldc_I4, method.Parameters.Count));               
@@ -133,9 +140,33 @@ namespace LokiLogger.Fody {
 			newInstructions.Add(Instruction.Create(OpCodes.Ldstr,method.DeclaringType.FullName));
 			newInstructions.Add(Instruction.Create(OpCodes.Ldloc, arrayDef)); 
 			newInstructions.Add(Instruction.Create(OpCodes.Call, ModuleDefinition.ImportReference( _lokiInvokeMethod ) ));
+			
+			VariableDefinition stopWatch = new VariableDefinition(new PointerType(ModuleDefinition.ImportReference( typeof(System.Diagnostics.Stopwatch))));
+			method.Body.Variables.Add(stopWatch);
+			Log("1");
+			//newInstructions.Add(Instruction.Create(OpCodes.Newobj,ModuleDefinition.ImportReference( typeof(System.Diagnostics.Stopwatch))));
+			Log("2");
+			newInstructions.Add(Instruction.Create(OpCodes.Stloc, stopWatch));
+			Log("3");
+			newInstructions.Add(Instruction.Create(OpCodes.Ldloc, stopWatch));
+			Log("4");
+			newInstructions.Add(Instruction.Create(OpCodes.Callvirt,ModuleDefinition.ImportReference( _stopWatchStartMethod)));
+			Log("5");
+
+
+			method.Body.Instructions.Last();
+			
+			newInstructions.Add(Instruction.Create(OpCodes.Ldloc, stopWatch));
+			Log("6");
+			newInstructions.Add(Instruction.Create(OpCodes.Callvirt,ModuleDefinition.ImportReference( _stopWatchStopMethod)));
+			Log("7");
 			return newInstructions;
 		}
-		
+
+		private void Log(string data)
+		{
+			File.AppendAllText("/home/lokilokus/RiderProjects/lokiIogger/LokiLogger.Fody/DataMethod.txt",data);
+		}
 
 		public override IEnumerable<string> GetAssembliesForScanning()
 		{
