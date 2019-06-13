@@ -32,9 +32,9 @@ namespace LokiWebAppTest {
 			
 			services.AddLokiObjectLogger(options =>
 			{
-				options.Name = "asd";
+				options.Name = "TEST";
 				options.HostName = "https://llogger.hopfenspace.org/api/Logging/Log";
-				options.ActivateAttributes = true;
+				options.ActivateAttributes = false;
 				options.AttributeDefaultInvokeLevel = LogLevel.Information;
 				options.AttributeDefaultEndLevel = LogLevel.Information;
 				options.SendInterval = 1;

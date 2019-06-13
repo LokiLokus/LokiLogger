@@ -20,20 +20,8 @@ namespace LokiWebAppTest.Controllers {
 		{
 			Loki.Information("Hallo");
 			var tmp = new string[] {"value1", "value2"};
-			Loki.ReturnCritical(tmp);
 			test.Test();
-			try
-			{
-				throw new Exception("FEHLER");
-			}
-			catch (Exception e)
-			{
-				Loki.ExceptionCritical(e);
-			}
-
 			test.Test2("asd", 123);
-			
-			Loki.SystemCritical("OMG",this);
 			return tmp;
 		}
 
