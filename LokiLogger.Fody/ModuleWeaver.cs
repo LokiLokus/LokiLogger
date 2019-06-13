@@ -53,6 +53,10 @@ namespace LokiLogger.Fody {
 					return parameters.Length == 1 &&
 					       parameters[0].ParameterType == typeof( string );
 				} );
+			_debugWriteLineMethod = typeof( LokiLogger.Loki )
+				.GetMethods()
+				.Where( x => x.Name == nameof(LokiLogger.Loki.WriteInvoke) )
+				.Single();
 		}
 		
 		public override void Execute()
@@ -124,6 +128,26 @@ namespace LokiLogger.Fody {
 				System.IO.File.AppendAllText("/home/lokilokus/RiderProjects/lokilogger/LokiLogger.Fody/DataMethod.txt",current.OpCode.Name+"\n");
 				current = instruction;
 			}
+		}
+
+		private IEnumerable<Instruction> LokiInstructions(MethodDefinition method)
+		{
+			yield return Instruction.Create( OpCodes.Ldstr, $"DEBUG: {method.DeclaringType.FullName}.<{method.Name}({{0}})" );
+			yield return Instruction.Create( OpCodes.Ldstr, "," );
+
+			yield return Instruction.Create( OpCodes.Ldc_I4, method.Parameters.Count );
+			yield return Instruction.Create( OpCodes.Newarr, ModuleDefinition.ImportReference( typeof( object ) ) );
+
+			for ( int i = 0; i < method.Parameters.Count; i++ )
+			{
+				yield return Instruction.Create( OpCodes.Dup );
+				yield return Instruction.Create( OpCodes.Ldc_I4, i );
+				yield return Instruction.Create( OpCodes.Ldarg, method.Parameters[i] );
+				if ( method.Parameters[i].ParameterType.IsValueType )
+					yield return Instruction.Create( OpCodes.Box, method.Parameters[i].ParameterType );
+				yield return Instruction.Create( OpCodes.Stelem_Ref );
+			}
+			yield return Instruction.Create( OpCodes.Call, ModuleDefinition.ImportReference( _debugWriteLineMethod ) );
 		}
 
 		private IEnumerable<Instruction> GetInstructions( MethodDefinition method )
