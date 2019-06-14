@@ -157,7 +157,7 @@ namespace LokiWebExtension {
             _logs.Enqueue(result);
         }
 
-        public void WriteInvoke( string methodName, string className, object[] objects)
+        public void WriteInvoke(LogLevel logLevel, string methodName, string className, object[] objects)
         {
             string data;
             try
@@ -175,6 +175,7 @@ namespace LokiWebExtension {
             {
                 Time = DateTime.Now,
                 Method = methodName,
+                LogLevel = logLevel,
                 Class = className,
                 Line = -1,
                 LogTyp = LogTyp.Invoke,

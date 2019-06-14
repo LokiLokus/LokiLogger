@@ -26,8 +26,6 @@ namespace ConsoleApp1 {
 		}
 
 		
-
-		[Loki("dfghdfh")]
 		static void Test()
 		{
 			Stopwatch sw = new Stopwatch();

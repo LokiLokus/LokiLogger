@@ -7,27 +7,31 @@ namespace LokiLogger {
 	[AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor | AttributeTargets.Assembly | AttributeTargets.Module,Inherited = false)]
 	public class LokiAttribute :Attribute,IMethodDecorator{
 		private readonly Stopwatch _stopwatch = new Stopwatch();
+		private string _methodName;
+		private string _className;
 		public void Init(object instance, MethodBase method, object[] args)
 		{
-			throw new NotImplementedException();
+			_methodName = method.Name;
+			_className = method.ReflectedType.FullName;
+			
+			Loki.WriteInvoke(_methodName,_className,args);
 		}
 
 		public void OnEntry()
 		{
 			_stopwatch.Start();
-			throw new NotImplementedException();
 		}
 
 		public void OnExit()
 		{
 			_stopwatch.Stop();
-			throw new NotImplementedException();
+			Loki.WriteReturn(null,_methodName,_className,0,elapsedTime:_stopwatch.ElapsedTicks);
 		}
 
 		public void OnException(Exception exception)
 		{
 			_stopwatch.Stop();
-			throw new NotImplementedException();
+			Loki.WriteException(exception,_methodName,_className,0);
 		}
 	}
 }
