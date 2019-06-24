@@ -17,5 +17,6 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="MethodDecerator" />
     </ItemGroup>
 </Project>

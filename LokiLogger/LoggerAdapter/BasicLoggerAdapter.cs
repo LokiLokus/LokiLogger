@@ -13,9 +13,6 @@ namespace LokiLogger.LoggerAdapter {
 
 			switch (loglvl)
 			{
-				case LogLevel.Verbose:
-					result += "[VER]";
-					break;
 				case LogLevel.Debug:
 					result += "[DEB]";
 					break;
@@ -25,10 +22,10 @@ namespace LokiLogger.LoggerAdapter {
 				case LogLevel.Warning:
 					result += "[WAR]";
 					break;
-				case LogLevel.Critical:
+				case LogLevel.Error:
 					result += "[CRT]";
 					break;
-				case LogLevel.SystemCritical:
+				case LogLevel.Critical:
 					result += "[SCRT]";
 					break;
 				default:
@@ -53,9 +50,6 @@ namespace LokiLogger.LoggerAdapter {
 
 			switch (loglvl)
 			{
-				case LogLevel.Verbose:
-					result += "[VER]";
-					break;
 				case LogLevel.Debug:
 					result += "[DEB]";
 					break;
@@ -65,10 +59,10 @@ namespace LokiLogger.LoggerAdapter {
 				case LogLevel.Warning:
 					result += "[WAR]";
 					break;
-				case LogLevel.Critical:
+				case LogLevel.Error:
 					result += "[CRT]";
 					break;
-				case LogLevel.SystemCritical:
+				case LogLevel.Critical:
 					result += "[SCRT]";
 					break;
 				default:
@@ -96,9 +90,6 @@ namespace LokiLogger.LoggerAdapter {
 
 			switch (loglvl)
 			{
-				case LogLevel.Verbose:
-					result += "[VER]";
-					break;
 				case LogLevel.Debug:
 					result += "[DEB]";
 					break;
@@ -108,10 +99,10 @@ namespace LokiLogger.LoggerAdapter {
 				case LogLevel.Warning:
 					result += "[WAR]";
 					break;
-				case LogLevel.Critical:
+				case LogLevel.Error:
 					result += "[CRT]";
 					break;
-				case LogLevel.SystemCritical:
+				case LogLevel.Critical:
 					result += "[SCRT]";
 					break;
 				default:
@@ -133,10 +124,29 @@ namespace LokiLogger.LoggerAdapter {
 			Console.WriteLine(result);
 		}
 
-		public void WriteInvoke(string methodName, string className, object[] data)
+		public void WriteInvoke(LogLevel logLevel,string methodName, string className, object[] data)
 		{
 			string result = className.Split("/").Last() + "." + methodName;
-
+			switch (logLevel)
+			{
+				case LogLevel.Debug:
+					result += "[DEB]";
+					break;
+				case LogLevel.Information:
+					result += "[INF]";
+					break;
+				case LogLevel.Warning:
+					result += "[WAR]";
+					break;
+				case LogLevel.Error:
+					result += "[CRT]";
+					break;
+				case LogLevel.Critical:
+					result += "[SCRT]";
+					break;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(logLevel), logLevel, null);
+			}
 
 			result += "[INV]";
 			
