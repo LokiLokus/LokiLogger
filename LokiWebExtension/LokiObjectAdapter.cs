@@ -129,7 +129,8 @@ namespace LokiWebExtension {
             string exData;
             try
             {
-                exData = JsonConvert.SerializeObject(exception);
+                exData = exception.Message + "\n";
+                exData += exception.StackTrace;
                 if(objects == null) 
                     data = null;
                 else
