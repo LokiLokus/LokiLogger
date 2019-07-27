@@ -19,4 +19,8 @@
     <ItemGroup>
       <Folder Include="MethodDecerator" />
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\LokiLogger.Shared\LokiLogger.Shared.csproj" />
+    </ItemGroup>
 </Project>

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using System.Timers;
 using LokiLogger;
 using LokiLogger.LoggerAdapter;
-using LokiLogger.Model;
-using LokiWebExtension.Interception.Extensions;
-using LokiWebExtension.Interception.Strategies;
+using LokiLogger.Shared;
+using LokiWebExtension.ConfigSettings;
+using LokiWebExtension.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
@@ -22,8 +22,9 @@ namespace LokiWebExtension {
 	    private System.Threading.Timer _timer;
 	    
 	    
-	    public static LokiConfig LokiConfig { get; set; }
+	    public static LokiConfigSettings LokiConfig { get; set; }
 	    private static object _lock = new object();
+	    
         public LokiObjectAdapter()
         {
             _logs = new ConcurrentQueue<Log>();
@@ -207,37 +208,15 @@ namespace LokiWebExtension {
 	    {
 	        
 	        _timer?.Change(Timeout.Infinite, 0);
-
 	        return Task.CompletedTask;
 	    }
 	}
 
-    public class Log
-    {
-        public int ThreadId { get; set; }
-        public DateTime Time { get; set; }
-        public LogLevel LogLevel { get; set; }
-        public string Message { get; set; }
-        public string Class { get; set; }
-        public string Method { get; set; }
-        public int Line { get; set; }
-        public LogTyp LogTyp { get; set; }
-        public string Exception { get; set; }
-        public string Data { get; set; }
-        public string Name { get; set; }
-        public long ElapsedTime { get; set; }
-    }
-
-    public enum LogTyp
-    {
-        Normal,Exception,Return,Invoke
-    }
-
     public static class LokiWebServiceExtension {
         
-        public static IServiceCollection AddLokiObjectLogger(this IServiceCollection services, Action<LokiConfig> options)
+        public static IServiceCollection AddLokiObjectLogger(this IServiceCollection services, Action<LokiConfigSettings> options)
         {
-            LokiConfig config = new LokiConfig();
+            LokiConfigSettings config = new LokiConfigSettings();
             options.Invoke(config);
             LokiObjectAdapter.LokiConfig = config;
             services.AddHostedService<LokiObjectAdapter>();
@@ -245,12 +224,5 @@ namespace LokiWebExtension {
         }
     }
 
-    public class LokiConfig {
-        public string HostName { get; set; }
-        public string Name { get; set; }
-        public bool ActivateAttributes { get; set; }
-        public LogLevel AttributeDefaultInvokeLevel { get; set; }
-        public LogLevel AttributeDefaultEndLevel { get; set; }
-        public int SendInterval { get; set; }
-    }
+    
 }

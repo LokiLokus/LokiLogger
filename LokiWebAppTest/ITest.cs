@@ -21,7 +21,6 @@ namespace LokiWebAppTest {
 			
 			Console.WriteLine("asdasd");
 		}
-		[Loki]
 		public string Test1()
 		{
 			return "Hallo" + "qasd";

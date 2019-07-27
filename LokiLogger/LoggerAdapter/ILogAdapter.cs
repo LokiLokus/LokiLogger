@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using LokiLogger.Model;
+using LokiLogger.Shared;
 
 namespace LokiLogger.LoggerAdapter {
 	public interface ILogAdapter {

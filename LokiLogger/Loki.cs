@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using LokiLogger.LoggerAdapter;
-using LokiLogger.Model;
+using LokiLogger.Shared;
 
 namespace LokiLogger {
 	public static class Loki {

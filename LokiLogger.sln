@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiWebAppTest", "LokiWebAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiObjectAdapter", "LokiWebExtension\LokiWebExtension.csproj", "{7DE57DEC-CAD7-4DCF-891E-6C71074F6E67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiLogger.Shared", "LokiLogger.Shared\LokiLogger.Shared.csproj", "{ADA336F8-A968-47DC-A63A-35416696824F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{7DE57DEC-CAD7-4DCF-891E-6C71074F6E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DE57DEC-CAD7-4DCF-891E-6C71074F6E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DE57DEC-CAD7-4DCF-891E-6C71074F6E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA336F8-A968-47DC-A63A-35416696824F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA336F8-A968-47DC-A63A-35416696824F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA336F8-A968-47DC-A63A-35416696824F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA336F8-A968-47DC-A63A-35416696824F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
