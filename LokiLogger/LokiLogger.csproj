@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
 	<PackageId>LokiLogger</PackageId>
-	<Version>2.2.3</Version>
+	<Version>2.2.5</Version>
 	<Authors>LokiLokus</Authors>
+	<LangVersion>7.3</LangVersion>
+	<TargetFramework>netcoreapp2.1</TargetFramework>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -17,10 +18,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="MethodDecerator" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\LokiLogger.Shared\LokiLogger.Shared.csproj" />
+        <PackageReference Include="LokiLogger.Shared" Version="2.2.4" />
     </ItemGroup>
 </Project>

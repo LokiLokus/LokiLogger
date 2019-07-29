@@ -362,8 +362,7 @@ namespace LokiLogger {
 					
 					if (logAdapter == null) continue;
 					if(!_adapters[logAdapter].Contains(DefaultInvokeLogLevel))
-					logAdapter.WriteInvoke(DefaultInvokeLogLevel, methodName, className, data);
-					
+						logAdapter.WriteInvoke(DefaultInvokeLogLevel, methodName, className, data);
 				}
 				catch (Exception e)
 				{
