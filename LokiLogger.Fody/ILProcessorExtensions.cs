@@ -26,6 +26,7 @@ https://github.com/Fody/MethodDecorator
 using System.Collections.Generic;
 using Mono.Cecil.Cil;
 
+
 namespace LokiLogger.Fody {
     public static class IlProcessorExtensions
     {
