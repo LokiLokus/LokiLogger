@@ -32,7 +32,6 @@ using Fody;
 using Mono.Cecil;
 using Mono.Collections.Generic;
 
-namespace LokiLogger.Fody {
     public partial class ModuleWeaver : BaseModuleWeaver
     {
         TypeReference objectTypeRef;
@@ -135,6 +134,7 @@ namespace LokiLogger.Fody {
                         // If we have a rule and it isn't an exclusion, apply the method decoration.
                         if (rule != null && !rule.AttributeExclude)
                         {
+                            LogInfo("Decorate " + method.Name);
                             Decorate(
                                 type,
                                 method,
@@ -197,10 +197,12 @@ namespace LokiLogger.Fody {
         {
             var allAttributes = GetAttributes();
 
-            return from type in allAttributes
+            var tmp =  from type in allAttributes
                 where HasCorrectMethods(type)
                       && !type.Implements("MethodDecorator.Fody.Interfaces.IAspectMatchingRule")
                 select type;
+            LogInfo("FindMarker " + tmp.Count());
+            return tmp;
         }
 
         IEnumerable<AspectRule> FindAspectRules(
@@ -286,6 +288,7 @@ namespace LokiLogger.Fody {
                     c.Implements("MethodDecorator.Fody.Interfaces.IMethodDecorator"));
                 res.AddRange(re);
                 res.AddRange(tmp);
+                LogInfo("TMP RANGE: " + tmp.Count);
             }
 
             return res;
@@ -415,4 +418,3 @@ namespace LokiLogger.Fody {
             }
         }
     }
-}

@@ -31,7 +31,6 @@ using Mono.Cecil;
 using Mono.Cecil.Cil;
 using Mono.Cecil.Rocks;
 
-namespace LokiLogger.Fody {
     public partial class ModuleWeaver
     {
         ReferenceFinder referenceFinder;
@@ -571,4 +570,3 @@ namespace LokiLogger.Fody {
             return new Instruction[0];
         }
     }
-}

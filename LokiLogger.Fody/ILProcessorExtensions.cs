@@ -27,7 +27,6 @@ using System.Collections.Generic;
 using Mono.Cecil.Cil;
 
 
-namespace LokiLogger.Fody {
     public static class IlProcessorExtensions
     {
         public static void InsertBefore(this ILProcessor processor, Instruction target, IEnumerable<Instruction> instructions)
@@ -46,5 +45,4 @@ namespace LokiLogger.Fody {
                 target = instruction;
             }
         }
-    }
 }

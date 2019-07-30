@@ -2,14 +2,14 @@ using System;
 using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Reflection;
+using LokiLogger;
 using MethodDecorator.Fody.Interfaces;
 
-namespace LokiLogger.Fody {
 	public class LokiAttribute:Attribute,IMethodDecorator {
 		private Stopwatch _stopwatch;
 		private string _methodName;
 		private string _className;
-		private readonly bool _enableStopwatch;
+		private readonly bool _enableStopwatch = true;
 		
 		public LokiAttribute(){}
 
@@ -37,9 +37,14 @@ namespace LokiLogger.Fody {
 
 		public void OnExit()
 		{
-			if(_enableStopwatch)
+			if(_enableStopwatch){
 				_stopwatch.Stop();
-			Loki.WriteReturn(null, _methodName, _className, -1, elapsedTime: _stopwatch.ElapsedTicks);
+				Loki.WriteReturn(null, _methodName, _className, -1, elapsedTime: _stopwatch.ElapsedTicks);
+			}
+			else
+			{
+				Loki.WriteReturn(null, _methodName, _className, -1);
+			}
 		}
 
 		public void OnException(Exception exception)
@@ -49,4 +54,3 @@ namespace LokiLogger.Fody {
 			Loki.WriteException(exception,_methodName,_className,-1);
 		}
 	}
-}

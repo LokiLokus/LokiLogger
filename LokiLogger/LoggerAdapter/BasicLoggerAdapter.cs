@@ -9,7 +9,7 @@ namespace LokiLogger.LoggerAdapter {
 		public void Write(LogLevel loglvl, string message, string className, string methodName, int line,
 			params object[] objects)
 		{
-			string result = className.Split("/").Last() + "." + methodName + ":" + line;
+			string result = className.Split('/').Last() + "." + methodName + ":" + line;
 
 			switch (loglvl)
 			{
@@ -46,7 +46,7 @@ namespace LokiLogger.LoggerAdapter {
 
 		public void WriteReturn(LogLevel loglvl, string message, string className, string methodName, int line, object data,long elapsedTime)
 		{
-			string result = className.Split("/").Last() + "." + methodName + ":" + line;
+			string result = className.Split('/').Last() + "." + methodName + ":" + line;
 
 			switch (loglvl)
 			{
@@ -86,7 +86,7 @@ namespace LokiLogger.LoggerAdapter {
 		public void WriteException(LogLevel loglvl, string message, string className, string methodName, int line,
 			Exception exception, params object[] data)
 		{
-			string result = className.Split("/").Last() + "." + methodName + ":" + line;
+			string result = className.Split('/').Last() + "." + methodName + ":" + line;
 
 			switch (loglvl)
 			{
@@ -126,7 +126,7 @@ namespace LokiLogger.LoggerAdapter {
 
 		public void WriteInvoke(LogLevel logLevel,string methodName, string className, object[] data)
 		{
-			string result = className.Split("/").Last() + "." + methodName;
+			string result = className.Split('/').Last() + "." + methodName;
 			switch (logLevel)
 			{
 				case LogLevel.Debug:

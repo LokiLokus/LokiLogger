@@ -28,7 +28,6 @@ using System.Collections.Generic;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 
-namespace LokiLogger.Fody {
     public static class IlHelper
     {
         public static IEnumerable<Instruction> ProcessParam(ParameterDefinition parameterDefinition, VariableDefinition paramsArray)
@@ -165,4 +164,3 @@ namespace LokiLogger.Fody {
             yield return Instruction.Create(OpCodes.Stelem_Ref);
         }
     }
-}

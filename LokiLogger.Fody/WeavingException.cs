@@ -25,7 +25,6 @@ https://github.com/Fody/MethodDecorator
  */
 using System;
 
-namespace LokiLogger.Fody {
     public class WeavingException : Exception
     {
         public WeavingException(string message)
@@ -33,4 +32,3 @@ namespace LokiLogger.Fody {
         {
         }
     }
-}

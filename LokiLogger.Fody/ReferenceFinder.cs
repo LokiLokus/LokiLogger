@@ -27,7 +27,6 @@ using System;
 using System.Linq;
 using Mono.Cecil;
 
-namespace LokiLogger.Fody {
     public class ReferenceFinder
     {
         ModuleDefinition moduleDefinition;
@@ -65,4 +64,3 @@ namespace LokiLogger.Fody {
             return null != methodDefinition ? moduleDefinition.ImportReference(methodDefinition) : null;
         }
     }
-}

@@ -319,7 +319,7 @@ namespace LokiLogger {
 			if (ProjectNameSpace != null)
 			{
 				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(ProjectNameSpace,2);
+				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
 				if (tmp.Length > 1)
 				{
 					className = $"{ProjectNameSpace}{tmp[1]}";
@@ -348,7 +348,7 @@ namespace LokiLogger {
 			if (ProjectNameSpace != null)
 			{
 				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(ProjectNameSpace,2);
+				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
 				if (tmp.Length > 1)
 				{
 					className = $"{ProjectNameSpace}{tmp[1]}";
@@ -379,7 +379,7 @@ namespace LokiLogger {
 			if (ProjectNameSpace != null)
 			{
 				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(ProjectNameSpace,2);
+				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
 				if (tmp.Length > 1)
 				{
 					className = $"{ProjectNameSpace}{tmp[1]}";
@@ -414,7 +414,7 @@ namespace LokiLogger {
 			if (ProjectNameSpace != null)
 			{
 				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(ProjectNameSpace,2);
+				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
 				if (tmp.Length > 1)
 				{
 					className = $"{ProjectNameSpace}{tmp[1]}";

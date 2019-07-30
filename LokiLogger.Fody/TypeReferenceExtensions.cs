@@ -26,7 +26,6 @@ https://github.com/Fody/MethodDecorator
 using System.Linq;
 using Mono.Cecil;
 
-namespace LokiLogger.Fody {
     public static class TypeReferenceExtensions
     {
         public static bool Implements(this TypeDefinition typeDefinition, TypeReference interfaceTypeReference)
@@ -73,5 +72,4 @@ namespace LokiLogger.Fody {
 
             return false;
         }
-    }
 }
