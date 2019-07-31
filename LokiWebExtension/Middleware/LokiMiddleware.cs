@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using LokiLogger;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 
@@ -16,9 +17,16 @@ namespace LokiWebExtension.Middleware {
 
         public async Task Invoke(HttpContext context)
         {
-            var request = await FormatRequest(context.Request);
-            
-            
+            RequestLog log;
+            try
+            {
+                log = await LogRequest(context.Request,context.TraceIdentifier);
+            }
+            catch (Exception e)
+            {
+                Loki.ExceptionWarning("Error in Loki Middleware logging Request",e);
+            }
+
             var originalBodyStream = context.Response.Body;
 
             using (var responseBody = new MemoryStream())
@@ -27,14 +35,15 @@ namespace LokiWebExtension.Middleware {
 
                 await _next(context);
 
-                string response = await FormatResponse(context.Response);
+                string response = await LogResponse(context.Response,log);
 
 
                 await responseBody.CopyToAsync(originalBodyStream);
             }
         }
 
-        private async Task<string> FormatRequest(HttpRequest request)
+        [Loki]
+        private async Task<RequestLog> LogRequest(HttpRequest request,string traceId)
         {
             var body = request.Body;
 
@@ -48,10 +57,22 @@ namespace LokiWebExtension.Middleware {
 
             request.Body = body;
 
-            return $"{request.Scheme} {request.Host}{request.Path} {request.QueryString} {bodyAsText}";
+            var data = new RequestLog{
+                Scheme = request.Scheme,
+                Host = request.Host.ToString(),
+                Path = request.Path,
+                QueryString = request.QueryString.ToString(),
+                Body = bodyAsText,
+                ClientIp = request.HttpContext.Connection.RemoteIpAddress.ToString(),
+                TraceId = traceId
+            };
+            
+            Loki.WriteInvoke("LogRequest","LokiWebExtension.Middleware.LokiMiddleware", data);
+            return data;
         }
 
-        private async Task<string> FormatResponse(HttpResponse response)
+        [Loki]
+        private async Task LogResponse(HttpResponse response,RequestLog log)
         {
             response.Body.Seek(0, SeekOrigin.Begin);
 
@@ -59,7 +80,49 @@ namespace LokiWebExtension.Middleware {
 
             response.Body.Seek(0, SeekOrigin.Begin);
 
-            return $"{response.StatusCode}: {text}";
+            ResponseLog data; 
+            if (log != null)
+            {
+                data = new ResponseLog{
+                    Scheme = log.Scheme,
+                    Host = log.Host,
+                    Path = log.Path,
+                    QueryString = log.QueryString,
+                    Body = text,
+                    ClientIp = log.ClientIp,
+                    TraceId = log.TraceId,
+                    StatusCode = response.StatusCode,
+                };
+            }
+            else
+            {
+                data = new ResponseLog{
+                    Body = text,
+                    ClientIp = response.HttpContext.Connection.RemoteIpAddress.ToString(),
+                    TraceId = response.HttpContext.TraceIdentifier,
+                    StatusCode = response.StatusCode,
+                };
+            }
+            Loki.WriteReturn(data,"LogResponse","LokiWebExtension.Middleware.LokiMiddleware",89);
         }
 	}
+
+    class HttpContextLog {
+        
+        public string Scheme { get; set; }
+        public string Host { get; set; }
+        public string Path { get; set; }
+        public string QueryString { get; set; }
+        public string ClientIp { get; set; }
+        public string TraceId { get; set; }
+    }
+    class RequestLog :HttpContextLog {
+        public string Body { get; set; }
+    }
+
+    class ResponseLog : HttpContextLog {
+        public string Body { get; set; }
+        public int StatusCode { get; set; }
+        
+    }
 }

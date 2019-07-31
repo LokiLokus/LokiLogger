@@ -14,16 +14,39 @@ namespace LokiLogger {
 		/// Project Name Space Start everything before that ist remove from ClassPath
 		/// It is setted automatically but sometimes this is buggy, so set it manually
 		/// </summary>
-		public static string ProjectNameSpace { get; set; }
-
 		public static LogLevel DefaultReturnLogLevel { get; set; } = LogLevel.Debug;
 		public static LogLevel DefaultInvokeLogLevel { get; set; } = LogLevel.Information;
 		public static LogLevel DefaultExceptionLogLevel { get; set; } = LogLevel.Error;
 		static Loki()
 		{
 			_adapters = new Dictionary<ILogAdapter, List<LogLevel>>();
-			ProjectNameSpace = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault()?.Namespace;
 		}
+
+		#region Return
+
+
+		public static void Return(object data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			Write(LogTyp.Return,LogLevel.Debug,null,callerName,className,lineNr,data);
+		}
+		
+		public static T Return<T>(T data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			Write(LogTyp.Return,LogLevel.Debug,null,callerName,className,lineNr,data);
+			return data;
+		}
+		
+		public static T Return<T>(string message,T data, [CallerLineNumber] int lineNr = 0,
+			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		{
+			Write(LogTyp.Return,LogLevel.Debug,message,callerName,className,lineNr,data);
+			return data;
+		}
+		
+
+		#endregion
 		
 		
 		#region Debug
@@ -31,58 +54,39 @@ namespace LokiLogger {
 		public static void ExceptionDebug(string message, Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Debug, exception, callerName, className, lineNr,message);
+			Write(LogTyp.Exception, LogLevel.Debug, message, callerName, className, lineNr,exception);
 		}
 		
 		public static void ExceptionDebug(string message, Exception exception,object obj, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Debug, exception, callerName, className, lineNr,message,obj);
+			Write(LogTyp.Exception, LogLevel.Debug, message, callerName, className, lineNr,exception,obj);
 		}
 		public static void ExceptionDebug(Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Debug, exception, callerName, className, lineNr);
+			Write(LogTyp.Exception, LogLevel.Debug, null, callerName, className, lineNr,exception);
 		}
 		
-		public static void Return(object data, [CallerLineNumber] int lineNr = 0,
-			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		
+		public static void Debug(string message,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			WriteReturn(data,callerName,className,lineNr);
+			Write(LogTyp.Normal, LogLevel.Debug,message,callerName,className,lineNr,ob1,obj2,obj3);
 		}
 		
-		public static T Return<T>(T data, [CallerLineNumber] int lineNr = 0,
-			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		public static void Debug(string message,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			WriteReturn(data,callerName,className,lineNr);
-			return data;
+			Write(LogTyp.Normal,LogLevel.Debug,message,callerName,className,lineNr,ob1,obj2);
 		}
 		
-		public static T Return<T>(string message,T data, [CallerLineNumber] int lineNr = 0,
-			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
+		public static void Debug(string message,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			WriteReturn(data,callerName,className,lineNr,message);
-			return data;
+			Write(LogTyp.Normal,LogLevel.Debug,message,callerName,className,lineNr,ob1);
 		}
 		
-		public static void Debug(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Debug(string message, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Debug,data,callerName,className,lineNr,ob1,obj2,obj3);
-		}
-		
-		public static void Debug(string data,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
-		{
-			Write(LogLevel.Debug,data,callerName,className,lineNr,ob1,obj2);
-		}
-		
-		public static void Debug(string data,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
-		{
-			Write(LogLevel.Debug,data,callerName,className,lineNr,ob1);
-		}
-		
-		public static void Debug(string data, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
-		{
-			Write(LogLevel.Debug,data,callerName,className,lineNr);
+			Write(LogTyp.Normal,LogLevel.Debug,message,callerName,className,lineNr);
 		}
 		#endregion
 
@@ -91,38 +95,39 @@ namespace LokiLogger {
 		public static void ExceptionInformation(string message, Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Information, exception, callerName, className, lineNr,message);
+			Write(LogTyp.Exception,LogLevel.Information, message, callerName, className, lineNr,exception);
 		}
 		public static void ExceptionInformation(string message, Exception exception,object obj, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Information, exception, callerName, className, lineNr,message,obj);
+			Write(LogTyp.Exception,LogLevel.Information, message, callerName, className, lineNr,exception,obj);
 		}
 		
 		public static void ExceptionInformation(Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Information, exception, callerName, className, lineNr);
+			Write(LogTyp.Exception,LogLevel.Information, null, callerName, className, lineNr,exception);
+
 		}
 		
-		public static void Information(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Information(string message,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Information,data,callerName,className,lineNr,ob1,obj2,obj3);
+			Write(LogTyp.Normal,LogLevel.Information,message,callerName,className,lineNr,ob1,obj2,obj3);
 		}
 		
-		public static void Information(string data,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Information(string message,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Information,data,callerName,className,lineNr,ob1,obj2);
+			Write(LogTyp.Normal,LogLevel.Information,message,callerName,className,lineNr,ob1,obj2);
 		}
 		
-		public static void Information(string data,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Information(string message,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Information,data,callerName,className,lineNr,ob1);
+			Write(LogTyp.Normal,LogLevel.Information,message,callerName,className,lineNr,ob1);
 		}
 		
-		public static void Information(string data, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Information(string message, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Information,data,callerName,className,lineNr);
+			Write(LogTyp.Normal,LogLevel.Information,message,callerName,className,lineNr);
 		}
 		#endregion
 
@@ -130,40 +135,40 @@ namespace LokiLogger {
 		public static void ExceptionWarning(string message, Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Warning, exception, callerName, className, lineNr,message);
+			Write(LogTyp.Exception, LogLevel.Warning, message, callerName, className, lineNr,exception);
 		}
 		
 		public static void ExceptionWarning(string message, Exception exception,object obj, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Warning, exception, callerName, className, lineNr,message,obj);
+			Write(LogTyp.Exception,LogLevel.Warning, message, callerName, className, lineNr,exception, obj);
 		}
 		
 		public static void ExceptionWarning(Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Warning, exception, callerName, className, lineNr);
+			Write(LogTyp.Exception,LogLevel.Warning, null, callerName, className, lineNr,exception);
 		}
 
 	
-		public static void Warning(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Warning(string message,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Warning,data,callerName,className,lineNr,ob1,obj2,obj3);
+			Write(LogTyp.Normal,LogLevel.Warning,message,callerName,className,lineNr,ob1,obj2,obj3);
 		}
 		
-		public static void Warning(string data,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Warning(string message,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Warning,data,callerName,className,lineNr,ob1,obj2);
+			Write(LogTyp.Normal,LogLevel.Warning,message,callerName,className,lineNr,ob1,obj2);
 		}
 		
-		public static void Warning(string data,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Warning(string message,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Warning,data,callerName,className,lineNr,ob1);
+			Write(LogTyp.Normal,LogLevel.Warning,message,callerName,className,lineNr,ob1);
 		}
 		
-		public static void Warning(string data, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Warning(string message, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Warning,data,callerName,className,lineNr);
+			Write(LogTyp.Normal,LogLevel.Warning,message,callerName,className,lineNr);
 		}
 		#endregion
 
@@ -171,41 +176,41 @@ namespace LokiLogger {
 		public static void ExceptionError(string message, Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Error, exception, callerName, className, lineNr,message);
+			Write(LogTyp.Exception, LogLevel.Error, message, callerName, className, lineNr,exception);
 		}
 		
 		public static void ExceptionError(string message, Exception exception,object obj, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Error, exception, callerName, className, lineNr,message,obj);
+			Write(LogTyp.Exception, LogLevel.Error, message, callerName, className, lineNr,exception,obj);
 		}
 		
 		public static void ExceptionError(Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Error, exception, callerName, className, lineNr);
+			Write(LogTyp.Exception, LogLevel.Error, null, callerName, className, lineNr,exception);
 		}
 
 		
 		
-		public static void Error(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Error(string message,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Error,data,callerName,className,lineNr,ob1,obj2,obj3);
+			Write(LogTyp.Normal,LogLevel.Error,message,callerName,className,lineNr,ob1,obj2,obj3);
 		}
 		
-		public static void Error(string data,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Error(string message,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Error,data,callerName,className,lineNr,ob1,obj2);
+			Write(LogTyp.Normal,LogLevel.Error,message,callerName,className,lineNr,ob1,obj2);
 		}
 		
-		public static void Error(string data,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Error(string message,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Error,data,callerName,className,lineNr,ob1);
+			Write(LogTyp.Normal,LogLevel.Error,message,callerName,className,lineNr,ob1);
 		}
 		
-		public static void Error(string data, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Error(string message, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Error,data,callerName,className,lineNr);
+			Write(LogTyp.Normal,LogLevel.Error,message,callerName,className,lineNr);
 		}
 		#endregion
 
@@ -213,40 +218,40 @@ namespace LokiLogger {
 		public static void ExceptionCritical(string message, Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Critical, exception, callerName, className, lineNr,message);
+			Write(LogTyp.Exception, LogLevel.Critical, message, callerName, className, lineNr,exception);
 		}
 
 		
 		public static void ExceptionCritical(string message, Exception exception,object obj, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Critical, exception, callerName, className, lineNr,message,obj);
+			Write(LogTyp.Exception, LogLevel.Critical, message, callerName, className, lineNr,exception,obj);
 		}
 		
 		public static void ExceptionCritical(Exception exception, [CallerLineNumber] int lineNr = 0,
 			[CallerMemberName] string callerName = "", [CallerFilePath] string className = "")
 		{
-			WriteException(LogLevel.Critical, exception, callerName, className, lineNr);
+			Write(LogTyp.Exception, LogLevel.Critical, null, callerName, className, lineNr,exception);
 		}
 		
-		public static void Critical(string data,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Critical(string message,object ob1,object obj2,object obj3, [CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Critical,data,callerName,className,lineNr,ob1,obj2,obj3);
+			Write(LogTyp.Normal,LogLevel.Critical,message,callerName,className,lineNr,ob1,obj2,obj3);
 		}
 		
-		public static void Critical(string data,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Critical(string message,object ob1,object obj2,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Critical,data,callerName,className,lineNr,ob1,obj2);
+			Write(LogTyp.Normal,LogLevel.Critical,message,callerName,className,lineNr,ob1,obj2);
 		}
 		
-		public static void Critical(string data,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Critical(string message,object ob1,[CallerLineNumber] int lineNr = 0, [CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Critical,data,callerName,className,lineNr,ob1);
+			Write(LogTyp.Normal,LogLevel.Critical,message,callerName,className,lineNr,ob1);
 		}
 		
-		public static void Critical(string data, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
+		public static void Critical(string message, [CallerLineNumber] int lineNr = 0,[CallerMemberName] string callerName = "",[CallerFilePath] string className = "")
 		{
-			Write(LogLevel.Critical,data,callerName,className,lineNr);
+			Write(LogTyp.Normal,LogLevel.Critical,message,callerName,className,lineNr);
 		}
 		#endregion
 		
@@ -311,28 +316,16 @@ namespace LokiLogger {
 			return _adapters;
 		}
 
-		private static void Write(LogLevel logLevel, string message, string methodName, string className, int line,
-			params object[] objects)
+		public static void Write(LogTyp typ, LogLevel logLevel,string message, string methodName, string className, int line,
+			params object[] data)
 		{
-			string classPath = className;
-
-			if (ProjectNameSpace != null)
-			{
-				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
-				if (tmp.Length > 1)
-				{
-					className = $"{ProjectNameSpace}{tmp[1]}";
-				}
-			}
-			
 			foreach (ILogAdapter logAdapter in _adapters.Keys)
 			{
 				try
 				{
 					if (logAdapter == null) continue;
 					if(!_adapters[logAdapter].Contains(logLevel))
-						logAdapter.Write(logLevel,message,className, methodName,line,objects);
+						logAdapter.Write(typ,logLevel,message,className, methodName,line,data);
 				}
 				catch (Exception e)
 				{
@@ -340,104 +333,6 @@ namespace LokiLogger {
 				}
 			}
 		}
-
-		public static void WriteInvoke(string methodName, string className, params object[] data)
-		{
-			string classPath = className;
-
-			if (ProjectNameSpace != null)
-			{
-				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
-				if (tmp.Length > 1)
-				{
-					className = $"{ProjectNameSpace}{tmp[1]}";
-				}
-			}
-			
-			foreach (ILogAdapter logAdapter in _adapters.Keys)
-			{
-				try
-				{
-					
-					if (logAdapter == null) continue;
-					if(!_adapters[logAdapter].Contains(DefaultInvokeLogLevel))
-						logAdapter.WriteInvoke(DefaultInvokeLogLevel, methodName, className, data);
-				}
-				catch (Exception e)
-				{
-					Console.WriteLine(e);
-				}
-			}
-		}
-		
-		
-		public static void WriteReturn(object data, string methodName, string className, int lineNr, string message = null,long elapsedTime = 0)
-		{
-			string classPath = className;
-
-			if (ProjectNameSpace != null)
-			{
-				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
-				if (tmp.Length > 1)
-				{
-					className = $"{ProjectNameSpace}{tmp[1]}";
-				}
-			}
-			
-			foreach (ILogAdapter logAdapter in _adapters.Keys)
-			{
-				try
-				{
-					if (logAdapter == null) continue;
-					if(!_adapters[logAdapter].Contains(DefaultReturnLogLevel))
-						logAdapter.WriteReturn(DefaultReturnLogLevel,message,className, methodName,lineNr,data,elapsedTime);
-				}
-				catch (Exception e)
-				{
-					Console.WriteLine(e);
-				}
-			}
-		}
-
-		public static void WriteException(Exception exception, string methodName, string className, int lineNr,
-			string message = null, params object[] data)
-		{
-			WriteException(DefaultExceptionLogLevel,exception,methodName,className,lineNr,message,data);
-		}
-		
-		private static void WriteException(LogLevel logLevel, Exception exception, string methodName, string className, int lineNr, string message = null,params object[] data)
-		{
-			string classPath = className;
-
-			if (ProjectNameSpace != null)
-			{
-				//Yeah hate me, but i like tmp as Name
-				string[] tmp = className.Split(new string[] { ProjectNameSpace }, StringSplitOptions.None);
-				if (tmp.Length > 1)
-				{
-					className = $"{ProjectNameSpace}{tmp[1]}";
-				}
-			}
-			
-			foreach (ILogAdapter logAdapter in _adapters.Keys)
-			{
-				try
-				{
-					if (logAdapter == null) continue;
-					if(!_adapters[logAdapter].Contains(logLevel))
-						logAdapter.WriteException(logLevel,message,className, methodName,lineNr,exception,data);
-				}
-				catch (Exception e)
-				{
-					Console.WriteLine(e);
-				}
-			}
-		}
-		
-		
-
 	}
 	public class LoggerAdapterIsNullException : Exception {}
 	public class IgnoreListIsNullException : Exception {}

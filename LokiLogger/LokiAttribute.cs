@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Reflection;
 using LokiLogger;
+using LokiLogger.Shared;
 using MethodDecorator.Fody.Interfaces;
 
 	public class LokiAttribute:Attribute,IMethodDecorator {
@@ -25,8 +26,7 @@ using MethodDecorator.Fody.Interfaces;
 				_stopwatch = new Stopwatch();
 			_methodName = method.Name;
 			_className = method.DeclaringType.FullName;
-			Loki.WriteInvoke(_methodName,_className,args);
-			
+			Loki.Write(LogTyp.Invoke,LogLevel.Debug,null,_methodName,_className,-1,args);
 		}
 
 		public void OnEntry()
@@ -39,11 +39,11 @@ using MethodDecorator.Fody.Interfaces;
 		{
 			if(_enableStopwatch){
 				_stopwatch.Stop();
-				Loki.WriteReturn(null, _methodName, _className, -1, elapsedTime: _stopwatch.ElapsedTicks);
+				Loki.Write(LogTyp.Return,LogLevel.Debug,null,_methodName,_className,-1,_stopwatch.ElapsedTicks);
 			}
 			else
 			{
-				Loki.WriteReturn(null, _methodName, _className, -1);
+				Loki.Write(LogTyp.Return,LogLevel.Debug,null,_methodName,_className,-1);
 			}
 		}
 
@@ -51,6 +51,6 @@ using MethodDecorator.Fody.Interfaces;
 		{
 			if(_enableStopwatch)
 				_stopwatch.Stop();
-			Loki.WriteException(exception,_methodName,_className,-1);
+			Loki.Write(LogTyp.Exception,LogLevel.Warning,null,_methodName,_className,-1,exception);
 		}
 	}

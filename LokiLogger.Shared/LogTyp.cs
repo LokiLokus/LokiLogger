@@ -4,6 +4,7 @@ namespace LokiLogger.Shared {
 		Normal,
 		Exception,
 		Return,
-		Invoke
+		Invoke,
+		RestCall
 	}
 }

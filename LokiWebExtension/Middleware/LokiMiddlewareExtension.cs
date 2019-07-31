@@ -38,6 +38,7 @@ namespace LokiWebExtension.Middleware {
 
 		public LokiMiddlewareConfig()
 		{
+			DefaultLevel = LogLevel.Debug;
 			IgnoreRoutes = new List<string>();
 			Routes = new Dictionary<string, LogLevel>();
 		}
@@ -47,7 +48,7 @@ namespace LokiWebExtension.Middleware {
 			if(route ==null) throw new ArgumentNullException(nameof(route));
 			IgnoreRoutes.Add(route);
 		}
-
+[Obsolete("This feature is not supported at the Moment")]
 		public void SetLevelOfRoute(string route, LogLevel level)
 		{
 			if(route ==null) throw new ArgumentNullException(nameof(route));
