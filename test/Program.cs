@@ -15,6 +15,7 @@ namespace test {
 		[Loki]
 		public static void test()
 		{
+			
 			Console.WriteLine("Hallo");
 		}
 	}
