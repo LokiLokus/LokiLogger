@@ -6,10 +6,12 @@
         <Authors>LokiLokus</Authors>
         <LangVersion>7.1</LangVersion>
     </PropertyGroup>
-
+    
     <ItemGroup>
+        
+        <PackageReference Include="LokiLogger" Version="3.0.0" />
+        
         <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
-        <PackageReference Include="LokiLogger" Version="2.2.5" />
     </ItemGroup>
 
 </Project>
