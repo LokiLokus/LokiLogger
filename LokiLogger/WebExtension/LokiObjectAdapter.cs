@@ -5,17 +5,16 @@ using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Timers;
-using LokiLogger;
 using LokiLogger.LoggerAdapter;
 using LokiLogger.Shared;
-using LokiWebExtension.ConfigSettings;
+using LokiLogger.WebExtension.ConfigSettings;
+using LokiLogger.WebExtension.Middleware;
 using LokiWebExtension.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 
-namespace LokiWebExtension {
+namespace LokiLogger.WebExtension {
 	public class LokiObjectAdapter : ILogAdapter,IDisposable,IHostedService{
         private ConcurrentQueue<Log> _logs;
         private HttpClient _client;
