@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LokiLogger.Shared;
 using LokiLogger.WebExtension.ConfigSettings;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace LokiLogger.WebExtension.Middleware {
 	public static class LokiMiddlewareExtension {
@@ -24,8 +25,16 @@ namespace LokiLogger.WebExtension.Middleware {
 		private static IApplicationBuilder UseLokiLogger(IApplicationBuilder builder,LokiConfigSettings config)
 		{
 			Config = config;
-			builder.UseMiddleware<LokiConfigSettings>();
+
+			LokiObjectAdapter.LokiConfig = config;
+			builder.UseMiddleware<LokiMiddleware>();
 			return builder;
+		}
+
+		public static IServiceCollection AddLokiObjectLogger(this IServiceCollection services)
+		{
+			services.AddHostedService<LokiObjectAdapter>();
+			return services;
 		}
 	}
 }

@@ -30,7 +30,7 @@ namespace TestApp {
 				options.CheckConsentNeeded = context => true;
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
-
+			services.AddLokiObjectLogger();
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
@@ -52,7 +52,10 @@ namespace TestApp {
 			app.UseStaticFiles();
 			app.UseCookiePolicy();
 			
-			app.UseLokiLogger(x => { x.DefaultLevel = LogLevel.Debug; });
+			app.UseLokiLogger(x =>
+			{
+				x.DefaultLevel = LogLevel.Debug;
+			});
 
 			app.UseMvc(routes =>
 			{

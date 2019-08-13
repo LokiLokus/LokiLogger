@@ -101,6 +101,7 @@ namespace LokiLogger.WebExtension {
                 }
                 catch (Exception exception)
                 {
+	                if (string.IsNullOrWhiteSpace(LokiConfig.HostName)) throw;
                     Console.WriteLine("Error occured");
                     tmpSafe.ForEach(x => _logs.Enqueue(x));
                 }
@@ -128,18 +129,4 @@ namespace LokiLogger.WebExtension {
 	        return Task.CompletedTask;
 	    }
 	}
-
-    public static class LokiWebServiceExtension {
-        
-        public static IServiceCollection AddLokiObjectLogger(this IServiceCollection services, Action<LokiConfigSettings> options)
-        {
-            LokiConfigSettings config = new LokiConfigSettings();
-            options.Invoke(config);
-            LokiObjectAdapter.LokiConfig = config;
-            services.AddHostedService<LokiObjectAdapter>();
-            return services;
-        }
-    }
-
-    
 }
