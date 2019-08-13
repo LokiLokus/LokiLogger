@@ -1,10 +1,12 @@
 using System;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using LokiLogger;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
+using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace LokiWebExtension.Middleware {
 	public class LokiMiddleware {
@@ -17,10 +19,13 @@ namespace LokiWebExtension.Middleware {
 
         public async Task Invoke(HttpContext context)
         {
-            RequestLog log;
+            WebRestLog log = new WebRestLog()
+            {
+                TraceId = context.TraceIdentifier
+            };
             try
             {
-                log = await LogRequest(context.Request,context.TraceIdentifier);
+                log = await LogRequest(context.Request,log);
             }
             catch (Exception e)
             {
@@ -35,15 +40,14 @@ namespace LokiWebExtension.Middleware {
 
                 await _next(context);
 
-                string response = await LogResponse(context.Response,log);
-
+                await LogResponse(context.Response,log);
 
                 await responseBody.CopyToAsync(originalBodyStream);
             }
         }
 
         [Loki]
-        private async Task<RequestLog> LogRequest(HttpRequest request,string traceId)
+        private async Task<WebRestLog> LogRequest(HttpRequest request,WebRestLog log)
         {
             var body = request.Body;
 
@@ -57,72 +61,46 @@ namespace LokiWebExtension.Middleware {
 
             request.Body = body;
 
-            var data = new RequestLog{
-                Scheme = request.Scheme,
-                Host = request.Host.ToString(),
-                Path = request.Path,
-                QueryString = request.QueryString.ToString(),
-                Body = bodyAsText,
-                ClientIp = request.HttpContext.Connection.RemoteIpAddress.ToString(),
-                TraceId = traceId
-            };
+            log.Scheme = request.Scheme;
+            log.Host = request.Host.ToString();
+            log.Path = request.Path;
+            log.QueryString = request.QueryString.ToString();
+            log.RequestBody = bodyAsText;
+            log.ClientIp = request.HttpContext.Connection.RemoteIpAddress.ToString();
+            log.HttpMethod = request.Method;
+            log.Start = DateTime.UtcNow;
             
-            Loki.WriteInvoke("LogRequest","LokiWebExtension.Middleware.LokiMiddleware", data);
-            return data;
+            return log;
         }
 
         [Loki]
-        private async Task LogResponse(HttpResponse response,RequestLog log)
+        private async Task LogResponse(HttpResponse response,WebRestLog log)
         {
             response.Body.Seek(0, SeekOrigin.Begin);
 
             string text = await new StreamReader(response.Body).ReadToEndAsync();
 
+            
             response.Body.Seek(0, SeekOrigin.Begin);
 
-            ResponseLog data; 
-            if (log != null)
-            {
-                data = new ResponseLog{
-                    Scheme = log.Scheme,
-                    Host = log.Host,
-                    Path = log.Path,
-                    QueryString = log.QueryString,
-                    Body = text,
-                    ClientIp = log.ClientIp,
-                    TraceId = log.TraceId,
-                    StatusCode = response.StatusCode,
-                };
-            }
-            else
-            {
-                data = new ResponseLog{
-                    Body = text,
-                    ClientIp = response.HttpContext.Connection.RemoteIpAddress.ToString(),
-                    TraceId = response.HttpContext.TraceIdentifier,
-                    StatusCode = response.StatusCode,
-                };
-            }
-            Loki.WriteReturn(data,"LogResponse","LokiWebExtension.Middleware.LokiMiddleware",89);
+            log.StatusCode = response.StatusCode;
+            log.End = DateTime.UtcNow;
+            log.ResponseBody = text;
         }
 	}
 
-    class HttpContextLog {
-        
+    class WebRestLog {
+        public string HttpMethod { get; set; }
         public string Scheme { get; set; }
         public string Host { get; set; }
         public string Path { get; set; }
         public string QueryString { get; set; }
         public string ClientIp { get; set; }
         public string TraceId { get; set; }
-    }
-    class RequestLog :HttpContextLog {
-        public string Body { get; set; }
-    }
-
-    class ResponseLog : HttpContextLog {
-        public string Body { get; set; }
+        public string RequestBody { get; set; }
+        public string ResponseBody { get; set; }
         public int StatusCode { get; set; }
-        
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
     }
 }
