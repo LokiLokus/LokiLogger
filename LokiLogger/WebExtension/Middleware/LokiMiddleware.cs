@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using LokiLogger;
+using LokiLogger.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Routing.Constraints;
@@ -44,6 +45,15 @@ namespace LokiWebExtension.Middleware {
 
                 await responseBody.CopyToAsync(originalBodyStream);
             }
+
+            LogLevel lvl = LogLevel.Debug;
+            if (log.StatusCode >= 200 && log.StatusCode < 300)
+            {
+                lvl = LogLevel.Warning;
+
+            }
+
+            Loki.Write(LogTyp.RestCall, lvl, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
         }
 
         [Loki]
