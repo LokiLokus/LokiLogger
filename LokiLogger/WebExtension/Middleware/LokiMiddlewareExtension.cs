@@ -14,8 +14,7 @@ namespace LokiWebExtension.Middleware {
 			configAction.Invoke(config);
 			return UseLokiLogger(builder,config);
 		}
-		
-		
+				
 		public static IApplicationBuilder UseLokiLogger(this IApplicationBuilder builder)
 		{
 			LokiMiddlewareConfig config = new LokiMiddlewareConfig();
@@ -28,7 +27,6 @@ namespace LokiWebExtension.Middleware {
 			builder.UseMiddleware<LokiMiddleware>();
 			return builder;
 		}
-		
 	}
 
 	public class LokiMiddlewareConfig {
