@@ -2,8 +2,8 @@ using LokiLogger.Shared;
 
 namespace LokiLogger.WebExtension.ConfigSettings {
 	public class LokiConfigSettings {
+			public string Secret { get; set; }
 			public string HostName { get; set; }
-			public string Name { get; set; }
 			public bool ActivateAttributes { get; set; }
 			public LogLevel AttributeDefaultInvokeLevel { get; set; }
 			public LogLevel AttributeDefaultEndLevel { get; set; }

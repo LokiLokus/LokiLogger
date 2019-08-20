@@ -72,13 +72,21 @@ namespace LokiLogger.WebExtension {
 				ThreadId = Thread.CurrentThread.ManagedThreadId,
 				LogLevel = logLevel,
 				LogTyp = typ,
-				Name = LokiConfig.Name,
 				Data = data,
 				Exception = exData
 			};
 			
 			_logs.Enqueue(log);
 		}
+		
+		
+		public class SendLogModel
+		{
+			public string SourceSecret { get; set; }
+			public List<Log> Logs { get; set; }
+        
+		}
+		
 		
 	    [MethodImpl(MethodImplOptions.Synchronized)]
         private void SendData(object state)
@@ -90,19 +98,28 @@ namespace LokiLogger.WebExtension {
                 {
                     tmpSafe.Add(tmp);
                 }
+                SendLogModel sendData = new SendLogModel()
+                {
+	                Logs = tmpSafe,
+	                SourceSecret = LokiConfig.Secret
+                };
 	            
                 try
                 {
                     if(tmpSafe.Count > 0){
-                        var result = _client.PostAsJsonAsync(LokiConfig.HostName, tmpSafe);
+                        var result = _client.PostAsJsonAsync(LokiConfig.HostName, sendData);
                         var data = result.Result;
-                        if(!data.IsSuccessStatusCode) throw new Exception();
+                        if(!data.IsSuccessStatusCode)
+                        {
+	                        Console.WriteLine("Status Code: " + data.StatusCode);
+	                        Console.WriteLine("Message: " + data.Content.ReadAsStringAsync().Result);
+                        }
                     }
                 }
                 catch (Exception exception)
                 {
-	                if (string.IsNullOrWhiteSpace(LokiConfig.HostName)) throw;
-                    Console.WriteLine("Error occured");
+                    Console.WriteLine("Send Log Data Failed");
+                    Console.WriteLine(exception.Message);
                     tmpSafe.ForEach(x => _logs.Enqueue(x));
                 }
             }

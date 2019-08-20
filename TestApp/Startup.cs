@@ -30,6 +30,7 @@ namespace TestApp {
 				options.CheckConsentNeeded = context => true;
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
+			
 			services.AddLokiObjectLogger();
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -54,6 +55,8 @@ namespace TestApp {
 			
 			app.UseLokiLogger(x =>
 			{
+				x.Secret = "1234";
+				x.HostName = "http://localhost:5000/api/Logging/Log/22a0420d-102f-4bf9-99a0-79f6bac6f2aa";
 				x.DefaultLevel = LogLevel.Debug;
 			});
 

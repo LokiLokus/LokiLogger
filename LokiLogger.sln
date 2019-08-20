@@ -8,8 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LokiLogger.Fody", "LokiLogg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{83765A29-45A8-4668-A5E6-08A4DCB0E219}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{67A86B12-9F2C-4CFE-BBB5-923A419C4FF9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{D93B9735-8BDF-42BE-AA9B-E41B1B9A34EE}"
 EndProject
 Global
