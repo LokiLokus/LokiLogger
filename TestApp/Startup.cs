@@ -56,7 +56,7 @@ namespace TestApp {
 			app.UseLokiLogger(x =>
 			{
 				x.Secret = "1234";
-				x.HostName = "http://localhost:5000/api/Logging/Log/22a0420d-102f-4bf9-99a0-79f6bac6f2aa";
+				x.HostName = "http://localhost:5000/api/Logging/Log/b71b3208-0c9a-4e41-b1e8-3ce77b38a167";
 				x.DefaultLevel = LogLevel.Debug;
 			});
 
