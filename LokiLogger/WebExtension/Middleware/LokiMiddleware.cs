@@ -30,31 +30,23 @@ namespace LokiLogger.WebExtension.Middleware {
                 Loki.ExceptionWarning("Error in Loki Middleware logging Request",e);
             }
 
-            var originalBodyStream = context.Response.Body;
 
-            using (var responseBody = new MemoryStream())
+
+            try
             {
-                context.Response.Body = responseBody;
-
-                try
-                {
-                    await _next(context);
-                }
-                catch (Exception e)
-                {
-                    log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
-                    await LogResponse(context.Response, log);
-                    await responseBody.CopyToAsync(originalBodyStream);
-                    Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
-                    throw;
-                }
-                
-                await LogResponse(context.Response, log);
-                await responseBody.CopyToAsync(originalBodyStream);
-                
-
-                
+                await _next(context);
             }
+            catch (Exception e)
+            {
+                log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
+                await LogResponse(context.Response, log);
+                Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
+                throw;
+            }
+                
+            await LogResponse(context.Response, log);
+                
+
 
             LogLevel lvl = LokiObjectAdapter.LokiConfig.DefaultLevel;
             if (!(log.StatusCode >= 200 && log.StatusCode < 300))
@@ -69,24 +61,19 @@ namespace LokiLogger.WebExtension.Middleware {
         [Loki]
         private async Task<WebRestLog> LogRequest(HttpRequest request,WebRestLog log)
         {
-            var body = request.Body;
+            request.EnableBuffering();
 
-            request.EnableRewind();
+            using (var reader = new StreamReader(request.Body, Encoding.UTF8, false, 1024, true))
+            {
+                log.RequestBody = await reader.ReadToEndAsync();
 
-            var buffer = new byte[Convert.ToInt32(request.ContentLength)];
-
-            await request.Body.ReadAsync(buffer, 0, buffer.Length);
-
-            request.Body.Position = 0;
-            var bodyAsText = Encoding.UTF8.GetString(buffer);
-
-            request.Body = body;
-
+                request.Body.Seek(0, SeekOrigin.Begin);
+            }
+            
             log.Scheme = request.Scheme;
             log.Host = request.Host.ToString();
             log.Path = request.Path;
             log.QueryString = request.QueryString.ToString();
-            log.RequestBody = bodyAsText;
             log.ClientIp = request.HttpContext.Connection.RemoteIpAddress.ToString();
             log.HttpMethod = request.Method;
             log.Start = DateTime.UtcNow;
