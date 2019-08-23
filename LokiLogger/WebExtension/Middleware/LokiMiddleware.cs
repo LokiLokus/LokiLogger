@@ -36,15 +36,28 @@ namespace LokiLogger.WebExtension.Middleware {
             {
                 context.Response.Body = responseBody;
 
-                await _next(context);
-
-                await LogResponse(context.Response,log);
-
+                try
+                {
+                    await _next(context);
+                }
+                catch (Exception e)
+                {
+                    log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
+                    await LogResponse(context.Response, log);
+                    await responseBody.CopyToAsync(originalBodyStream);
+                    Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
+                    throw;
+                }
+                
+                await LogResponse(context.Response, log);
                 await responseBody.CopyToAsync(originalBodyStream);
+                
+
+                
             }
 
             LogLevel lvl = LokiObjectAdapter.LokiConfig.DefaultLevel;
-            if (log.StatusCode >= 200 && log.StatusCode < 300)
+            if (!(log.StatusCode >= 200 && log.StatusCode < 300))
             {
                 lvl = LogLevel.Warning;
 
@@ -107,6 +120,7 @@ namespace LokiLogger.WebExtension.Middleware {
         public string RequestBody { get; set; }
         public string ResponseBody { get; set; }
         public int StatusCode { get; set; }
+        public string Exception { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
     }

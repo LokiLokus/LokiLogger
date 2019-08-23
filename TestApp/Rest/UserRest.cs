@@ -60,7 +60,7 @@ namespace TestApp.Rest {
 		}
 	}
 
-	class LoginModel {
+	public class LoginModel {
 		public string Password { get; set; }
 		public string UserName { get; set; }
 	}

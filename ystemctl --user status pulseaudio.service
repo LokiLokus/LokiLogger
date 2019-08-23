@@ -1,0 +1,2366 @@
+-- Logs begin at Tue 2019-03-26 19:04:34 CET, end at Sun 2019-08-18 21:07:15 CEST. --
+Aug 14 19:37:37 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 19:37:37 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x2e00007 specified for 0x2e00005 (Stacer).[0m
+Aug 14 19:37:37 loki-ryzen cerebro[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "pantheon-filechooser-module"[0m
+Aug 14 19:37:37 loki-ryzen dbus-daemon[1516]: [session uid=1000 pid=1516] Successfully activated service 'org.gnome.evolution.dataserver.Sources5'
+Aug 14 19:37:37 loki-ryzen systemd[1463]: Started Evolution source registry.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 19:37:37 loki-ryzen cerebro[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "canberra-gtk-module"[0m
+Aug 14 19:37:37 loki-ryzen dbus-daemon[1516]: [session uid=1000 pid=1516] Activating via systemd: service name='org.gnome.evolution.dataserver.Calendar7' unit='evolution-calendar-factory.service' requested by ':1.54' (uid=1000 pid=1789 comm="/usr/lib/x86_64-linux-gnu/io.elementary.calendar-d" label="unconfined")
+Aug 14 19:37:37 loki-ryzen systemd[1463]: Starting Evolution calendar service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 19:37:37 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39minvalid cast from 'CoglTexture2D' to '(null)'[0m
+Aug 14 19:37:37 loki-ryzen dbus-daemon[1516]: [session uid=1000 pid=1516] Successfully activated service 'org.gnome.evolution.dataserver.Calendar7'
+Aug 14 19:37:37 loki-ryzen systemd[1463]: Started Evolution calendar service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 19:37:38 loki-ryzen dbus-daemon[1516]: [session uid=1000 pid=1516] Activating service name='org.gnome.GConf' requested by ':1.60' (uid=1000 pid=1792 comm="/opt/Cerebro/cerebro " label="unconfined")
+Aug 14 19:37:38 loki-ryzen dbus-daemon[1516]: [session uid=1000 pid=1516] Successfully activated service 'org.gnome.GConf'
+Aug 14 19:37:38 loki-ryzen dbus-daemon[1516]: [session uid=1000 pid=1516] Activating via systemd: service name='org.gnome.evolution.dataserver.AddressBook9' unit='evolution-addressbook-factory.service' requested by ':1.62' (uid=1000 pid=1890 comm="/usr/lib/evolution/evolution-calendar-factory-subp" label="unconfined")
+Aug 14 19:37:38 loki-ryzen systemd[1463]: Starting Evolution address book service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 19:37:38 loki-ryzen dbus-daemon[1516]: [session uid=1000 pid=1516] Successfully activated service 'org.gnome.evolution.dataserver.AddressBook9'
+Aug 14 19:37:38 loki-ryzen systemd[1463]: Started Evolution address book service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 19:37:39 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x300000a specified for 0x3000008 (Nextcloud).[0m
+Aug 14 19:37:44 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 19:37:46 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 19:37:51 loki-ryzen pulseaudio[1673]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 14 19:37:51 loki-ryzen wingpanel[1776]: [0;1;39m[0;1;31m[0;1;39mManager.vala:56: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 14 19:37:51 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 19:38:51 loki-ryzen io.elementary.a[2704]: [0;1;39m[0;1;31m[0;1;39mClient.vala:633: Update_cache: Refesh cache async failed - E: The repository 'http://ppa.launchpad.net/webupd8team/tor-browser/ubuntu bionic Release' does not have a Release file.[0m
+                                                  [0;1;39mW: Updating from such a repository can't be done securely, and is therefore disabled by default.[0m
+                                                  [0;1;39mW: See apt-secure(8) manpage for repository creation and user configuration details.[0m
+Aug 14 19:41:26 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Parent 2241, Gecko_IOThread] WARNING: pipe error (120): Connection reset by peer: file /build/firefox-6m4fHv/firefox-66.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357[0m
+Aug 14 19:41:34 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 19:42:28 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mmeta_end_modal_for_plugin: assertion 'is_modal (display)' failed[0m
+Aug 14 19:49:33 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: CurrentTime used to choose focus window; focus window may not be correct.[0m
+Aug 14 19:49:35 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: CurrentTime used to choose focus window; focus window may not be correct.[0m
+Aug 14 19:49:35 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mmeta_end_modal_for_plugin: assertion 'is_modal (display)' failed[0m
+Aug 14 20:08:43 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 20:16:59 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 20:17:30 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 20:17:37 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 20:17:37 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 20:17:47 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 20:17:48 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 20:17:48 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 20:17:48 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 20:26:10 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mWindowSwitcher.vala:733: Error opening directory '/home/loki/.config/plank/dock1/launchers/telegramdesktop.dockitem': Not a directory[0m
+Aug 14 20:54:03 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 20:54:05 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 20:54:05 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 14 20:54:05 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 14 21:07:09 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:07:09 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:24 loki-ryzen gsd-sharing[1676]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit gnome-remote-desktop.service not loaded.[0m
+Aug 14 21:59:24 loki-ryzen gsd-sharing[1676]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit vino-server.service not loaded.[0m
+Aug 14 21:59:25 loki-ryzen io.elementary.cerbere.desktop[1771]: [0;1;39m[0;1;31m[0;1;39mFailed to register: GDBus.Error:org.freedesktop.DBus.Error.NoReply: Message recipient disconnected from message bus without replying[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen gsd-sharing[1676]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit gnome-remote-desktop.service not loaded.[0m
+Aug 14 21:59:27 loki-ryzen gsd-sharing[1676]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit vino-server.service not loaded.[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:27 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:28 loki-ryzen gsd-color[1659]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 14 21:59:29 loki-ryzen pulseaudio[1673]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-ALC1220 Digital] alsa-sink.c: Error opening PCM device iec958:1: No such file or directory[0m
+Aug 14 21:59:29 loki-ryzen pulseaudio[1673]: [0;1;39m[0;1;31m[0;1;39m[pulseaudio] sink-input.c: Failed to create sink input: sink is suspended.[0m
+Aug 14 21:59:29 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:29 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 21:59:29 loki-ryzen nm-applet[1816]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 21:59:29 loki-ryzen gsd-color[1659]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 14 21:59:56 loki-ryzen gsd-color[1659]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 14 21:59:56 loki-ryzen gsd-color[1659]: [0;1;39m[0;1;31m[0;1;39mfailed to connect to device: Failed to connect to missing device /org/freedesktop/ColorManager/devices/xrandr_BenQ_Corporation_BenQ_EW3270U_Y1K01177019_lightdm_110[0m
+Aug 14 22:00:04 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 22:00:07 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:00:07 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 14 22:00:07 loki-ryzen gala[1753]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 14 22:00:18 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][MessageChannel] Error: (msgtype=0x5F0029,name=PNecko::Msg_RemoveRequestContext) Closed channel: cannot send/recv[0m
+Aug 14 22:00:18 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:00:32 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:00:32 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:00:35 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:00:35 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:00:37 loki-ryzen io.elementary.a[2704]: [0;1;39m[0;1;31m[0;1;39mClient.vala:633: Update_cache: Refesh cache async failed - E: The repository 'http://ppa.launchpad.net/webupd8team/tor-browser/ubuntu bionic Release' does not have a Release file.[0m
+                                                  [0;1;39mW: Updating from such a repository can't be done securely, and is therefore disabled by default.[0m
+                                                  [0;1;39mW: See apt-secure(8) manpage for repository creation and user configuration details.[0m
+Aug 14 22:01:05 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:01:05 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:01:36 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:01:36 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:02:36 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:02:36 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:05:08 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:05:20 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:06:18 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:08:11 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 10274, MediaPlayback #4] WARNING: Decoder=7f0ce53c4a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:08:11 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 10274, MediaPlayback #2] WARNING: Decoder=7f0ce53c4a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:08:11 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 10274, MediaPlayback #1] WARNING: Decoder=7f0ce53c4a00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:08:22 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Parent 2241, Gecko_IOThread] WARNING: pipe error (194): Connection reset by peer: file /build/firefox-6m4fHv/firefox-66.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357[0m
+Aug 14 22:08:45 loki-ryzen wingpanel[1776]: [0;1;39m[0;1;31m[0;1;39mManager.vala:61: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 14 22:23:14 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:23:14 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39mPulseAudioManager.vala:167: setting sink (null) port to hdmi-output-0 failed[0m
+Aug 14 22:23:15 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:23:15 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39mPulseAudioManager.vala:167: setting sink (null) port to hdmi-output-0 failed[0m
+Aug 14 22:23:37 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39mManager.vala:65: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 14 22:23:44 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:23:45 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:23:46 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:23:46 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:23:47 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:23:47 loki-ryzen io.elementary.s[16460]: [0;1;39m[0;1;31m[0;1;39mPulseAudioManager.vala:167: setting sink (null) port to hdmi-output-0 failed[0m
+Aug 14 22:28:11 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:28:18 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:28:18 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost[0m
+Aug 14 22:29:14 loki-ryzen pulseaudio[1673]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-ALC1220 Digital] alsa-sink.c: ALSA woke us up to write new data to the device, but there was actually nothing to write.[0m
+Aug 14 22:29:14 loki-ryzen pulseaudio[1673]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-ALC1220 Digital] alsa-sink.c: Most likely this is a bug in the ALSA driver 'snd_hda_intel'. Please report this issue to the ALSA developers.[0m
+Aug 14 22:29:14 loki-ryzen pulseaudio[1673]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-ALC1220 Digital] alsa-sink.c: We were woken up with POLLOUT set -- however a subsequent snd_pcm_avail() returned 0 or another value < min_avail.[0m
+Aug 14 22:29:33 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7ba5baa600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:29:33 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #1] WARNING: Decoder=7f7ba5baa600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:29:33 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7ba5baa600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:29:33 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7ba5baa600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:29:33 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7ba5baa600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:29:33 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7ba5baa600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:29:33 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7ba5baa600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:52 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b96953800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:55 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7b91566800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:55 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7b91566800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:55 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7b91566800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:55 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b91566800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:55 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7b91566800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:55 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #4] WARNING: Decoder=7f7b91566800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:56 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b91566800 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #1] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #1] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #1] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:57 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7b9694c600 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #1] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #1] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #3] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:31:59 loki-ryzen cerebro.desktop[1792]: [0;1;39m[0;1;31m[0;1;39m[Child 16941, MediaPlayback #2] WARNING: Decoder=7f7b91566200 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<mozilla::MozPromise<RefPtr<mozilla::MediaTrackDemuxer::SamplesHolder>, mozilla::MediaResult, true> > mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-6m4fHv/firefox-66.0.3+build1/dom/media/MediaDecoderStateMachine.cpp, line 3331[0m
+Aug 14 22:52:12 loki-ryzen gala.desktop[1753]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 22:52:24 loki-ryzen io.elementary.s[19443]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:52:24 loki-ryzen io.elementary.s[19443]: [0;1;39m[0;1;31m[0;1;39mPulseAudioManager.vala:167: setting sink (null) port to hdmi-output-0 failed[0m
+Aug 14 22:52:26 loki-ryzen io.elementary.s[19443]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:52:26 loki-ryzen io.elementary.s[19443]: [0;1;39m[0;1;31m[0;1;39mPulseAudioManager.vala:167: setting sink (null) port to hdmi-output-0 failed[0m
+Aug 14 22:52:37 loki-ryzen io.elementary.s[19443]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 14 22:52:37 loki-ryzen io.elementary.s[19443]: [0;1;39m[0;1;31m[0;1;39mPulseAudioManager.vala:167: setting sink (null) port to hdmi-output-0 failed[0m
+Aug 14 22:52:44 loki-ryzen io.elementary.s[19443]: [0;1;39m[0;1;31m[0;1;39mManager.vala:65: Error calling StartServiceByName for org.bluez: Timeout was reached[0m
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopping Virtual filesystem service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopping Accessibility services bus...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped target Default.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopping Evolution address book service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopping BAMF Application Matcher Framework...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopping Evolution calendar service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopping Evolution source registry...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopping D-Bus User Message Bus...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped D-Bus User Message Bus.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped BAMF Application Matcher Framework.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped Evolution source registry.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped Evolution calendar service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped Evolution address book service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped Accessibility services bus.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'io.elementary.cerbere.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'io.elementary.cerbere.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped Virtual filesystem service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped target Basic System.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped target Sockets.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Closed GnuPG network certificate management daemon.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Closed D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Closed GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Closed GnuPG cryptographic agent and passphrase cache.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Closed GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped target Timers.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Stopped target Paths.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Reached target Shutdown.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Starting Exit the Session...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:52:48 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mSessionManager.vala:121: Could not connect: Connection refused[0m
+Aug 14 22:52:48 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mCerbere.vala:64: Could not connect to session manager[0m
+Aug 14 22:52:48 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mfile src/src@@io.elementary.cerbere@exe/Cerbere.c: line 273 (cerbere_app_register_session_client): should not be reached[0m
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'gala-daemon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'gala-daemon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.PrintNotifications-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.PrintNotifications-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Sound-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Rfkill-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Smartcard-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Mouse-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.A11ySettings-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.XSettings-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Clipboard-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Color-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Sound-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Sharing-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Application 'org.gnome.SettingsDaemon.Datetime-pantheon.desktop' killed by signal 15
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Rfkill-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Smartcard-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Mouse-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.A11ySettings-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.XSettings-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Clipboard-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Color-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Sharing-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Application 'org.gnome.SettingsDaemon.Datetime-pantheon.desktop' killed by signal 15[0m
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: WARNING: Lost name on bus: org.gnome.SessionManager
+Aug 14 22:52:48 loki-ryzen gnome-session[1482]: gnome-session-binary[1482]: CRITICAL: We failed, but the fail whale is dead. Sorry....
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;39m[0;1;31m[0;1;39mWARNING: Lost name on bus: org.gnome.SessionManager[0m
+Aug 14 22:52:48 loki-ryzen gnome-session-binary[1482]: [0;1;31m[0;1;39m[0;1;31mCRITICAL: We failed, but the fail whale is dead. Sorry....[0m
+Aug 14 22:52:48 loki-ryzen systemd[1463]: Received SIGRTMIN+24 from PID 19525 (kill).
+Aug 14 22:52:48 loki-ryzen systemd[1464]: pam_unix(systemd-user:session): session closed for user loki
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen wingpanel[19529]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen plank[19530]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'wingpanel' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process wingpanel is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 1.501647 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'wingpanel' CRASHED (#1)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'plank' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process plank is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 1.500326 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'plank' CRASHED (#1)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen wingpanel[19602]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'wingpanel' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process wingpanel is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.015868 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'wingpanel' CRASHED (#2)[0m
+Aug 14 22:52:49 loki-ryzen plank[19603]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'plank' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process plank is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.015995 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'plank' CRASHED (#2)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen wingpanel[19618]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'wingpanel' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process wingpanel is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.014857 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'wingpanel' CRASHED (#3)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen plank[19620]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'plank' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process plank is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.015911 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'plank' CRASHED (#3)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen wingpanel[19626]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'wingpanel' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process wingpanel is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.013666 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'wingpanel' CRASHED (#4)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen plank[19628]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'plank' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process plank is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.013554 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'plank' CRASHED (#4)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen wingpanel[19632]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'wingpanel' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process wingpanel is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.013793 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'wingpanel' CRASHED (#5)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen plank[19633]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'plank' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process plank is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.015177 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'plank' CRASHED (#5)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen wingpanel[19635]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.cerbere.desktop[19516]: [0;1;39m[0;1;31m[0;1;39mUnable to init server: Could not connect: Connection refused[0m
+Aug 14 22:52:49 loki-ryzen plank[19637]: [0;1;39m[0;1;31m[0;1;39mcannot open display: :0[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'wingpanel' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process wingpanel is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.013091 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'wingpanel' CRASHED (#6)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39m'wingpanel' exceeded the maximum number of crashes allowed (5). It won't be launched again[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:99: Process 'plank' watch exit[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:111: Process plank is being terminated[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:123: ET = 0.010344 secs        Min allowed time = 3.500000[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39mProcessWrapper.vala:128: PROCESS 'plank' CRASHED (#6)[0m
+Aug 14 22:52:49 loki-ryzen io.elementary.c[19516]: [0;1;39m[0;1;31m[0;1;39m'plank' exceeded the maximum number of crashes allowed (5). It won't be launched again[0m
+[0;1;39m-- Reboot --[0m
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Starting D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Listening on GnuPG cryptographic agent and passphrase cache.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Listening on GnuPG network certificate management daemon.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Reached target Timers.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Reached target Paths.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Listening on D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Reached target Sockets.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Reached target Basic System.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Reached target Default.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:45 loki-ryzen systemd[1472]: Startup finished in 35ms.
+-- Subject: User manager start-up is now complete
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The user manager instance for user 1000 has been started. All services queued
+-- for starting have been started. Note that other services might still be starting
+-- up or be started at any later time.
+-- 
+-- Startup of the manager took 35840 microseconds.
+Aug 14 22:53:46 loki-ryzen systemd[1472]: Started D-Bus User Message Bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:46 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] AppArmor D-Bus mediation is enabled
+Aug 14 22:53:46 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.5' (uid=1000 pid=1600 comm="/usr/lib/gnome-session/gnome-session-check-acceler" label="unconfined")
+Aug 14 22:53:46 loki-ryzen systemd[1472]: Starting Accessibility services bus...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:53:46 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'org.a11y.Bus'
+Aug 14 22:53:46 loki-ryzen systemd[1472]: Started Accessibility services bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:46 loki-ryzen at-spi-bus-launcher[1602]: dbus-daemon[1607]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=1600 comm="/usr/lib/gnome-session/gnome-session-check-acceler" label="unconfined")
+Aug 14 22:53:46 loki-ryzen at-spi-bus-launcher[1602]: dbus-daemon[1607]: Successfully activated service 'org.a11y.atspi.Registry'
+Aug 14 22:53:46 loki-ryzen at-spi-bus-launcher[1602]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Aug 14 22:53:46 loki-ryzen gnome-session[1491]: gnome-session-binary[1491]: WARNING: Error while executing session-migration: Failed to execute child process “session-migration” (No such file or directory)
+Aug 14 22:53:46 loki-ryzen gnome-session-binary[1491]: [0;1;39m[0;1;31m[0;1;39mWARNING: Error while executing session-migration: Failed to execute child process “session-migration” (No such file or directory)[0m
+Aug 14 22:53:46 loki-ryzen spice-vdagent[1668]: [0;1;31m[0;1;39m[0;1;31mCannot access vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0[0m
+Aug 14 22:53:46 loki-ryzen io.elementary.dpms-helper.desktop[1648]: org.gnome.settings-daemon.plugins.power manage-dpms-defaults is false.
+Aug 14 22:53:46 loki-ryzen io.elementary.dpms-helper.desktop[1648]: Using settings found in io.elementary.dpms (0 seconds = Never).
+Aug 14 22:53:46 loki-ryzen io.elementary.dpms-helper.desktop[1648]:     Standby: 7200 seconds
+Aug 14 22:53:46 loki-ryzen io.elementary.dpms-helper.desktop[1648]:     Suspend: 0 seconds
+Aug 14 22:53:46 loki-ryzen io.elementary.dpms-helper.desktop[1648]:     Off: 0 seconds
+Aug 14 22:53:46 loki-ryzen gnome-session[1491]: gnome-session-binary[1491]: WARNING: App 'spice-vdagent.desktop' exited with code 1
+Aug 14 22:53:46 loki-ryzen gnome-session-binary[1491]: [0;1;39m[0;1;31m[0;1;39mWARNING: App 'spice-vdagent.desktop' exited with code 1[0m
+Aug 14 22:53:46 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.21' (uid=1000 pid=1621 comm="/usr/lib/gnome-settings-daemon/gsd-sound " label="unconfined")
+Aug 14 22:53:46 loki-ryzen systemd[1472]: Starting Virtual filesystem service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:53:46 loki-ryzen gnome-keyring-ssh-pantheon.desktop[1639]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Aug 14 22:53:46 loki-ryzen gnome-keyring-pkcs11-pantheon.desktop[1672]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Aug 14 22:53:46 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'org.gtk.vfs.Daemon'
+Aug 14 22:53:46 loki-ryzen systemd[1472]: Started Virtual filesystem service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:46 loki-ryzen gsd-xsettings[1656]: [0;1;39m[0;1;31m[0;1;39mFailed to get current display configuration state: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.gnome.Mutter.DisplayConfig" does not exist[0m
+Aug 14 22:53:46 loki-ryzen gsd-sharing[1679]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit gnome-remote-desktop.service not loaded.[0m
+Aug 14 22:53:46 loki-ryzen gsd-sharing[1679]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit vino-server.service not loaded.[0m
+Aug 14 22:53:48 loki-ryzen pulseaudio[1755]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] pid.c: Daemon already running.[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_child: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_child_at_index: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: CurrentTime used to choose focus window; focus window may not be correct.[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mg_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mg_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_parent: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mgala_window_manager_gala_clutter_actor_reparent: assertion 'actor != NULL' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Trying to re-add keybinding "switch-to-workspace-last".[0m
+Aug 14 22:53:48 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Trying to re-add keybinding "move-to-workspace-last".[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_save_easing_state: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_easing_mode: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_easing_duration: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating service name='ca.desrt.dconf' requested by ':1.40' (uid=1000 pid=1760 comm="gala " label="unconfined")
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_restore_easing_state: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_translation: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mgala_window_manager_gala_clutter_actor_reparent: assertion 'actor != NULL' failed[0m
+Aug 14 22:53:48 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'ca.desrt.dconf'
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mPreferences.vala:192: '/usr/share/themes/elementary/plank/dock.theme' is read-only![0m
+Aug 14 22:53:48 loki-ryzen gnome-session-binary[1491]: [0;1;39m[0;1;31m[0;1;39mEntering running state[0m
+Aug 14 22:53:48 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating via systemd: service name='org.ayatana.bamf' unit='bamfdaemon.service' requested by ':1.44' (uid=1000 pid=1784 comm="plank " label="unconfined")
+Aug 14 22:53:48 loki-ryzen stacer.desktop[1797]: [0;1;39m[0;1;31m[0;1;39mQApplication: invalid style override passed, ignoring it.[0m
+Aug 14 22:53:48 loki-ryzen systemd[1472]: Starting BAMF Application Matcher Framework...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:53:48 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating via systemd: service name='org.gnome.evolution.dataserver.Sources5' unit='evolution-source-registry.service' requested by ':1.53' (uid=1000 pid=1798 comm="/usr/lib/x86_64-linux-gnu/io.elementary.calendar-d" label="unconfined")
+Aug 14 22:53:48 loki-ryzen systemd[1472]: Starting Evolution source registry...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:53:48 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'org.ayatana.bamf'
+Aug 14 22:53:48 loki-ryzen systemd[1472]: Started BAMF Application Matcher Framework.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:48 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mPreferences.vala:192: '/usr/share/themes/elementary/plank/dock.theme' is read-only![0m
+Aug 14 22:53:48 loki-ryzen cerebro[1801]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "pantheon-filechooser-module"[0m
+Aug 14 22:53:48 loki-ryzen nm-applet[1829]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 14 22:53:48 loki-ryzen cerebro[1801]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "canberra-gtk-module"[0m
+Aug 14 22:53:48 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'org.gnome.evolution.dataserver.Sources5'
+Aug 14 22:53:48 loki-ryzen systemd[1472]: Started Evolution source registry.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:48 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating via systemd: service name='org.gnome.evolution.dataserver.Calendar7' unit='evolution-calendar-factory.service' requested by ':1.53' (uid=1000 pid=1798 comm="/usr/lib/x86_64-linux-gnu/io.elementary.calendar-d" label="unconfined")
+Aug 14 22:53:48 loki-ryzen systemd[1472]: Starting Evolution calendar service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:53:48 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x2a00007 specified for 0x2a00005 (Stacer).[0m
+Aug 14 22:53:49 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39minvalid cast from 'CoglTexture2D' to '(null)'[0m
+Aug 14 22:53:49 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'org.gnome.evolution.dataserver.Calendar7'
+Aug 14 22:53:49 loki-ryzen systemd[1472]: Started Evolution calendar service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:49 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating via systemd: service name='org.gnome.evolution.dataserver.AddressBook9' unit='evolution-addressbook-factory.service' requested by ':1.60' (uid=1000 pid=1900 comm="/usr/lib/evolution/evolution-calendar-factory-subp" label="unconfined")
+Aug 14 22:53:49 loki-ryzen systemd[1472]: Starting Evolution address book service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 14 22:53:49 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Activating service name='org.gnome.GConf' requested by ':1.61' (uid=1000 pid=1801 comm="/opt/Cerebro/cerebro " label="unconfined")
+Aug 14 22:53:49 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'org.gnome.GConf'
+Aug 14 22:53:49 loki-ryzen dbus-daemon[1524]: [session uid=1000 pid=1524] Successfully activated service 'org.gnome.evolution.dataserver.AddressBook9'
+Aug 14 22:53:49 loki-ryzen systemd[1472]: Started Evolution address book service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 14 22:53:50 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x320000a specified for 0x3200008 (Nextcloud).[0m
+Aug 14 22:53:57 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 14 22:54:00 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 14 22:54:03 loki-ryzen pulseaudio[1677]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 14 22:54:03 loki-ryzen wingpanel[1783]: [0;1;39m[0;1;31m[0;1;39mManager.vala:56: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 14 22:54:58 loki-ryzen io.elementary.a[2675]: [0;1;39m[0;1;31m[0;1;39mClient.vala:633: Update_cache: Refesh cache async failed - E: The repository 'http://ppa.launchpad.net/webupd8team/tor-browser/ubuntu bionic Release' does not have a Release file.[0m
+                                                  [0;1;39mW: Updating from such a repository can't be done securely, and is therefore disabled by default.[0m
+                                                  [0;1;39mW: See apt-secure(8) manpage for repository creation and user configuration details.[0m
+Aug 14 23:02:05 loki-ryzen wingpanel[1783]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_set_no_show_all: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 23:02:05 loki-ryzen wingpanel[1783]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_show: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 23:02:05 loki-ryzen wingpanel[1783]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_set_no_show_all: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 23:02:05 loki-ryzen wingpanel[1783]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_hide: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 14 23:27:59 loki-ryzen pulseaudio[1677]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: ALSA woke us up to write new data to the device, but there was actually nothing to write.[0m
+Aug 14 23:27:59 loki-ryzen pulseaudio[1677]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: Most likely this is a bug in the ALSA driver 'snd_hda_intel'. Please report this issue to the ALSA developers.[0m
+Aug 14 23:27:59 loki-ryzen pulseaudio[1677]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: We were woken up with POLLOUT set -- however a subsequent snd_pcm_avail() returned 0 or another value < min_avail.[0m
+Aug 14 23:48:25 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 00:02:54 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 00:10:09 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 15 00:10:12 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 00:10:12 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 00:14:44 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 15 00:20:14 loki-ryzen io.elementary.t[12115]: [0;1;39m[0;1;31m[0;1;39mgtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkNotebook[0m
+Aug 15 00:20:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1625]: [DEBUG 00:20:14.407430] Settings.vala:163: Loading settings from schema 'io.elementary.terminal.saved-state'
+Aug 15 00:20:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1625]: [DEBUG 00:20:14.408169] Settings.vala:163: Loading settings from schema 'io.elementary.terminal.settings'
+Aug 15 00:20:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1625]: [WARNING 00:20:14.573229] [Vte] (../../src/vtegtk.cc:1906):int vte_terminal_match_add_gregex(VteTerminal*, GRegex*, GRegexMatchFlags): runtime check failed: (g_regex_get_compile_flags(gregex) & G_REGEX_MULTILINE)
+Aug 15 00:20:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1625]: [WARNING 00:20:14.573273] [Vte] (../../src/vtegtk.cc:1906):int vte_terminal_match_add_gregex(VteTerminal*, GRegex*, GRegexMatchFlags): runtime check failed: (g_regex_get_compile_flags(gregex) & G_REGEX_MULTILINE)
+Aug 15 00:20:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1625]: [WARNING 00:20:14.573307] [Vte] (../../src/vtegtk.cc:1906):int vte_terminal_match_add_gregex(VteTerminal*, GRegex*, GRegexMatchFlags): runtime check failed: (g_regex_get_compile_flags(gregex) & G_REGEX_MULTILINE)
+Aug 15 00:20:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1625]: [WARNING 00:20:14.573336] [Vte] (../../src/vtegtk.cc:1906):int vte_terminal_match_add_gregex(VteTerminal*, GRegex*, GRegexMatchFlags): runtime check failed: (g_regex_get_compile_flags(gregex) & G_REGEX_MULTILINE)
+Aug 15 00:20:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1625]: [WARNING 00:20:14.573360] [Vte] (../../src/vtegtk.cc:1906):int vte_terminal_match_add_gregex(VteTerminal*, GRegex*, GRegexMatchFlags): runtime check failed: (g_regex_get_compile_flags(gregex) & G_REGEX_MULTILINE)
+Aug 15 00:20:34 loki-ryzen gsd-color[1667]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 15 00:20:34 loki-ryzen gsd-color[1667]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped target Default.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopping Accessibility services bus...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopping D-Bus User Message Bus...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopping BAMF Application Matcher Framework...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopping Evolution calendar service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopping Evolution address book service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopping Virtual filesystem service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopping Evolution source registry...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 00:21:18 loki-ryzen gnome-session[1491]: gnome-session-binary[1491]: WARNING: Lost name on bus: org.gnome.SessionManager
+Aug 15 00:21:18 loki-ryzen gnome-session[1491]: gnome-session-binary[1491]: CRITICAL: We failed, but the fail whale is dead. Sorry....
+Aug 15 00:21:18 loki-ryzen gnome-session-binary[1491]: [0;1;39m[0;1;31m[0;1;39mWARNING: Lost name on bus: org.gnome.SessionManager[0m
+Aug 15 00:21:18 loki-ryzen gnome-session-binary[1491]: [0;1;31m[0;1;39m[0;1;31mCRITICAL: We failed, but the fail whale is dead. Sorry....[0m
+Aug 15 00:21:18 loki-ryzen Nextcloud.desktop[1800]: [0;1;39m[0;1;31m[0;1;39mICE default IO error handler doing an exit(), pid = 1800, errno = 11[0m
+Aug 15 00:21:18 loki-ryzen gala.desktop[1760]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: CurrentTime used to choose focus window; focus window may not be correct.[0m
+Aug 15 00:21:18 loki-ryzen wingpanel[1783]: [0;1;39m[0;1;31m[0;1;39mEndSessionDialogServer.vala:35: Could not acquire name[0m
+Aug 15 00:21:18 loki-ryzen io.elementary.cerbere.desktop[1778]: [0;1;39m[0;1;31m[0;1;39mICE default IO error handler doing an exit(), pid = 4819, errno = 11[0m
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped BAMF Application Matcher Framework.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped Evolution calendar service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped Evolution address book service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped Evolution source registry.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen gala[1760]: [0;1;39m[0;1;31m[0;1;39mgala: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.[0m
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped Accessibility services bus.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped Virtual filesystem service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped D-Bus User Message Bus.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped target Basic System.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped target Paths.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped target Sockets.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Closed GnuPG cryptographic agent and passphrase cache.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Closed GnuPG network certificate management daemon.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Closed GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Closed GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Stopped target Timers.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Closed D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Reached target Shutdown.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Starting Exit the Session...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 00:21:18 loki-ryzen systemd[1472]: Received SIGRTMIN+24 from PID 24619 (kill).
+[0;1;39m-- Reboot --[0m
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent and passphrase cache.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Reached target Paths.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Reached target Timers.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Starting D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Listening on GnuPG network certificate management daemon.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Listening on D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Reached target Sockets.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Reached target Basic System.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Reached target Default.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Startup finished in 37ms.
+-- Subject: User manager start-up is now complete
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The user manager instance for user 1000 has been started. All services queued
+-- for starting have been started. Note that other services might still be starting
+-- up or be started at any later time.
+-- 
+-- Startup of the manager took 37201 microseconds.
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Started D-Bus User Message Bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] AppArmor D-Bus mediation is enabled
+Aug 15 13:56:45 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.5' (uid=1000 pid=1701 comm="/usr/lib/gnome-session/gnome-session-check-acceler" label="unconfined")
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Starting Accessibility services bus...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 13:56:45 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.a11y.Bus'
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Started Accessibility services bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen at-spi-bus-launcher[1703]: dbus-daemon[1708]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=1701 comm="/usr/lib/gnome-session/gnome-session-check-acceler" label="unconfined")
+Aug 15 13:56:45 loki-ryzen at-spi-bus-launcher[1703]: dbus-daemon[1708]: Successfully activated service 'org.a11y.atspi.Registry'
+Aug 15 13:56:45 loki-ryzen at-spi-bus-launcher[1703]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Aug 15 13:56:45 loki-ryzen gnome-session[1595]: gnome-session-binary[1595]: WARNING: Error while executing session-migration: Failed to execute child process “session-migration” (No such file or directory)
+Aug 15 13:56:45 loki-ryzen gnome-session-binary[1595]: [0;1;39m[0;1;31m[0;1;39mWARNING: Error while executing session-migration: Failed to execute child process “session-migration” (No such file or directory)[0m
+Aug 15 13:56:45 loki-ryzen spice-vdagent[1770]: [0;1;31m[0;1;39m[0;1;31mCannot access vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0[0m
+Aug 15 13:56:45 loki-ryzen io.elementary.dpms-helper.desktop[1751]: org.gnome.settings-daemon.plugins.power manage-dpms-defaults is false.
+Aug 15 13:56:45 loki-ryzen io.elementary.dpms-helper.desktop[1751]: Using settings found in io.elementary.dpms (0 seconds = Never).
+Aug 15 13:56:45 loki-ryzen io.elementary.dpms-helper.desktop[1751]:     Standby: 7200 seconds
+Aug 15 13:56:45 loki-ryzen io.elementary.dpms-helper.desktop[1751]:     Suspend: 0 seconds
+Aug 15 13:56:45 loki-ryzen io.elementary.dpms-helper.desktop[1751]:     Off: 0 seconds
+Aug 15 13:56:45 loki-ryzen gnome-session[1595]: gnome-session-binary[1595]: WARNING: App 'spice-vdagent.desktop' exited with code 1
+Aug 15 13:56:45 loki-ryzen gnome-session-binary[1595]: [0;1;39m[0;1;31m[0;1;39mWARNING: App 'spice-vdagent.desktop' exited with code 1[0m
+Aug 15 13:56:45 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.21' (uid=1000 pid=1722 comm="/usr/lib/gnome-settings-daemon/gsd-sound " label="unconfined")
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Starting Virtual filesystem service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 13:56:45 loki-ryzen gnome-keyring-ssh-pantheon.desktop[1738]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Aug 15 13:56:45 loki-ryzen gnome-keyring-pkcs11-pantheon.desktop[1775]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Aug 15 13:56:45 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.Daemon'
+Aug 15 13:56:45 loki-ryzen systemd[1574]: Started Virtual filesystem service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:45 loki-ryzen gsd-xsettings[1757]: [0;1;39m[0;1;31m[0;1;39mFailed to get current display configuration state: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.gnome.Mutter.DisplayConfig" does not exist[0m
+Aug 15 13:56:45 loki-ryzen gsd-sharing[1786]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit gnome-remote-desktop.service not loaded.[0m
+Aug 15 13:56:45 loki-ryzen gsd-sharing[1786]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit vino-server.service not loaded.[0m
+Aug 15 13:56:47 loki-ryzen pulseaudio[1858]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] pid.c: Daemon already running.[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_child: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_child_at_index: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: CurrentTime used to choose focus window; focus window may not be correct.[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mg_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mg_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_parent: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mgala_window_manager_gala_clutter_actor_reparent: assertion 'actor != NULL' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Trying to re-add keybinding "switch-to-workspace-last".[0m
+Aug 15 13:56:47 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Trying to re-add keybinding "move-to-workspace-last".[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_save_easing_state: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_easing_mode: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating service name='ca.desrt.dconf' requested by ':1.40' (uid=1000 pid=1863 comm="gala " label="unconfined")
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_easing_duration: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_restore_easing_state: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_translation: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mgala_window_manager_gala_clutter_actor_reparent: assertion 'actor != NULL' failed[0m
+Aug 15 13:56:47 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'ca.desrt.dconf'
+Aug 15 13:56:47 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mPreferences.vala:192: '/usr/share/themes/elementary/plank/dock.theme' is read-only![0m
+Aug 15 13:56:47 loki-ryzen gnome-session-binary[1595]: [0;1;39m[0;1;31m[0;1;39mEntering running state[0m
+Aug 15 13:56:47 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.ayatana.bamf' unit='bamfdaemon.service' requested by ':1.44' (uid=1000 pid=1890 comm="plank " label="unconfined")
+Aug 15 13:56:47 loki-ryzen systemd[1574]: Starting BAMF Application Matcher Framework...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 13:56:48 loki-ryzen stacer.desktop[1906]: [0;1;39m[0;1;31m[0;1;39mQApplication: invalid style override passed, ignoring it.[0m
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.evolution.dataserver.Sources5' unit='evolution-source-registry.service' requested by ':1.54' (uid=1000 pid=1907 comm="/usr/lib/x86_64-linux-gnu/io.elementary.calendar-d" label="unconfined")
+Aug 15 13:56:48 loki-ryzen systemd[1574]: Starting Evolution source registry...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.ayatana.bamf'
+Aug 15 13:56:48 loki-ryzen systemd[1574]: Started BAMF Application Matcher Framework.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:48 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mPreferences.vala:192: '/usr/share/themes/elementary/plank/dock.theme' is read-only![0m
+Aug 15 13:56:48 loki-ryzen cerebro[1910]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "pantheon-filechooser-module"[0m
+Aug 15 13:56:48 loki-ryzen nm-applet[1937]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.evolution.dataserver.Sources5'
+Aug 15 13:56:48 loki-ryzen systemd[1574]: Started Evolution source registry.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.evolution.dataserver.Calendar7' unit='evolution-calendar-factory.service' requested by ':1.54' (uid=1000 pid=1907 comm="/usr/lib/x86_64-linux-gnu/io.elementary.calendar-d" label="unconfined")
+Aug 15 13:56:48 loki-ryzen systemd[1574]: Starting Evolution calendar service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 13:56:48 loki-ryzen cerebro[1910]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "canberra-gtk-module"[0m
+Aug 15 13:56:48 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x2e00007 specified for 0x2e00005 (Stacer).[0m
+Aug 15 13:56:48 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39minvalid cast from 'CoglTexture2D' to '(null)'[0m
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.evolution.dataserver.Calendar7'
+Aug 15 13:56:48 loki-ryzen systemd[1574]: Started Evolution calendar service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.evolution.dataserver.AddressBook9' unit='evolution-addressbook-factory.service' requested by ':1.60' (uid=1000 pid=2008 comm="/usr/lib/evolution/evolution-calendar-factory-subp" label="unconfined")
+Aug 15 13:56:48 loki-ryzen systemd[1574]: Starting Evolution address book service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating service name='org.gnome.GConf' requested by ':1.61' (uid=1000 pid=1910 comm="/opt/Cerebro/cerebro " label="unconfined")
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.GConf'
+Aug 15 13:56:48 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.evolution.dataserver.AddressBook9'
+Aug 15 13:56:48 loki-ryzen systemd[1574]: Started Evolution address book service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 13:56:50 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x320000a specified for 0x3200008 (Nextcloud).[0m
+Aug 15 13:56:54 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 15 13:57:03 loki-ryzen pulseaudio[1785]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 15 13:57:03 loki-ryzen wingpanel[1889]: [0;1;39m[0;1;31m[0;1;39mManager.vala:56: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 15 13:57:21 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:57:57 loki-ryzen io.elementary.a[2821]: [0;1;39m[0;1;31m[0;1;39mClient.vala:633: Update_cache: Refesh cache async failed - E: The repository 'http://ppa.launchpad.net/webupd8team/tor-browser/ubuntu bionic Release' does not have a Release file.[0m
+                                                  [0;1;39mW: Updating from such a repository can't be done securely, and is therefore disabled by default.[0m
+                                                  [0;1;39mW: See apt-secure(8) manpage for repository creation and user configuration details.[0m
+Aug 15 13:59:25 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 15 13:59:28 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 13:59:28 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 13:59:28 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 14:07:22 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 14:16:39 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service' requested by ':1.78' (uid=1000 pid=2397 comm="/usr/lib/firefox/firefox https://tsde.li/schnee " label="unconfined")
+Aug 15 14:16:39 loki-ryzen systemd[1574]: Starting Virtual filesystem metadata service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 14:16:39 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.Metadata'
+Aug 15 14:16:39 loki-ryzen systemd[1574]: Started Virtual filesystem metadata service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 14:16:39 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.evince.Daemon' unit='evince.service' requested by ':1.102' (uid=1000 pid=6616 comm="evince /tmp/mozilla_loki0/SS17_LA_Brandenberg_Klau" label="/usr/bin/evince (enforce)")
+Aug 15 14:16:39 loki-ryzen systemd[1574]: Starting Evince document viewer...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 14:16:39 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.evince.Daemon'
+Aug 15 14:16:39 loki-ryzen systemd[1574]: Started Evince document viewer.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 14:17:53 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 14:18:03 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Tried to ping a window with a bad serial! Not allowed.[0m
+Aug 15 14:30:12 loki-ryzen pulseaudio[1785]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: ALSA woke us up to write new data to the device, but there was actually nothing to write.[0m
+Aug 15 14:30:12 loki-ryzen pulseaudio[1785]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: Most likely this is a bug in the ALSA driver 'snd_hda_intel'. Please report this issue to the ALSA developers.[0m
+Aug 15 14:30:12 loki-ryzen pulseaudio[1785]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: We were woken up with POLLOUT set -- however a subsequent snd_pcm_avail() returned 0 or another value < min_avail.[0m
+Aug 15 15:07:17 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 15 15:07:20 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 15:07:20 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 15:44:46 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 15 15:44:48 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 15:44:48 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 15:44:48 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 15 15:45:02 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mWindowManager.vala:208: Text was empty (or contained only whitespace)[0m
+Aug 15 15:45:03 loki-ryzen gala.desktop[1863]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 15 15:45:05 loki-ryzen gala[1863]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 15 15:45:07 loki-ryzen io.elementary.t[15596]: [0;1;39m[0;1;31m[0;1;39mgtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkNotebook[0m
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping Evolution calendar service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen gsd-media-keys[1726]: [0;1;39m[0;1;31m[0;1;39mg_object_notify: object class 'UpDevice' has no property named 'g-name-owner'[0m
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping Virtual filesystem service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping Evolution source registry...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping Virtual filesystem metadata service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping Evince document viewer...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping D-Bus User Message Bus...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped target Default.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping Accessibility services bus...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping Evolution address book service...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopping BAMF Application Matcher Framework...
+-- Subject: Unit UNIT has begun shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped Virtual filesystem metadata service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped Evince document viewer.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped BAMF Application Matcher Framework.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped Evolution address book service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped D-Bus User Message Bus.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped Evolution source registry.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped Evolution calendar service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped Virtual filesystem service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped Accessibility services bus.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped target Basic System.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped target Sockets.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Closed GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Closed GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Closed GnuPG network certificate management daemon.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Closed GnuPG cryptographic agent and passphrase cache.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped target Paths.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Stopped target Timers.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Closed D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Reached target Shutdown.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Starting Exit the Session...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 15 15:46:09 loki-ryzen systemd[1574]: Received SIGRTMIN+24 from PID 15806 (kill).
+[0;1;39m-- Reboot --[0m
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent and passphrase cache.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Listening on GnuPG network certificate management daemon.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Reached target Timers.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Reached target Paths.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Starting D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Listening on D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Reached target Sockets.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Reached target Basic System.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Reached target Default.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Startup finished in 39ms.
+-- Subject: User manager start-up is now complete
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- The user manager instance for user 1000 has been started. All services queued
+-- for starting have been started. Note that other services might still be starting
+-- up or be started at any later time.
+-- 
+-- Startup of the manager took 39374 microseconds.
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Started D-Bus User Message Bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] AppArmor D-Bus mediation is enabled
+Aug 18 15:16:08 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.5' (uid=1000 pid=1701 comm="/usr/lib/gnome-session/gnome-session-check-acceler" label="unconfined")
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Starting Accessibility services bus...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:16:08 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.a11y.Bus'
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Started Accessibility services bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen at-spi-bus-launcher[1703]: dbus-daemon[1708]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=1701 comm="/usr/lib/gnome-session/gnome-session-check-acceler" label="unconfined")
+Aug 18 15:16:08 loki-ryzen at-spi-bus-launcher[1703]: dbus-daemon[1708]: Successfully activated service 'org.a11y.atspi.Registry'
+Aug 18 15:16:08 loki-ryzen at-spi-bus-launcher[1703]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Aug 18 15:16:08 loki-ryzen gnome-session[1593]: gnome-session-binary[1593]: WARNING: Error while executing session-migration: Failed to execute child process “session-migration” (No such file or directory)
+Aug 18 15:16:08 loki-ryzen gnome-session-binary[1593]: [0;1;39m[0;1;31m[0;1;39mWARNING: Error while executing session-migration: Failed to execute child process “session-migration” (No such file or directory)[0m
+Aug 18 15:16:08 loki-ryzen io.elementary.dpms-helper.desktop[1749]: org.gnome.settings-daemon.plugins.power manage-dpms-defaults is false.
+Aug 18 15:16:08 loki-ryzen io.elementary.dpms-helper.desktop[1749]: Using settings found in io.elementary.dpms (0 seconds = Never).
+Aug 18 15:16:08 loki-ryzen io.elementary.dpms-helper.desktop[1749]:     Standby: 7200 seconds
+Aug 18 15:16:08 loki-ryzen io.elementary.dpms-helper.desktop[1749]:     Suspend: 0 seconds
+Aug 18 15:16:08 loki-ryzen io.elementary.dpms-helper.desktop[1749]:     Off: 0 seconds
+Aug 18 15:16:08 loki-ryzen spice-vdagent[1781]: [0;1;31m[0;1;39m[0;1;31mCannot access vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0[0m
+Aug 18 15:16:08 loki-ryzen gnome-session[1593]: gnome-session-binary[1593]: WARNING: App 'spice-vdagent.desktop' exited with code 1
+Aug 18 15:16:08 loki-ryzen gnome-session-binary[1593]: [0;1;39m[0;1;31m[0;1;39mWARNING: App 'spice-vdagent.desktop' exited with code 1[0m
+Aug 18 15:16:08 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.20' (uid=1000 pid=1722 comm="/usr/lib/gnome-settings-daemon/gsd-sound " label="unconfined")
+Aug 18 15:16:08 loki-ryzen gnome-keyring-ssh-pantheon.desktop[1738]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Aug 18 15:16:08 loki-ryzen gnome-keyring-pkcs11-pantheon.desktop[1785]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Starting Virtual filesystem service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:16:08 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.Daemon'
+Aug 18 15:16:08 loki-ryzen systemd[1574]: Started Virtual filesystem service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:08 loki-ryzen gsd-xsettings[1758]: [0;1;39m[0;1;31m[0;1;39mFailed to get current display configuration state: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.gnome.Mutter.DisplayConfig" does not exist[0m
+Aug 18 15:16:08 loki-ryzen gsd-sharing[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit gnome-remote-desktop.service not loaded.[0m
+Aug 18 15:16:08 loki-ryzen gsd-sharing[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit vino-server.service not loaded.[0m
+Aug 18 15:16:10 loki-ryzen pulseaudio[1856]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] pid.c: Daemon already running.[0m
+Aug 18 15:16:11 loki-ryzen gsd-media-keys[1725]: [0;1;39m[0;1;31m[0;1;39mUnable to get default sink[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_child: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_child_at_index: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: CurrentTime used to choose focus window; focus window may not be correct.[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mg_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mg_object_set_data_full: assertion 'G_IS_OBJECT (object)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_parent: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mgala_window_manager_gala_clutter_actor_reparent: assertion 'actor != NULL' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Trying to re-add keybinding "switch-to-workspace-last".[0m
+Aug 18 15:16:11 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Trying to re-add keybinding "move-to-workspace-last".[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_y: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_save_easing_state: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_easing_mode: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_easing_duration: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_get_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_x: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating service name='ca.desrt.dconf' requested by ':1.40' (uid=1000 pid=1861 comm="gala " label="unconfined")
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_restore_easing_state: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_set_translation: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mgala_window_manager_gala_clutter_actor_reparent: assertion 'actor != NULL' failed[0m
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'ca.desrt.dconf'
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mPreferences.vala:192: '/usr/share/themes/elementary/plank/dock.theme' is read-only![0m
+Aug 18 15:16:11 loki-ryzen gnome-session-binary[1593]: [0;1;39m[0;1;31m[0;1;39mEntering running state[0m
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.ayatana.bamf' unit='bamfdaemon.service' requested by ':1.43' (uid=1000 pid=1888 comm="plank " label="unconfined")
+Aug 18 15:16:11 loki-ryzen systemd[1574]: Starting BAMF Application Matcher Framework...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:16:11 loki-ryzen pantheon-agent-[1931]: [0;1;39m[0;1;31m[0;1;39mg_object_notify: object class 'AgAgent' has no property named 'max-accuracy-level'[0m
+Aug 18 15:16:11 loki-ryzen stacer.desktop[1899]: [0;1;39m[0;1;31m[0;1;39mQApplication: invalid style override passed, ignoring it.[0m
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.evolution.dataserver.Sources5' unit='evolution-source-registry.service' requested by ':1.54' (uid=1000 pid=1900 comm="/usr/lib/x86_64-linux-gnu/io.elementary.calendar-d" label="unconfined")
+Aug 18 15:16:11 loki-ryzen systemd[1574]: Starting Evolution source registry...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.ayatana.bamf'
+Aug 18 15:16:11 loki-ryzen systemd[1574]: Started BAMF Application Matcher Framework.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:11 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 15:16:11 loki-ryzen cerebro[1909]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "pantheon-filechooser-module"[0m
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mPreferences.vala:192: '/usr/share/themes/elementary/plank/dock.theme' is read-only![0m
+Aug 18 15:16:11 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x2e00007 specified for 0x2e00005 (Stacer).[0m
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.evolution.dataserver.Sources5'
+Aug 18 15:16:11 loki-ryzen systemd[1574]: Started Evolution source registry.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:11 loki-ryzen cerebro[1909]: [0;1;39m[0;1;31m[0;1;39mFailed to load module "canberra-gtk-module"[0m
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.evolution.dataserver.Calendar7' unit='evolution-calendar-factory.service' requested by ':1.54' (uid=1000 pid=1900 comm="/usr/lib/x86_64-linux-gnu/io.elementary.calendar-d" label="unconfined")
+Aug 18 15:16:11 loki-ryzen systemd[1574]: Starting Evolution calendar service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:16:11 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39minvalid cast from 'CoglTexture2D' to '(null)'[0m
+Aug 18 15:16:11 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.evolution.dataserver.Calendar7'
+Aug 18 15:16:11 loki-ryzen systemd[1574]: Started Evolution calendar service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:12 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating service name='org.gnome.GConf' requested by ':1.61' (uid=1000 pid=1909 comm="/opt/Cerebro/cerebro " label="unconfined")
+Aug 18 15:16:12 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.GConf'
+Aug 18 15:16:12 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.evolution.dataserver.AddressBook9' unit='evolution-addressbook-factory.service' requested by ':1.60' (uid=1000 pid=2004 comm="/usr/lib/evolution/evolution-calendar-factory-subp" label="unconfined")
+Aug 18 15:16:12 loki-ryzen systemd[1574]: Starting Evolution address book service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:16:12 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.evolution.dataserver.AddressBook9'
+Aug 18 15:16:12 loki-ryzen systemd[1574]: Started Evolution address book service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:16:13 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Invalid WM_TRANSIENT_FOR window 0x300000a specified for 0x3000008 (Nextcloud).[0m
+Aug 18 15:16:17 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 15:16:20 loki-ryzen pulseaudio[1779]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 18 15:16:20 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mManager.vala:56: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 18 15:16:17 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 15:16:19 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:16:37 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 15:16:41 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 15:16:53 loki-ryzen io.elementary.s[3239]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 18 15:17:13 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mManager.vala:61: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 18 15:17:15 loki-ryzen io.elementary.a[3385]: [0;1;39m[0;1;31m[0;1;39mClient.vala:633: Update_cache: Refesh cache async failed - E: The repository 'http://ppa.launchpad.net/webupd8team/tor-browser/ubuntu bionic Release' does not have a Release file.[0m
+                                                  [0;1;39mW: Updating from such a repository can't be done securely, and is therefore disabled by default.[0m
+                                                  [0;1;39mW: See apt-secure(8) manpage for repository creation and user configuration details.[0m
+Aug 18 15:31:32 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 15:31:34 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mclutter_actor_add_effect_with_name: assertion 'CLUTTER_IS_ACTOR (self)' failed[0m
+Aug 18 15:33:16 loki-ryzen io.elementary.f[7017]: [0;1;39m[0;1;31m[0;1;39mApplication.vala:50: Report any issues/bugs you might find to https://github.com/elementary/files/issues[0m
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating service name='io.elementary.files.db' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:16 loki-ryzen io.elementary.f[7024]: [0;1;39m[0;1;31m[0;1;39mmarlind-tagging.vala:77: Database path: /home/loki/.config/marlin/marlin.db [0m
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'io.elementary.files.db'
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.UDisks2VolumeMonitor' unit='gvfs-udisks2-volume-monitor.service' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Starting Virtual filesystem service - disk device monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.UDisks2VolumeMonitor'
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Started Virtual filesystem service - disk device monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.GPhoto2VolumeMonitor' unit='gvfs-gphoto2-volume-monitor.service' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Starting Virtual filesystem service - digital camera monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.GPhoto2VolumeMonitor'
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Started Virtual filesystem service - digital camera monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.GoaVolumeMonitor' unit='gvfs-goa-volume-monitor.service' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Starting Virtual filesystem service - GNOME Online Accounts monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.GoaVolumeMonitor'
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Started Virtual filesystem service - GNOME Online Accounts monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.MTPVolumeMonitor' unit='gvfs-mtp-volume-monitor.service' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Starting Virtual filesystem service - Media Transfer Protocol monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.MTPVolumeMonitor'
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Started Virtual filesystem service - Media Transfer Protocol monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.AfcVolumeMonitor' unit='gvfs-afc-volume-monitor.service' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Starting Virtual filesystem service - Apple File Conduit monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:16 loki-ryzen gvfs-afc-volume-monitor[7052]: Volume monitor alive
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.AfcVolumeMonitor'
+Aug 18 15:33:16 loki-ryzen systemd[1574]: Started Virtual filesystem service - Apple File Conduit monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:16 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating service name='org.freedesktop.thumbnails.Thumbnailer1' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:17 loki-ryzen org.freedesktop.thumbnails.Thumbnailer1[1626]: Registered thumbailer /usr/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+Aug 18 15:33:17 loki-ryzen org.freedesktop.thumbnails.Thumbnailer1[1626]: Registered thumbailer evince-thumbnailer -s %s %u %o
+Aug 18 15:33:17 loki-ryzen org.freedesktop.thumbnails.Thumbnailer1[1626]: Registered thumbailer /usr/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+Aug 18 15:33:17 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.freedesktop.thumbnails.Thumbnailer1'
+Aug 18 15:33:17 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.zeitgeist.Engine' unit='zeitgeist.service' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:17 loki-ryzen systemd[1574]: Starting Zeitgeist activity log service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:17 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gnome.zeitgeist.SimpleIndexer' unit='zeitgeist-fts.service' requested by ':1.116' (uid=1000 pid=7075 comm="/usr/bin/zeitgeist-daemon " label="unconfined")
+Aug 18 15:33:17 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.zeitgeist.Engine'
+Aug 18 15:33:17 loki-ryzen systemd[1574]: Started Zeitgeist activity log service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:17 loki-ryzen systemd[1574]: Starting Zeitgeist full-text search indexer...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:17 loki-ryzen zeitgeist-daemon[7075]: [13:33:17.195685 WARNING] zeitgeist-daemon.vala:334: Failed to execute child process “zeitgeist-datahub” (No such file or directory)
+Aug 18 15:33:17 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gnome.zeitgeist.SimpleIndexer'
+Aug 18 15:33:17 loki-ryzen systemd[1574]: Started Zeitgeist full-text search indexer.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:17 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service' requested by ':1.106' (uid=1000 pid=7017 comm="io.elementary.files /home/loki " label="unconfined")
+Aug 18 15:33:17 loki-ryzen systemd[1574]: Starting Virtual filesystem metadata service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 15:33:17 loki-ryzen dbus-daemon[1626]: [session uid=1000 pid=1626] Successfully activated service 'org.gtk.vfs.Metadata'
+Aug 18 15:33:17 loki-ryzen systemd[1574]: Started Virtual filesystem metadata service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 15:33:18 loki-ryzen zeitgeist-daemon[7075]: [13:33:18.482957 WARNING] zeitgeist-daemon.vala:127: Unable to parse version info!
+Aug 18 15:33:18 loki-ryzen zeitgeist-daemon[7075]: [13:33:18.483116 WARNING] zeitgeist-daemon.vala:127: Unable to parse version info!
+Aug 18 15:44:15 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: ready-to-show: 2861.844ms
+Aug 18 15:44:15 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Checking for update
+Aug 18 15:44:17 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Update for version 1.5.53 is not available (latest version: 1.5.53, downgrade is disallowed).
+Aug 18 15:44:19 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: ready-to-show: 6840.265ms
+Aug 18 15:44:19 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Checking for update
+Aug 18 15:44:21 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Update for version 1.5.53 is not available (latest version: 1.5.53, downgrade is disallowed).
+Aug 18 15:44:23 loki-ryzen balena-etcher-e[8157]: [0;1;39m[0;1;31m[0;1;39mGtkDialog mapped without a transient parent. This is discouraged.[0m
+Aug 18 15:44:23 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:23 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:23 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:23 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:28 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:28 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:28 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:28 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:28 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:28 loki-ryzen gvfsd[1812]: mkdir failed on directory /var/cache/samba: Permission denied
+Aug 18 15:44:34 loki-ryzen io.elementary.p[1919]: [0;1;39m[0;1;31m[0;1;39mGtkDialog mapped without a transient parent. This is discouraged.[0m
+Aug 18 15:44:34 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2200007 (Authentica)[0m
+Aug 18 15:44:38 loki-ryzen pkexec[8565]: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Aug 18 15:47:32 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mgee_abstract_map_get: assertion 'self != NULL' failed[0m
+Aug 18 15:47:32 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mgee_abstract_map_set: assertion 'self != NULL' failed[0m
+Aug 18 15:49:17 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Checking for update
+Aug 18 15:49:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Update for version 1.5.53 is not available (latest version: 1.5.53, downgrade is disallowed).
+Aug 18 16:05:32 loki-ryzen pulseaudio[1779]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: ALSA woke us up to write new data to the device, but there was actually nothing to write.[0m
+Aug 18 16:05:32 loki-ryzen pulseaudio[1779]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: Most likely this is a bug in the ALSA driver 'snd_hda_intel'. Please report this issue to the ALSA developers.[0m
+Aug 18 16:05:32 loki-ryzen pulseaudio[1779]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 1] alsa-sink.c: We were woken up with POLLOUT set -- however a subsequent snd_pcm_avail() returned 0 or another value < min_avail.[0m
+Aug 18 16:06:05 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 16:06:08 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 18 16:06:08 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 18 16:06:08 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 18 16:06:35 loki-ryzen gala[1861]: [0;1;39m[0;1;31m[0;1;39mDrawingService.vala:277: Could not find icon '/usr/bin/thunderbird/Icons/Icon.jpeg'[0m
+Aug 18 16:08:21 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mgee_abstract_map_get: assertion 'self != NULL' failed[0m
+Aug 18 16:08:21 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mgee_abstract_map_set: assertion 'self != NULL' failed[0m
+Aug 18 16:09:17 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: ready-to-show: 2875.122ms
+Aug 18 16:09:18 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Checking for update
+Aug 18 16:09:19 loki-ryzen balena-etcher-e[11580]: [0;1;39m[0;1;31m[0;1;39mGtkDialog mapped without a transient parent. This is discouraged.[0m
+Aug 18 16:09:19 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Update for version 1.5.53 is not available (latest version: 1.5.53, downgrade is disallowed).
+Aug 18 16:09:21 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: ready-to-show: 6803.969ms
+Aug 18 16:09:22 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Checking for update
+Aug 18 16:09:23 loki-ryzen io.elementary.p[1919]: [0;1;39m[0;1;31m[0;1;39mGtkDialog mapped without a transient parent. This is discouraged.[0m
+Aug 18 16:09:23 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x220087e (Authentica)[0m
+Aug 18 16:09:23 loki-ryzen org.gnome.SettingsDaemon.MediaKeys-pantheon.desktop[1725]: Update for version 1.5.53 is not available (latest version: 1.5.53, downgrade is disallowed).
+Aug 18 16:09:26 loki-ryzen pkexec[11909]: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Aug 18 16:13:10 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mgee_abstract_map_get: assertion 'self != NULL' failed[0m
+Aug 18 16:13:10 loki-ryzen wingpanel[1887]: [0;1;39m[0;1;31m[0;1;39mgee_abstract_map_set: assertion 'self != NULL' failed[0m
+Aug 18 16:20:09 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 16:21:44 loki-ryzen gala.desktop[1861]: [0;1;39m[0;1;31m[0;1;39mWindow manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x3400001 (Cerebro)[0m
+Aug 18 16:23:10 loki-ryzen pulseaudio[1779]: [0;1;31m[0;1;39m[0;1;31m[alsa-sink-HDMI 0] alsa-sink.c: Error opening PCM device hdmi:0: No such file or directory[0m
+Aug 18 16:23:10 loki-ryzen gsd-media-keys[1725]: [0;1;39m[0;1;31m[0;1;39mUnable to get default sink[0m
+Aug 18 16:23:11 loki-ryzen gsd-color[1772]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 18 16:23:11 loki-ryzen gsd-color[1772]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 18 16:43:11 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 16:43:11 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:43 loki-ryzen pulseaudio[1779]: [0;1;39m[0;1;31m[0;1;39m[pulseaudio] sink-input.c: Failed to create sink input: sink is suspended.[0m
+Aug 18 21:03:43 loki-ryzen gsd-sharing[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit gnome-remote-desktop.service not loaded.[0m
+Aug 18 21:03:43 loki-ryzen gsd-sharing[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit vino-server.service not loaded.[0m
+Aug 18 21:03:43 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:43 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:43 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:43 loki-ryzen io.elementary.cerbere.desktop[1881]: [0;1;39m[0;1;31m[0;1;39mFailed to register: GDBus.Error:org.freedesktop.DBus.Error.NoReply: Message recipient disconnected from message bus without replying[0m
+Aug 18 21:03:43 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:44 loki-ryzen pulseaudio[1779]: [0;1;39m[0;1;31m[0;1;39m[pulseaudio] sink-input.c: Failed to create sink input: sink is suspended.[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:46 loki-ryzen gsd-sharing[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit gnome-remote-desktop.service not loaded.[0m
+Aug 18 21:03:46 loki-ryzen gsd-sharing[1792]: [0;1;39m[0;1;31m[0;1;39mFailed to StopUnit service: GDBus.Error:org.freedesktop.systemd1.NoSuchUnit: Unit vino-server.service not loaded.[0m
+Aug 18 21:03:46 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:47 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:47 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mgtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed[0m
+Aug 18 21:03:47 loki-ryzen nm-applet[1935]: [0;1;39m[0;1;31m[0;1;39mCan't set a parent on widget which has a parent[0m
+Aug 18 21:03:47 loki-ryzen io.elementary.cerbere.desktop[1881]: [0;1;39m[0;1;31m[0;1;39mFailed to register: GDBus.Error:org.freedesktop.DBus.Error.NoReply: Message recipient disconnected from message bus without replying[0m
+Aug 18 21:03:53 loki-ryzen gsd-color[1772]: [0;1;39m[0;1;31m[0;1;39mfailed to set screen _ICC_PROFILE: Failed to open file “/var/lib/lightdm/.local/share/icc/edid-3cd039ba21af90d3cd027d07b08f9125.icc”: Permission denied[0m
+Aug 18 21:03:58 loki-ryzen gsd-color[1772]: [0;1;39m[0;1;31m[0;1;39mfailed to connect to device: Failed to connect to missing device /org/freedesktop/ColorManager/devices/xrandr_Samsung_Electric_Company_U28E590_HTPJ301000_lightdm_110[0m
+Aug 18 21:03:58 loki-ryzen gsd-color[1772]: [0;1;39m[0;1;31m[0;1;39mfailed to connect to device: Failed to connect to missing device /org/freedesktop/ColorManager/devices/xrandr_BenQ_Corporation_BenQ_EW3270U_Y1K01177019_lightdm_110[0m
+Aug 18 21:04:56 loki-ryzen io.elementary.a[3385]: [0;1;39m[0;1;31m[0;1;39mClient.vala:633: Update_cache: Refesh cache async failed - E: The repository 'http://ppa.launchpad.net/webupd8team/tor-browser/ubuntu bionic Release' does not have a Release file.[0m
+                                                  [0;1;39mW: Updating from such a repository can't be done securely, and is therefore disabled by default.[0m
+                                                  [0;1;39mW: See apt-secure(8) manpage for repository creation and user configuration details.[0m
+Aug 18 21:05:27 loki-ryzen io.elementary.s[17625]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 18 21:05:32 loki-ryzen io.elementary.s[17625]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 18 21:05:49 loki-ryzen io.elementary.s[17625]: [0;1;39m[0;1;31m[0;1;39mManager.vala:65: Error calling StartServiceByName for org.bluez: GDBus.Error:org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 18 21:05:57 loki-ryzen io.elementary.t[17691]: [0;1;39m[0;1;31m[0;1;39mgtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkNotebook[0m
+Aug 18 21:05:58 loki-ryzen pulseaudio[17739]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] pid.c: Daemon already running.[0m
+Aug 18 21:06:03 loki-ryzen gsd-media-keys[1725]: [0;1;39m[0;1;31m[0;1;39mUnable to get default sink[0m
+Aug 18 21:06:06 loki-ryzen pulseaudio[22013]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] pid.c: Daemon already running.[0m
+Aug 18 21:06:07 loki-ryzen pulseaudio[22958]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] pid.c: Daemon already running.[0m
+Aug 18 21:06:11 loki-ryzen gsd-media-keys[1725]: [0;1;39m[0;1;31m[0;1;39mUnable to get default sink[0m
+Aug 18 21:06:14 loki-ryzen io.elementary.s[17625]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 18 21:06:15 loki-ryzen io.elementary.s[17625]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 18 21:06:21 loki-ryzen io.elementary.s[17625]: [0;1;39m[0;1;31m[0;1;39msound_device_get_matching_profile: assertion 'other_device != NULL' failed[0m
+Aug 18 21:06:23 loki-ryzen pulseaudio[22279]: [0;1;31m[0;1;39m[0;1;31m[pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Listening on Sound System.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27022]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27022]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 1.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27029]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27029]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 2.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27030]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27030]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 3.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27032]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:06:44 loki-ryzen pulseaudio[27032]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:06:44 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 4.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:06:45 loki-ryzen pulseaudio[27033]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:06:45 loki-ryzen pulseaudio[27033]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:06:45 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:06:45 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 5.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Start request repeated too quickly.[0m
+Aug 18 21:06:45 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:06:45 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:06:45 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.socket: Failed with result 'service-start-limit-hit'.[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Listening on Sound System.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is RESULT.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27095]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27095]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 1.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27102]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27102]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 2.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27103]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27103]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 3.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27105]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:07:14 loki-ryzen pulseaudio[27105]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:07:14 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 4.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: Starting Sound Service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has begun starting up.
+Aug 18 21:07:15 loki-ryzen pulseaudio[27106]: E: [pulseaudio] pid.c: Daemon already running.
+Aug 18 21:07:15 loki-ryzen pulseaudio[27106]: E: [pulseaudio] main.c: pa_pid_file_create() failed.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 18 21:07:15 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:07:15 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: pulseaudio.service: Service hold-off time over, scheduling restart.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: pulseaudio.service: Scheduled restart job, restart counter is at 5.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Automatic restarting of the unit UNIT has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: Stopped Sound Service.
+-- Subject: Unit UNIT has finished shutting down
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has finished shutting down.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Start request repeated too quickly.[0m
+Aug 18 21:07:15 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.service: Failed with result 'exit-code'.[0m
+Aug 18 21:07:15 loki-ryzen systemd[1574]: [0;1;31m[0;1;39m[0;1;31mFailed to start Sound Service.[0m
+-- Subject: Unit UNIT has failed
+-- Defined-By: systemd
+-- Support: http://www.ubuntu.com/support
+-- 
+-- Unit UNIT has failed.
+-- 
+-- The result is RESULT.
+Aug 18 21:07:15 loki-ryzen systemd[1574]: [0;1;39m[0;1;31m[0;1;39mpulseaudio.socket: Failed with result 'service-start-limit-hit'.[0m

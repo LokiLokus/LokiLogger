@@ -56,9 +56,48 @@
 <div class="row">
     <div class="col-md-12">
         <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+        <button class="btn btn-danger" id="error">Throw Error</button>
+        <button class="btn btn-primary" id="data">GetData</button>
+        <button class="btn btn-primary" id="login">Execute Rest</button>
     </div>
 </div>
+
+<script>
+$("#error").click(function(){
+    $.get("/api/User/Error", function(data, status){
+           alert("Data: " + data + "\nStatus: " + status);
+         });
+});
+
+$("#data").click(function(){
+    $.get("/api/User/All", function(data, status){
+           alert("Data: " + data + "\nStatus: " + status);
+         });
+});
+
+$("#login").click(function(){
+    var data = {
+               Password:"12340",
+               UserName:"User0"
+           };
+    $.ajax({
+            async: false,
+            url: '/api/User/Login',
+            data: data,
+            type:'post',
+            timeout: 4000,
+            success: function(result) {
+                console.log(result)
+                response = result;
+                alert(response)
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                response = "err--" + XMLHttpRequest.status + " -- " + XMLHttpRequest.statusText;
+                
+                console.log(response + XMLHttpRequest.url)
+            }
+        });
+    
+});
+
+</script>
