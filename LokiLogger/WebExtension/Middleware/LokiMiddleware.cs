@@ -77,6 +77,7 @@ namespace LokiLogger.WebExtension.Middleware {
 
             await request.Body.ReadAsync(buffer, 0, buffer.Length);
 
+            request.Body.Position = 0;
             var bodyAsText = Encoding.UTF8.GetString(buffer);
 
             request.Body = body;
