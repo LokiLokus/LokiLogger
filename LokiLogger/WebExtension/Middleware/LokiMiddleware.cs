@@ -84,16 +84,25 @@ namespace LokiLogger.WebExtension.Middleware {
         [Loki]
         private async Task LogResponse(HttpResponse response,WebRestLog log)
         {
-            response.Body.Seek(0, SeekOrigin.Begin);
+            try
+            {
 
-            string text = await new StreamReader(response.Body).ReadToEndAsync();
+                response.Body.Seek(0, SeekOrigin.Begin);
+                
+                string text = await new StreamReader(response.Body).ReadToEndAsync();
 
-            
-            response.Body.Seek(0, SeekOrigin.Begin);
-
+                
+                response.Body.Seek(0, SeekOrigin.Begin);
+                
+                log.ResponseBody = text;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
             log.StatusCode = response.StatusCode;
             log.End = DateTime.UtcNow;
-            log.ResponseBody = text;
         }
 	}
 
