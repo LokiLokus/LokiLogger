@@ -55,8 +55,9 @@ namespace TestApp {
 			
 			app.UseLokiLogger(x =>
 			{
+				x.UseMiddleware = true;
 				x.Secret = "1234";
-				x.HostName = "http://localhost:5000/api/Logging/Log/b7bc5775-116d-4bba-ac7a-54e3aceac6ac";
+				x.HostName = "https://llogger.hopfenspace.org:/api/Logging/Log/0806a6e1-f539-44dd-bf93-31d43c7beafa";
 				x.DefaultLevel = LogLevel.Debug;
 			});
 

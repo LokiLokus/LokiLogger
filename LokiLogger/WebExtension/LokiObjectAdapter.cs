@@ -22,6 +22,7 @@ namespace LokiLogger.WebExtension {
 	    
 	    
 	    public static LokiConfigSettings LokiConfig { get; set; }
+	    
 	    private static object _lock = new object();
 	    
         public LokiObjectAdapter()

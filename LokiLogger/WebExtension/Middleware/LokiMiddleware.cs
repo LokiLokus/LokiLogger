@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LokiLogger.Shared;
@@ -17,46 +18,55 @@ namespace LokiLogger.WebExtension.Middleware {
 
         public async Task Invoke(HttpContext context)
         {
-            WebRestLog log = new WebRestLog()
+            if (!LokiObjectAdapter.LokiConfig.UseMiddleware || LokiObjectAdapter.LokiConfig.IgnoreRoutes.Any(x => context.Request.Path.ToString().Contains(x))) await _next(context);
+            else
             {
-                TraceId = context.TraceIdentifier
-            };
-            try
-            {
-                log = await LogRequest(context.Request,log);
-            }
-            catch (Exception e)
-            {
-                Loki.ExceptionWarning("Error in Loki Middleware logging Request",e);
-            }
+                WebRestLog log = new WebRestLog()
+                {
+                    TraceId = context.TraceIdentifier
+                };
+                try
+                {
+                    log = await LogRequest(context.Request,log);
+                }
+                catch (Exception e)
+                {
+                    Loki.ExceptionWarning("Error in Loki Middleware logging Request",e);
+                }
 
-            try
-            {
-                await _next(context);
-            }
-            catch (Exception e)
-            {
-                log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
-                await LogResponse(context.Response, log);
-                Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
-                throw;
-            }
+                try
+                {
+                    await _next(context);
+                }
+                catch (Exception e)
+                {
+                    log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
+                    await LogResponse(context.Response, log);
+                    Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
+                    throw;
+                }
+
+                try
+                {
+                    await LogResponse(context.Response, log);
+                }
+                catch (Exception e)
+                {
+                    Loki.ExceptionWarning("Error in Loki Middleware logging Response",e);
+                }
                 
-            await LogResponse(context.Response, log);
-                
 
+                LogLevel lvl = LokiObjectAdapter.LokiConfig.DefaultLevel;
+                if (!(200 <= log.StatusCode || log.StatusCode < 300))
+                {
+                    lvl = LogLevel.Warning;
+                }
 
-            LogLevel lvl = LokiObjectAdapter.LokiConfig.DefaultLevel;
-            if (!(log.StatusCode >= 200 && log.StatusCode < 300))
-            {
-                lvl = LogLevel.Warning;
-
+                Loki.Write(LogTyp.RestCall, lvl, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
             }
-
-            Loki.Write(LogTyp.RestCall, lvl, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
+            
         }
 
-        [Loki]
         private async Task<WebRestLog> LogRequest(HttpRequest request,WebRestLog log)
         {
             request.EnableBuffering();
@@ -79,7 +89,6 @@ namespace LokiLogger.WebExtension.Middleware {
             return log;
         }
 
-        [Loki]
         private async Task LogResponse(HttpResponse response,WebRestLog log)
         {
             try
@@ -88,8 +97,6 @@ namespace LokiLogger.WebExtension.Middleware {
                 response.Body.Seek(0, SeekOrigin.Begin);
                 
                 string text = await new StreamReader(response.Body).ReadToEndAsync();
-
-                
                 response.Body.Seek(0, SeekOrigin.Begin);
                 
                 log.ResponseBody = text;
@@ -97,7 +104,6 @@ namespace LokiLogger.WebExtension.Middleware {
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                throw;
             }
             log.StatusCode = response.StatusCode;
             log.End = DateTime.UtcNow;
