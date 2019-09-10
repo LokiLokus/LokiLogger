@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using LokiLogger.Shared;
+using Newtonsoft.Json;
 
 namespace LokiLogger.LoggerAdapter {
 	public class BasicLoggerAdapter : ILogAdapter{
@@ -52,12 +53,22 @@ namespace LokiLogger.LoggerAdapter {
 
 			try
 			{
-				result += ": " + String.Format(message);
+				result += ": " + message;
 			}
 			catch (Exception e)
 			{
 				Console.WriteLine("ERROR in String Format with Message " + e.Message);
 			}
+			try
+			{
+				result += " - " + JsonConvert.SerializeObject(objects);
+				
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine("ERROR in String Format with Message " + e.Message);
+			}
+			
 			
 			Console.WriteLine(result);
 		}

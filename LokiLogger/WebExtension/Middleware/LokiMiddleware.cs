@@ -30,8 +30,6 @@ namespace LokiLogger.WebExtension.Middleware {
                 Loki.ExceptionWarning("Error in Loki Middleware logging Request",e);
             }
 
-
-
             try
             {
                 await _next(context);
