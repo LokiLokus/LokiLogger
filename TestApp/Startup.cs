@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TestApp.Services;
 
 namespace TestApp {
 	public class Startup {
@@ -32,7 +33,7 @@ namespace TestApp {
 			});
 			
 			services.AddLokiObjectLogger();
-
+			services.AddTransient<ITestService,TestService>();
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
 
