@@ -112,6 +112,7 @@ namespace LokiLogger.WebExtension {
                         var data = result.Result;
                         if(!data.IsSuccessStatusCode)
                         {
+	                        Console.WriteLine("Error on sending LokiLogger Data");
 	                        Console.WriteLine("Status Code: " + data.StatusCode);
 	                        Console.WriteLine("Message: " + data.Content.ReadAsStringAsync().Result);
                         }

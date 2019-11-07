@@ -5,16 +5,32 @@ using Microsoft.AspNetCore.Identity;
 
 namespace LokiLogger.WebExtension.ViewModel
 {
-
+	public static class OperationResult {
+		
+		public static OperationResult<T> Success<T>(T obj)
+		{
+			return OperationResult<T>.Success(obj);
+		}
+		public static OperationResult<T> Fail<T>(string code, string description)
+		{
+			return OperationResult<T>.Failed<T>(code,description);
+		}
+	}
+	
 	public static class OpRes
 	{
 		public static OperationResult<T> Success<T>(T obj)
 		{
 			return OperationResult<T>.Success(obj);
 		}
+		public static OperationResult<T> Fail<T>(string code, string description)
+		{
+			return OperationResult<T>.Failed<T>(code,description);
+		}
 	}
-    public class OperationResult<T>{
-    public bool Succeeded { get; set; }
+	
+	public class OperationResult<T>{
+		public bool Succeeded { get; set; }
 		public T SuccessResult { get; set; }
 		public IEnumerable<OperationOutput> Errors { get; set; }
 
@@ -65,4 +81,5 @@ namespace LokiLogger.WebExtension.ViewModel
 			return new OperationOutput(code, desc);
 		}
 	}
+
 }

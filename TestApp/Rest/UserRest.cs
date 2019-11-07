@@ -1,17 +1,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using LokiLogger.WebExtension.Controller;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using TestApp.Models;
+using TestApp.Services;
 
 namespace TestApp.Rest {
 	[Route("api/User")]
 	[ApiController]
-	public class UserRest :Controller{
+	public class UserRest :LokiController{
+		
+		public ITestService TestService { get; set; }
+
 		public List<User> Users { get; set; }
 		
-		public UserRest()
+		public UserRest(ITestService service)
 		{
 			Users = new List<User>();
 			for (int i = 0; i < 5; i++)
@@ -24,6 +29,7 @@ namespace TestApp.Rest {
 					UserName = "User"+i
 				});
 			}
+			TestService = service;
 			
 		}
 		[HttpGet("All")]
@@ -54,9 +60,9 @@ namespace TestApp.Rest {
 		}
 
 		[HttpGet("Error")]
-		public ActionResult ThrowError()
+		public IActionResult ThrowError()
 		{
-			throw new Exception("This is an Exception");
+			return CallRest(TestService.Throw);
 		}
 	}
 

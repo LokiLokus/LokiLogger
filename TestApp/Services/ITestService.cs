@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using LokiLogger.WebExtension.ViewModel;
 using TestApp.Models;
@@ -8,6 +9,7 @@ namespace TestApp.Services
     {
         OperationResult<List<TestData>> GetData();
         OperationResult<TestData> NewData(TestData data);
+        OperationResult<string> Throw();
     }
     
     public class TestService:ITestService{
@@ -33,6 +35,11 @@ namespace TestApp.Services
         {
             data.Id = "2";
             return OpRes.Success(data);
+        }
+
+        public OperationResult<string> Throw()
+        {
+            throw new Exception("This is an Exception");
         }
     }
 }
