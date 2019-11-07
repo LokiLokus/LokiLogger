@@ -20,11 +20,9 @@ namespace LokiLogger.WebExtension.Middleware {
         public async Task Invoke(HttpContext context)
         {
             
-            Stopwatch overall = Stopwatch.StartNew();
             if (!LokiObjectAdapter.LokiConfig.UseMiddleware || LokiObjectAdapter.LokiConfig.IgnoreRoutes.Any(x => context.Request.Path.ToString().Contains(x))) await _next(context);
             else
             {
-                Stopwatch test1 = Stopwatch.StartNew();
                 WebRestLog log = new WebRestLog()
                 {
                     TraceId = context.TraceIdentifier
@@ -33,8 +31,6 @@ namespace LokiLogger.WebExtension.Middleware {
                 {
                     
                     log = await LogRequest(context.Request,log);
-                    test1.Stop();
-                    Console.WriteLine("TEST1 \t " + test1.ElapsedMilliseconds);
                 }
                 catch (Exception e)
                 {
@@ -49,11 +45,8 @@ namespace LokiLogger.WebExtension.Middleware {
                     context.Response.Body = responseBody;
                     try
                     {
-                        test1 = Stopwatch.StartNew();
                         await _next(context);
                         
-                        test1.Stop();
-                        Console.WriteLine("TEST2 \t " + test1.ElapsedMilliseconds);
                         if (context.Items.ContainsKey("Exception"))
                         {
                             Exception ex = (Exception) context.Items["Exception"];
@@ -70,11 +63,8 @@ namespace LokiLogger.WebExtension.Middleware {
 
                     try
                     {
-                        test1 = Stopwatch.StartNew();
                         await LogResponse(context.Response, log);
                         
-                        test1.Stop();
-                        Console.WriteLine("TEST3 \t " + test1.ElapsedMilliseconds);
                     }
                     catch (Exception e)
                     {
@@ -92,8 +82,6 @@ namespace LokiLogger.WebExtension.Middleware {
 
                 Loki.Write(LogTyp.RestCall, lvl, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
             }
-            overall.Stop();
-            Console.WriteLine("overall \t " + overall.ElapsedMilliseconds);
             
         }
 
