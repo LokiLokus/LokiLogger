@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace LokiLogger.WebExtension.Middleware {
 
         public async Task Invoke(HttpContext context)
         {
+            
             if (!LokiObjectAdapter.LokiConfig.UseMiddleware || LokiObjectAdapter.LokiConfig.IgnoreRoutes.Any(x => context.Request.Path.ToString().Contains(x))) await _next(context);
             else
             {
@@ -27,6 +29,7 @@ namespace LokiLogger.WebExtension.Middleware {
                 };
                 try
                 {
+                    
                     log = await LogRequest(context.Request,log);
                 }
                 catch (Exception e)
@@ -43,6 +46,12 @@ namespace LokiLogger.WebExtension.Middleware {
                     try
                     {
                         await _next(context);
+                        
+                        if (context.Items.ContainsKey("Exception"))
+                        {
+                            Exception ex = (Exception) context.Items["Exception"];
+                            log.Exception = ex.Message + "\n" + ex.StackTrace + "\n" + ex.Source;
+                        }
                     }
                     catch (Exception e)
                     {
@@ -55,12 +64,14 @@ namespace LokiLogger.WebExtension.Middleware {
                     try
                     {
                         await LogResponse(context.Response, log);
+                        
                     }
                     catch (Exception e)
                     {
                         Loki.ExceptionWarning("Error in Loki Middleware logging Response",e);
                     }
-                    await responseBody.CopyToAsync(originalBodyStream);
+                    if(originalBodyStream.CanWrite && responseBody.CanRead)
+                        await responseBody.CopyToAsync(originalBodyStream);
                 }
 
                 LogLevel lvl = LokiObjectAdapter.LokiConfig.DefaultLevel;
