@@ -6,7 +6,7 @@ using LokiLogger.Shared;
 namespace LokiLogger.LoggerAdapter {
 	public class BasicLoggerAdapter : ILogAdapter{
 		
-		public void Write(LogTyp typ, LogLevel loglvl, string message, string className, string methodName, int line,
+		public void Write(string typ, LogLevel loglvl, string message, string className, string methodName, int line,
 			params object[] objects)
 		{
 			string result = className.Split('/').Last() + "." + methodName + ":" + line;
@@ -34,24 +34,8 @@ namespace LokiLogger.LoggerAdapter {
 				default:
 					throw new ArgumentOutOfRangeException(nameof(loglvl), loglvl, null);
 			}
-			
-			switch (typ)
-			{
-				case LogTyp.Normal:
-					result += "[N]";
-					break;
-				case LogTyp.Exception:
-					result += "[E]";
-					break;
-				case LogTyp.Return:
-					result += "[R]";
-					break;
-				case LogTyp.Invoke:
-					result += "[I]";
-					break;
-				default:
-					throw new ArgumentOutOfRangeException(nameof(typ), typ, null);
-			}
+
+			result += typ;
 
 			try
 			{
