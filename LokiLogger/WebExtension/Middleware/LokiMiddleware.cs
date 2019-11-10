@@ -57,7 +57,7 @@ namespace LokiLogger.WebExtension.Middleware {
                     {
                         log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
                         await LogResponse(context.Response, log);
-                        Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
+                        Loki.Write(Loki.REST_TYP, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
                         throw;
                     }
 
@@ -76,7 +76,7 @@ namespace LokiLogger.WebExtension.Middleware {
                 }
 
 
-                Loki.Write(LogTyp.RestCall, LogLevel.SystemGenerated, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
+                Loki.Write(Loki.REST_TYP, LogLevel.SystemGenerated, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
             }
             
         }

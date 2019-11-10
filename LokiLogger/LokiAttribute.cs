@@ -17,7 +17,7 @@ using MethodDecorator.Fody.Interfaces;
 			_stopwatch = new Stopwatch();
 			_methodName = method.Name;
 			_className = method.DeclaringType.FullName;
-			Loki.Write(LogTyp.Invoke,LogLevel.SystemGenerated,null,_methodName,_className,-1,args);
+			Loki.Write(Loki.INVOKE_TYP,LogLevel.SystemGenerated,null,_methodName,_className,-1,args);
 		}
 
 		public void OnEntry()
@@ -28,12 +28,12 @@ using MethodDecorator.Fody.Interfaces;
 		public void OnExit()
 		{
 			_stopwatch.Stop();
-			Loki.Write(LogTyp.Return,LogLevel.SystemGenerated,null,_methodName,_className,-1,_stopwatch.ElapsedTicks);
+			Loki.Write(Loki.RETURN_TYP,LogLevel.SystemGenerated,null,_methodName,_className,-1,_stopwatch.ElapsedTicks);
 		}
 
 		public void OnException(Exception exception)
 		{
 			_stopwatch.Stop();
-			Loki.Write(LogTyp.Exception,LogLevel.SystemGenerated,null,_methodName,_className,-1,exception);
+			Loki.Write(Loki.EXCEPTION_TYP,LogLevel.SystemGenerated,null,_methodName,_className,-1,exception);
 		}
 	}
