@@ -126,7 +126,6 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        
         public IActionResult CallRest<D,T,G,A,B,C,E>(Func<T,G,A,B,C,E,OperationResult<D>> result,T input,G input1,A input2, B input3, C input4,E input5)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
