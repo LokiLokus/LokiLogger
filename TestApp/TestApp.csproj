@@ -12,6 +12,4 @@
     <ItemGroup>
       <ProjectReference Include="..\LokiLogger\LokiLogger.csproj" />
     </ItemGroup>
-
-
 </Project>

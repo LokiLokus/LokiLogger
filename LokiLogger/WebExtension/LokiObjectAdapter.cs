@@ -32,7 +32,7 @@ namespace LokiLogger.WebExtension {
             Loki.UpdateAdapter(this);
         }
 		
-		public void Write(LogTyp typ, LogLevel logLevel, string message, string className, string methodName, int line,
+		public void Write(string typ, LogLevel logLevel, string message, string className, string methodName, int line,
 			params object[] objects)
 		{
 			string data = "";
@@ -40,7 +40,7 @@ namespace LokiLogger.WebExtension {
 			
 			if (objects.Length > 0)
 			{
-				if (typ == LogTyp.Exception)
+				if (typ == Loki.EXCEPTION_TYP)
 				{
 					try
 					{

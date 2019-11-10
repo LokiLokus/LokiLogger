@@ -11,7 +11,7 @@ namespace LokiWebExtension.Models {
 		public string Class { get; set; }
 		public string Method { get; set; }
 		public int Line { get; set; }
-		public LogTyp LogTyp { get; set; }
+		public string LogTyp { get; set; }
 		public string Exception { get; set; }
 		public string Data { get; set; }
 		public string Name { get; set; }
