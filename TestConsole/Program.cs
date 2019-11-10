@@ -25,7 +25,7 @@ namespace TestConsole
 
         public static void DoStuff(string input)
         {
-            Thread.Sleep(TimeSpan.FromMilliseconds(2));
+            Thread.Sleep(TimeSpan.FromMilliseconds(2000));
         }
         [Loki]
         public static long DoStuff1(string input)
@@ -37,10 +37,10 @@ namespace TestConsole
 
             return long.Parse(input);
         }
-        [Loki(false)]
+        [Loki]
         public static void DoStuff2(string input)
         {
-            Thread.Sleep(TimeSpan.FromMilliseconds(2));
+            Thread.Sleep(TimeSpan.FromMilliseconds(2000));
         }
     }
 }

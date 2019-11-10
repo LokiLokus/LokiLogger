@@ -87,7 +87,9 @@ public int do(int x){
 }
 ```
 
-:warning: **Note:** Don't use that feature in very frequently called methods. The performance impact is normally very low. But you may encounter "problems" when using the attribute on an extremely frequently used method.
+
+
+:warning: **Note:** Don't use that feature in very frequently called methods. The performance impact is normally very low. But you may encounter "problems" when using the attribute on an extremely frequently used method. The Overhead per Methodcall is ~40-80 ms + Executiontime(Adapter).
 
 ### Use in ASP Core
 
