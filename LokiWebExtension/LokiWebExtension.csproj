@@ -9,7 +9,7 @@
     
     <ItemGroup>
         <PackageReference Include="LokiLogger" Version="3.0.1" />
-        <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
+        <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.4" />
     </ItemGroup>
 
 </Project>
