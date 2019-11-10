@@ -2,6 +2,7 @@
 
 namespace LokiLogger.Shared {
 	public enum LogLevel {
+		SystemGenerated = 0,
 		Debug = 1,
 		Information = 2,
 		Warning = 3,

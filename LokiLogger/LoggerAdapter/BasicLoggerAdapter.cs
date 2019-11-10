@@ -13,6 +13,9 @@ namespace LokiLogger.LoggerAdapter {
 
 			switch (loglvl)
 			{
+				case LogLevel.SystemGenerated:
+					result += "[SGE]";
+					break;
 				case LogLevel.Debug:
 					result += "[DEB]";
 					break;

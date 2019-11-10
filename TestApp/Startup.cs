@@ -36,10 +36,9 @@ namespace TestApp {
 			
 			services.AddLokiObjectLogger(x =>
 			{
-				x.UseMiddleware = true;
+				x.UseLokiMiddleware = true;
 				x.Secret = "1234";
 				x.HostName = "https://llogger.hopfenspace.org:/api/Logging/Log/0806a6e1-f539-44dd-bf93-31d43c7beafa";
-				x.DefaultLevel = LogLevel.Debug;
 			});
 			services.AddTransient<ITestService,TestService>();
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

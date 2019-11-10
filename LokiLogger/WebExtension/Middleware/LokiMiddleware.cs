@@ -20,7 +20,7 @@ namespace LokiLogger.WebExtension.Middleware {
         public async Task Invoke(HttpContext context)
         {
             
-            if (!LokiObjectAdapter.LokiConfig.UseMiddleware || LokiObjectAdapter.LokiConfig.IgnoreRoutes.Any(x => context.Request.Path.ToString().Contains(x))) await _next(context);
+            if (!LokiObjectAdapter.LokiConfig.UseLokiMiddleware || LokiObjectAdapter.LokiConfig.IgnoreRoutes.Any(x => context.Request.Path.ToString().Contains(x))) await _next(context);
             else
             {
                 WebRestLog log = new WebRestLog()
@@ -29,8 +29,8 @@ namespace LokiLogger.WebExtension.Middleware {
                 };
                 try
                 {
-                    
-                    log = await LogRequest(context.Request,log);
+                    if(!LokiObjectAdapter.LokiConfig.NoRequestRoutes.Any(x => context.Request.Path.ToString().Contains(x)))
+                        log = await LogRequest(context.Request,log);
                 }
                 catch (Exception e)
                 {
@@ -63,7 +63,8 @@ namespace LokiLogger.WebExtension.Middleware {
 
                     try
                     {
-                        await LogResponse(context.Response, log);
+                        if(!LokiObjectAdapter.LokiConfig.NoResponseRoutes.Any(x => context.Request.Path.ToString().Contains(x)))
+                            await LogResponse(context.Response, log);
                         
                     }
                     catch (Exception e)
@@ -74,13 +75,8 @@ namespace LokiLogger.WebExtension.Middleware {
                         await responseBody.CopyToAsync(originalBodyStream);
                 }
 
-                LogLevel lvl = LokiObjectAdapter.LokiConfig.DefaultLevel;
-                if (!(200 <= log.StatusCode || log.StatusCode < 300))
-                {
-                    lvl = LogLevel.Warning;
-                }
 
-                Loki.Write(LogTyp.RestCall, lvl, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
+                Loki.Write(LogTyp.RestCall, LogLevel.SystemGenerated, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 55, log);
             }
             
         }
