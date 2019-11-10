@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace LokiLogger.WebExtension.Middleware {
 
         public async Task Invoke(HttpContext context)
         {
+            
             if (!LokiObjectAdapter.LokiConfig.UseMiddleware || LokiObjectAdapter.LokiConfig.IgnoreRoutes.Any(x => context.Request.Path.ToString().Contains(x))) await _next(context);
             else
             {
@@ -27,6 +29,7 @@ namespace LokiLogger.WebExtension.Middleware {
                 };
                 try
                 {
+                    
                     log = await LogRequest(context.Request,log);
                 }
                 catch (Exception e)
@@ -34,27 +37,42 @@ namespace LokiLogger.WebExtension.Middleware {
                     Loki.ExceptionWarning("Error in Loki Middleware logging Request",e);
                 }
 
-                try
-                {
-                    await _next(context);
-                }
-                catch (Exception e)
-                {
-                    log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
-                    await LogResponse(context.Response, log);
-                    Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
-                    throw;
-                }
+                var originalBodyStream = context.Response.Body;
 
-                try
+                //Create a new memory stream...
+                using (var responseBody = new MemoryStream())
                 {
-                    await LogResponse(context.Response, log);
+                    context.Response.Body = responseBody;
+                    try
+                    {
+                        await _next(context);
+                        
+                        if (context.Items.ContainsKey("Exception"))
+                        {
+                            Exception ex = (Exception) context.Items["Exception"];
+                            log.Exception = ex.Message + "\n" + ex.StackTrace + "\n" + ex.Source;
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        log.Exception = e.Message + "\n" + e.StackTrace + "\n" + e.Source;
+                        await LogResponse(context.Response, log);
+                        Loki.Write(LogTyp.RestCall, LogLevel.Error, "", "Invoke", "LokiWebExtension.Middleware.LokiMiddleware", 48, log);
+                        throw;
+                    }
+
+                    try
+                    {
+                        await LogResponse(context.Response, log);
+                        
+                    }
+                    catch (Exception e)
+                    {
+                        Loki.ExceptionWarning("Error in Loki Middleware logging Response",e);
+                    }
+                    if(originalBodyStream.CanWrite && responseBody.CanRead)
+                        await responseBody.CopyToAsync(originalBodyStream);
                 }
-                catch (Exception e)
-                {
-                    Loki.ExceptionWarning("Error in Loki Middleware logging Response",e);
-                }
-                
 
                 LogLevel lvl = LokiObjectAdapter.LokiConfig.DefaultLevel;
                 if (!(200 <= log.StatusCode || log.StatusCode < 300))
@@ -95,7 +113,13 @@ namespace LokiLogger.WebExtension.Middleware {
             {
 
                 response.Body.Seek(0, SeekOrigin.Begin);
-                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            try
+            {
                 string text = await new StreamReader(response.Body).ReadToEndAsync();
                 response.Body.Seek(0, SeekOrigin.Begin);
                 

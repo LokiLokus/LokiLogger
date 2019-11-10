@@ -11,6 +11,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using TestApp.Services;
+using LogLevel = LokiLogger.Shared.LogLevel;
 
 namespace TestApp {
 	public class Startup {
@@ -31,8 +34,14 @@ namespace TestApp {
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 			
-			services.AddLokiObjectLogger();
-
+			services.AddLokiObjectLogger(x =>
+			{
+				x.UseMiddleware = true;
+				x.Secret = "1234";
+				x.HostName = "https://llogger.hopfenspace.org:/api/Logging/Log/0806a6e1-f539-44dd-bf93-31d43c7beafa";
+				x.DefaultLevel = LogLevel.Debug;
+			});
+			services.AddTransient<ITestService,TestService>();
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
 
@@ -49,17 +58,11 @@ namespace TestApp {
 				app.UseHsts();
 			}
 
+			app.UseLokiLogger();
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseCookiePolicy();
 			
-			app.UseLokiLogger(x =>
-			{
-				x.UseMiddleware = true;
-				x.Secret = "1234";
-				x.HostName = "https://llogger.hopfenspace.org:/api/Logging/Log/0806a6e1-f539-44dd-bf93-31d43c7beafa";
-				x.DefaultLevel = LogLevel.Debug;
-			});
 
 			app.UseMvc(routes =>
 			{
