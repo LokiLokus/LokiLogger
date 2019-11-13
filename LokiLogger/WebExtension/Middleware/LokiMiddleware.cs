@@ -96,7 +96,15 @@ namespace LokiLogger.WebExtension.Middleware {
             log.Host = request.Host.ToString();
             log.Path = request.Path;
             log.QueryString = request.QueryString.ToString();
-            log.ClientIp = request.HttpContext.Connection.RemoteIpAddress.ToString();
+            if (request.Headers.ContainsKey("x-real-ip"))
+            {
+                log.ClientIp = request.Headers["x-real-ip"];
+            }
+            else
+            {
+                log.ClientIp = request.HttpContext.Connection.RemoteIpAddress.ToString();
+            }
+            
             log.HttpMethod = request.Method;
             log.Start = DateTime.UtcNow;
             
