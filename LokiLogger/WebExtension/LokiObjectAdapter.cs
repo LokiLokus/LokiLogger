@@ -129,7 +129,14 @@ namespace LokiLogger.WebExtension {
 
         public void Dispose()
 	    {
-	        _timer.Dispose();
+		    try
+		    {
+			    _timer.Dispose();
+		    }
+		    catch (Exception e)
+		    {
+			    Console.WriteLine(e);
+		    }
 	        SendData(null);
 	        _client.Dispose();
 	    }

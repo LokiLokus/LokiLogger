@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
 using TestApp.Services;
 using LogLevel = LokiLogger.Shared.LogLevel;
 
@@ -34,11 +35,15 @@ namespace TestApp {
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 			
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new Info {Title = "ContainerManagement", Version = "v1"});
+			});
 			services.AddLokiObjectLogger(x =>
 			{
 				x.UseMiddleware = true;
-				x.Secret = "1234";
-				x.HostName = "https://llogger.hopfenspace.org:/api/Logging/Log/0806a6e1-f539-44dd-bf93-31d43c7beafa";
+				x.Secret = "";
+				x.HostName = "https://llogger.hopfenspace.org/api/Logging/Log/7ed19246-56b3-4d97-aaad-9ffdf6f5e6e4";
 				x.DefaultLevel = LogLevel.Debug;
 			});
 			services.AddTransient<ITestService,TestService>();
@@ -58,6 +63,11 @@ namespace TestApp {
 				app.UseHsts();
 			}
 
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Bss API");
+			});
 			app.UseLokiLogger();
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
