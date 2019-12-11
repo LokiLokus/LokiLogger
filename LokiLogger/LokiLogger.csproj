@@ -2,7 +2,7 @@
 
     <PropertyGroup>
 	<PackageId>LokiLogger</PackageId>
-	<Version>3.0.6</Version>
+	<Version>3.0.9</Version>
 	<Authors>LokiLokus</Authors>
 	<LangVersion>7.3</LangVersion>
 	<TargetFramework>netcoreapp2.1</TargetFramework>

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
@@ -63,7 +64,6 @@ namespace LokiLogger.WebExtension.ViewModel
 
 			Errors = errors;
 		}
-		
 		
 		public static OperationResult<T> Fail(string code, string description)
 		{
