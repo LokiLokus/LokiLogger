@@ -25,7 +25,7 @@ namespace LokiLogger.WebExtension.Controller
                 Loki.ExceptionError(e);
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult<D>.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         public async Task<IActionResult> CallRest<D,T>(Func<T,Task<OperationResult<D>>> result,T input)
@@ -45,7 +45,7 @@ namespace LokiLogger.WebExtension.Controller
                 Loki.ExceptionError(e);
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -66,7 +66,7 @@ namespace LokiLogger.WebExtension.Controller
                 Loki.ExceptionError(e);
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -87,7 +87,7 @@ namespace LokiLogger.WebExtension.Controller
                 Loki.ExceptionError(e);
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -109,7 +109,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -130,7 +130,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
 
@@ -152,7 +152,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -175,7 +175,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         public IActionResult CallRest<D,T,G,A>(Func<T,G,A,OperationResult<D>> result,T input,G input1,A input2)
@@ -196,7 +196,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         public IActionResult CallRest<D,T,G,A,B>(Func<T,G,A,B,OperationResult<D>> result,T input,G input1,A input2, B input3)
@@ -217,7 +217,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -239,7 +239,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -261,7 +261,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -283,7 +283,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -305,7 +305,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -327,7 +327,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
         
@@ -349,7 +349,7 @@ namespace LokiLogger.WebExtension.Controller
                 HttpContext.Items["Exception"] = e;
                 if (RethrowException) throw;
                 
-                return BadRequest(OperationResult.Fail<D>(GeneralErrorCode,GeneralErrorMessage).Errors);
+                return BadRequest(OperationResult.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
     }

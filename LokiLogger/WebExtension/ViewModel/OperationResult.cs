@@ -2,84 +2,105 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json;
 
 namespace LokiLogger.WebExtension.ViewModel
 {
-	public static class OperationResult {
-		
-		public static OperationResult<T> Success<T>(T obj)
-		{
-			return OperationResult<T>.Success(obj);
-		}
-		public static OperationResult<T> Fail<T>(string code, string description)
-		{
-			return OperationResult<T>.Failed<T>(code,description);
-		}
-	}
-	
-	public static class OpRes
+	public static class OperationResult
 	{
-		public static OperationResult<T> Success<T>(T obj)
+		public static OperationResult<object> Fail(string code, string description)
 		{
-			return OperationResult<T>.Success(obj);
+			return OperationResult<object>.Fail(code, description);
 		}
-		public static OperationResult<T> Fail<T>(string code, string description)
+		
+		public static OperationResult<object> Fail(string code, IEnumerable<string> description)
 		{
-			return OperationResult<T>.Failed<T>(code,description);
+			return OperationResult<object>.Fail(code, description);
+		}
+		public static OperationResult<object> Fail(string code, params string[] description)
+		{
+			return OperationResult<object>.Fail(code, description);
+		}
+		
+		public static OperationResult<object> Fail(Dictionary<string, IEnumerable<string>> err)
+		{
+			return OperationResult<object>.Fail(err);
+		}
+		
+		public static OperationResult<object> Success(object result)
+		{
+			return OperationResult<object>.Success(result);
 		}
 	}
 	
-	public class OperationResult<T>{
-		public bool Succeeded { get; set; }
-		public T SuccessResult { get; set; }
-		public IEnumerable<OperationOutput> Errors { get; set; }
-
-		public void Failed(params OperationOutput[] output)
+	public class OperationResult<T>
+	{
+		public readonly bool Succeeded;
+		public readonly T SuccessResult;
+		public readonly Dictionary<string, IEnumerable<string>> Errors;
+		
+		/// <summary>
+		/// Use when Operation succeeded
+		/// </summary>
+		/// <returns></returns>
+		private OperationResult(T successResult)
 		{
-			if (output == null) output = new OperationOutput[0];
-			if (Errors == null) Errors = new List<OperationOutput>();
-			foreach (OperationOutput tmp in output) Errors.Append(tmp);
+			Succeeded = true;
+			SuccessResult = successResult;
+		}
+
+		/// <summary>
+		/// Use when Operation fails
+		/// </summary>
+		/// <param name="errors"></param>
+		private OperationResult(Dictionary<string, IEnumerable<string>> errors)
+		{
+			Succeeded = false;
+			if (errors == null)
+			{
+				errors = new Dictionary<string, IEnumerable<string>>();
+			}
+
+			Errors = errors;
 		}
 		
-		public static OperationResult<G> Failed<G>(string code, string description)
+		
+		public static OperationResult<T> Fail(string code, string description)
 		{
-			return new OperationResult<G>
+			var err = new Dictionary<string, IEnumerable<string>>
 			{
-				Succeeded = false,
-				Errors = new List<OperationOutput>
-				{
-					new OperationOutput(code, description)
-				}
+				{code, new List<string>() {description}}
 			};
+			return new OperationResult<T>(err);
 		}
-		public static OperationResult<G> Success<G>(G result)
+		
+		public static OperationResult<T> Fail(string code, IEnumerable<string> description)
 		{
-			return new OperationResult<G>
+			var err = new Dictionary<string, IEnumerable<string>>();
+			if(description == null) description = new List<string>();
+			err.Add(code,description);
+			return new OperationResult<T>(err);
+		}
+		public static OperationResult<T> Fail(string code, params string[] description)
+		{
+			var err = new Dictionary<string, IEnumerable<string>>();
+			if(description == null) description = new string[0];
+			err.Add(code,description);
+			return new OperationResult<T>(err);
+		}
+		
+		public static OperationResult<T> Fail(Dictionary<string, IEnumerable<string>> err)
+		{
+			if (err == null)
 			{
-				Succeeded = true,
-				SuccessResult = result
-			};
+				err = new Dictionary<string, IEnumerable<string>>();
+			}
+			return new OperationResult<T>(err);
+		}
+		
+		public static OperationResult<T> Success(T result)
+		{
+			return new OperationResult<T>(result);
 		}
 	}
-
-	public class OperationOutput {
-		public OperationOutput(string code, string desc)
-		{
-			Code = code;
-			Description = desc;
-		}
-
-		public OperationOutput()
-		{
-		}
-
-		public string Code { get; set; }
-		public string Description { get; set; }
-
-		public static OperationOutput Operation(string code, string desc)
-		{
-			return new OperationOutput(code, desc);
-		}
-	}
-
 }

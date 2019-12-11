@@ -34,7 +34,7 @@ namespace TestApp.Services
         public OperationResult<TestData> NewData(TestData data)
         {
             data.Id = "2";
-            return OpRes.Success(data);
+            return OperationResult<TestData>.Success(data);
         }
 
         public OperationResult<string> Throw()
