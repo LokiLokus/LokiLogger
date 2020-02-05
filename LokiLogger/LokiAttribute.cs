@@ -39,11 +39,7 @@ using MethodDecorator.Fody.Interfaces;
 		{
 			if(_enableStopwatch){
 				_stopwatch.Stop();
-				Loki.Write(LogTyp.Return,LogLevel.Debug,null,_methodName,_className,-1,_stopwatch.ElapsedTicks);
-			}
-			else
-			{
-				Loki.Write(LogTyp.Return,LogLevel.Debug,null,_methodName,_className,-1);
+				Loki.Write(LogTyp.TimeMeasure,LogLevel.Debug,null,_methodName,_className,-1,_stopwatch.ElapsedTicks);
 			}
 		}
 

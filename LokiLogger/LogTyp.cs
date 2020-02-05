@@ -5,6 +5,7 @@ namespace LokiLogger.Shared {
 		Exception,
 		Return,
 		Invoke,
-		RestCall
+		RestCall,
+		TimeMeasure,
 	}
 }
