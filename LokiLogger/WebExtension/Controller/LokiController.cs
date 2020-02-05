@@ -9,7 +9,29 @@ namespace LokiLogger.WebExtension.Controller
         public bool RethrowException { get; set; } = LokiObjectAdapter.LokiConfig.DefaultLokiControllerRethrowException;
         public string GeneralErrorMessage { get; set; } = LokiObjectAdapter.LokiConfig.DefaultControllerErrorMessage;
         public string GeneralErrorCode { get; set; } = LokiObjectAdapter.LokiConfig.DefaultControllerErrorCode;
-        public async Task<IActionResult> CallRest<D>(Func<Task<Result<D>>> result)
+        
+        public async Task<IActionResult> CallRestAsync<D>(Func<Task<Result>> result)
+        {
+            try
+            {
+                Result res = await result();
+                if (res.Succeeded)
+                {
+                    return Ok(res.SuccessResult);
+                }
+                return BadRequest(res.Errors);
+            }
+            catch (Exception e)
+            {
+                Loki.ExceptionError(e);
+                HttpContext.Items["Exception"] = e;
+                if (RethrowException) throw;
+                return BadRequest(Result.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
+            }
+        }
+
+        
+        public async Task<IActionResult> CallRestAsync<D>(Func<Task<Result<D>>> result)
         {
             try
             {
@@ -28,7 +50,8 @@ namespace LokiLogger.WebExtension.Controller
                 return BadRequest(Result.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
-        public async Task<IActionResult> CallRest<D,T>(Func<T,Task<Result<D>>> result,T input)
+        
+        public async Task<IActionResult> CallRestAsync<D,T>(Func<T,Task<Result<D>>> result,T input)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -49,7 +72,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<D,T,G>(Func<T,G,Task<Result<D>>> result,T input,G input1)
+        public async Task<IActionResult> CallRestAsync<D,T,G>(Func<T,G,Task<Result<D>>> result,T input,G input1)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -70,7 +93,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<D,T,G,A>(Func<T,G,A,Task<Result<D>>> result,T input,G input1,A input2)
+        public async Task<IActionResult> CallRestAsync<D,T,G,A>(Func<T,G,A,Task<Result<D>>> result,T input,G input1,A input2)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -91,7 +114,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<D,T,G,A,B>(Func<T,G,A,B,Task<Result<D>>> result,T input,G input1,A input2, B input3)
+        public async Task<IActionResult> CallRestAsync<D,T,G,A,B>(Func<T,G,A,B,Task<Result<D>>> result,T input,G input1,A input2, B input3)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try

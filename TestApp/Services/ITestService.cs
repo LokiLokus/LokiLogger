@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using LokiLogger.WebExtension.ViewModel;
 using TestApp.Models;
 
@@ -10,6 +11,7 @@ namespace TestApp.Services
         Result<List<TestData>> GetData();
         Result<TestData> NewData(TestData data);
         Result<string> Throw();
+        Task<Result> Test();
     }
     
     public class TestService:ITestService{
@@ -40,6 +42,13 @@ namespace TestApp.Services
         public Result<string> Throw()
         {
             throw new Exception("This is an Exception");
+        }
+
+        public async Task<Result> Test()
+        {
+            await Task.Delay(10);
+            return Result.Fail("asdasd", "asd");
+            return Result.Ok();
         }
     }
 }

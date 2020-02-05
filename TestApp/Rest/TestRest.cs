@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using LokiLogger.WebExtension.Controller;
 using Microsoft.AspNetCore.Mvc;
 using TestApp.Models;
@@ -15,6 +17,11 @@ namespace TestApp.Rest
             TestService = service;
         }
 
+        [HttpGet("Test")]
+        public async Task<IActionResult> Test()
+        {
+            return await CallRestAsync<object>(TestService.Test);
+        }
         [HttpGet("GetData")]
         public IActionResult GetData()
         {
@@ -23,7 +30,7 @@ namespace TestApp.Rest
         [HttpGet("NewData/{data}")]
         public IActionResult GetData([FromRoute]string data)
         {
-            return CallRest(TestService.NewData,new TestData(){Name = data});
+            return  CallRest(TestService.NewData,new TestData(){Name = data});
         }
     }
 }
