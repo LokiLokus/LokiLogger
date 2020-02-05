@@ -7,13 +7,13 @@ namespace TestApp.Services
 {
     public interface ITestService
     {
-        OperationResult<List<TestData>> GetData();
-        OperationResult<TestData> NewData(TestData data);
-        OperationResult<string> Throw();
+        Result<List<TestData>> GetData();
+        Result<TestData> NewData(TestData data);
+        Result<string> Throw();
     }
     
     public class TestService:ITestService{
-        public OperationResult<List<TestData>> GetData()
+        public Result<List<TestData>> GetData()
         {
             var result = new List<TestData>()
             {
@@ -28,16 +28,16 @@ namespace TestApp.Services
                     Name = "sldfds"
                 }
             };
-            return OperationResult<List<TestData>>.Success(result);
+            return Result.Ok(result);
         }
 
-        public OperationResult<TestData> NewData(TestData data)
+        public Result<TestData> NewData(TestData data)
         {
             data.Id = "2";
-            return OperationResult<TestData>.Success(data);
+            return Result.Ok(data);
         }
 
-        public OperationResult<string> Throw()
+        public Result<string> Throw()
         {
             throw new Exception("This is an Exception");
         }
