@@ -10,7 +10,7 @@ namespace LokiLogger.WebExtension.Controller
         public string GeneralErrorMessage { get; set; } = LokiObjectAdapter.LokiConfig.DefaultControllerErrorMessage;
         public string GeneralErrorCode { get; set; } = LokiObjectAdapter.LokiConfig.DefaultControllerErrorCode;
         
-        public async Task<IActionResult> CallRest(Func<Task<Result>> result)
+        protected async Task<IActionResult> CallRest(Func<Task<Result>> result)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<T>(Func<T,Task<Result>> result,T input)
+        protected async Task<IActionResult> CallRest<T>(Func<T,Task<Result>> result,T input)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace LokiLogger.WebExtension.Controller
                 return BadRequest(Result.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
-        public async Task<IActionResult> CallRest<T,D>(Func<T,D,Task<Result>> result,T input,D input2)
+        protected async Task<IActionResult> CallRest<T,D>(Func<T,D,Task<Result>> result,T input,D input2)
         {
             try
             {
@@ -89,7 +89,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<D,T>(Func<T,Task<Result<D>>> result,T input)
+        protected async Task<IActionResult> CallRest<D,T>(Func<T,Task<Result<D>>> result,T input)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -110,7 +110,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<D,T,G>(Func<T,G,Task<Result<D>>> result,T input,G input1)
+        protected async Task<IActionResult> CallRest<D,T,G>(Func<T,G,Task<Result<D>>> result,T input,G input1)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -131,7 +131,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<D,T,G,A>(Func<T,G,A,Task<Result<D>>> result,T input,G input1,A input2)
+        protected async Task<IActionResult> CallRest<D,T,G,A>(Func<T,G,A,Task<Result<D>>> result,T input,G input1,A input2)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -152,7 +152,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public async Task<IActionResult> CallRest<D,T,G,A,B>(Func<T,G,A,B,Task<Result<D>>> result,T input,G input1,A input2, B input3)
+        protected async Task<IActionResult> CallRest<D,T,G,A,B>(Func<T,G,A,B,Task<Result<D>>> result,T input,G input1,A input2, B input3)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -174,7 +174,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public IActionResult CallRest<D>(Func<Result<D>> result)
+        protected IActionResult CallRest<D>(Func<Result<D>> result)
         {
             try
             {
@@ -195,7 +195,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
 
-        public IActionResult CallRest<D,T>(Func<T,Result<D>> result,T input)
+        protected IActionResult CallRest<D,T>(Func<T,Result<D>> result,T input)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -218,7 +218,7 @@ namespace LokiLogger.WebExtension.Controller
         }
         
         
-        public IActionResult CallRest<D,T,G>(Func<T,G,Result<D>> result,T input,G input1)
+        protected IActionResult CallRest<D,T,G>(Func<T,G,Result<D>> result,T input,G input1)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -239,7 +239,7 @@ namespace LokiLogger.WebExtension.Controller
                 return BadRequest(Result.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
-        public IActionResult CallRest<D,T,G,A>(Func<T,G,A,Result<D>> result,T input,G input1,A input2)
+        protected IActionResult CallRest<D,T,G,A>(Func<T,G,A,Result<D>> result,T input,G input1,A input2)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -260,7 +260,7 @@ namespace LokiLogger.WebExtension.Controller
                 return BadRequest(Result.Fail(GeneralErrorCode,GeneralErrorMessage).Errors);
             }
         }
-        public IActionResult CallRest<D,T,G,A,B>(Func<T,G,A,B,Result<D>> result,T input,G input1,A input2, B input3)
+        protected IActionResult CallRest<D,T,G,A,B>(Func<T,G,A,B,Result<D>> result,T input,G input1,A input2, B input3)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -282,7 +282,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public IActionResult CallRest<D,T,G,A,B,C>(Func<T,G,A,B,C,Result<D>> result,T input,G input1,A input2, B input3, C input4)
+        protected IActionResult CallRest<D,T,G,A,B,C>(Func<T,G,A,B,C,Result<D>> result,T input,G input1,A input2, B input3, C input4)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -304,7 +304,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public IActionResult CallRest<D,T,G,A,B,C,E>(Func<T,G,A,B,C,E,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5)
+        protected IActionResult CallRest<D,T,G,A,B,C,E>(Func<T,G,A,B,C,E,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -326,7 +326,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public IActionResult CallRest<D,T,G,A,B,C,E,F>(Func<T,G,A,B,C,E,F,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6)
+        protected IActionResult CallRest<D,T,G,A,B,C,E,F>(Func<T,G,A,B,C,E,F,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -348,7 +348,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public IActionResult CallRest<D,T,G,A,B,C,E,F,H>(Func<T,G,A,B,C,E,F,H,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6,H input7)
+        protected IActionResult CallRest<D,T,G,A,B,C,E,F,H>(Func<T,G,A,B,C,E,F,H,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6,H input7)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -370,7 +370,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public IActionResult CallRest<D,T,G,A,B,C,E,F,H,I>(Func<T,G,A,B,C,E,F,H,I,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6,H input7,I input8)
+        protected IActionResult CallRest<D,T,G,A,B,C,E,F,H,I>(Func<T,G,A,B,C,E,F,H,I,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6,H input7,I input8)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
@@ -392,7 +392,7 @@ namespace LokiLogger.WebExtension.Controller
             }
         }
         
-        public IActionResult CallRest<D,T,G,A,B,C,E,F,H,I,J>(Func<T,G,A,B,C,E,F,H,I,J,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6,H input7,I input8,J input9)
+        protected IActionResult CallRest<D,T,G,A,B,C,E,F,H,I,J>(Func<T,G,A,B,C,E,F,H,I,J,Result<D>> result,T input,G input1,A input2, B input3, C input4,E input5,F input6,H input7,I input8,J input9)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             try
