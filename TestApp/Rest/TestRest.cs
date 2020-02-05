@@ -20,7 +20,12 @@ namespace TestApp.Rest
         [HttpGet("Test")]
         public async Task<IActionResult> Test()
         {
-            return await CallRestAsync<object>(TestService.Test);
+            return await CallRest(TestService.Test);
+        }
+        [HttpGet("Test2")]
+        public async Task<IActionResult> Test2()
+        {
+            return await CallRest(TestService.Test2,"asd");
         }
         [HttpGet("GetData")]
         public IActionResult GetData()
